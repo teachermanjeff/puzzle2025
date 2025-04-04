@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://xepfbdwyxfcu"
-path="res://.godot/imported/cabbage.png-394fc364d9a1b582d0a84534be47d209.ctex"
+uid="uid://dkcbemc23j1k7"
+path="res://.godot/imported/drink_red.png-a4ba904b7a037df6fc3780b2cf31de55.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/32x32/cabbage.png"
-dest_files=["res://.godot/imported/cabbage.png-394fc364d9a1b582d0a84534be47d209.ctex"]
+source_file="res://assets/Game Sprites/Food sprites/drink_red.png"
+dest_files=["res://.godot/imported/drink_red.png-a4ba904b7a037df6fc3780b2cf31de55.ctex"]
 
 [params]
 

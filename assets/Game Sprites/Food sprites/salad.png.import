@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://gs5h2vd768l7"
-path="res://.godot/imported/bread_loaf.png-6b11189732cd7837d2a4dbe1b0085764.ctex"
+uid="uid://cgig0m354nh1q"
+path="res://.godot/imported/salad.png-d0e0d2fbf94795023fe87668ca38b06e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/32x32/bread_loaf.png"
-dest_files=["res://.godot/imported/bread_loaf.png-6b11189732cd7837d2a4dbe1b0085764.ctex"]
+source_file="res://assets/Game Sprites/Food sprites/salad.png"
+dest_files=["res://.godot/imported/salad.png-d0e0d2fbf94795023fe87668ca38b06e.ctex"]
 
 [params]
 

@@ -1,16 +1,18 @@
-[gd_scene load_steps=2 format=3 uid="uid://27dcf4gsuxto"]
+[gd_scene load_steps=2 format=3 uid="uid://di5ld0n2fe04n"]
 
 [ext_resource type="FontFile" uid="uid://drc3f4b74p0dt" path="res://Fonts/alagard/alagard.ttf" id="1_fhtl0"]
 
 [node name="Start Screen" type="Node2D"]
 
 [node name="Title" type="Label" parent="."]
-offset_left = -8.0
-offset_top = 60.0
-offset_right = 1078.0
-offset_bottom = 260.0
+offset_right = 1085.0
+offset_bottom = 284.0
 theme_override_fonts/font = ExtResource("1_fhtl0")
-theme_override_font_sizes/font_size = 100
-text = "Gems Hunter"
+theme_override_font_sizes/font_size = 150
+text = "Cave Escape"
 horizontal_alignment = 1
-visible_ratio = -0.0909091
+vertical_alignment = 1
+
+[node name="start Button" type="Button" parent="."]
+offset_right = 8.0
+offset_bottom = 8.0

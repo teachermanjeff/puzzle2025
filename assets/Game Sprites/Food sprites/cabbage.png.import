@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b4lpjr4gip12i"
-path="res://.godot/imported/egg.png-5c76e820f1d9f4a84815314968528e04.ctex"
+uid="uid://xepfbdwyxfcu"
+path="res://.godot/imported/cabbage.png-a750cb1cabb8824d90dcfc82792d21ec.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/32x32/egg.png"
-dest_files=["res://.godot/imported/egg.png-5c76e820f1d9f4a84815314968528e04.ctex"]
+source_file="res://assets/Game Sprites/Food sprites/cabbage.png"
+dest_files=["res://.godot/imported/cabbage.png-a750cb1cabb8824d90dcfc82792d21ec.ctex"]
 
 [params]
 

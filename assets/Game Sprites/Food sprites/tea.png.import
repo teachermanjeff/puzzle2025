@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://diycjulkwhh05"
-path="res://.godot/imported/sausage.png-a7440bbf08dc2994dbe0043f653e5827.ctex"
+uid="uid://mflqt2qp40cc"
+path="res://.godot/imported/tea.png-25c54b34c0781ae4a68244eb14ed8098.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/32x32/sausage.png"
-dest_files=["res://.godot/imported/sausage.png-a7440bbf08dc2994dbe0043f653e5827.ctex"]
+source_file="res://assets/Game Sprites/Food sprites/tea.png"
+dest_files=["res://.godot/imported/tea.png-25c54b34c0781ae4a68244eb14ed8098.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://yshvfp71bksq"
-path="res://.godot/imported/pepper_01.png-146dfa52fd40256f9d5e6ae0f1290e9d.ctex"
+uid="uid://jdu3erprt6vp"
+path="res://.godot/imported/watermelon.png-f18fb7ac19590eaad665aec9811ac774.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/32x32/pepper_01.png"
-dest_files=["res://.godot/imported/pepper_01.png-146dfa52fd40256f9d5e6ae0f1290e9d.ctex"]
+source_file="res://assets/Game Sprites/Food sprites/watermelon.png"
+dest_files=["res://.godot/imported/watermelon.png-f18fb7ac19590eaad665aec9811ac774.ctex"]
 
 [params]
 

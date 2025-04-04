@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dkcbemc23j1k7"
-path="res://.godot/imported/drink_red.png-6178bba81a4b1120654c34b1cb8134f0.ctex"
+uid="uid://5hgwjeivaego"
+path="res://.godot/imported/bread_slice.png-9665f66a5f5bebd25b253b9e12b59abe.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/32x32/drink_red.png"
-dest_files=["res://.godot/imported/drink_red.png-6178bba81a4b1120654c34b1cb8134f0.ctex"]
+source_file="res://assets/Game Sprites/Food sprites/bread_slice.png"
+dest_files=["res://.godot/imported/bread_slice.png-9665f66a5f5bebd25b253b9e12b59abe.ctex"]
 
 [params]
 

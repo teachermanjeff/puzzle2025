@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://5hgwjeivaego"
-path="res://.godot/imported/bread_slice.png-c4c0af7e15cf60c4bacf2c25a7984261.ctex"
+uid="uid://yshvfp71bksq"
+path="res://.godot/imported/pepper_01.png-b883f34e9b2b7438bb5750b1535a547a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/32x32/bread_slice.png"
-dest_files=["res://.godot/imported/bread_slice.png-c4c0af7e15cf60c4bacf2c25a7984261.ctex"]
+source_file="res://assets/Game Sprites/Food sprites/pepper_01.png"
+dest_files=["res://.godot/imported/pepper_01.png-b883f34e9b2b7438bb5750b1535a547a.ctex"]
 
 [params]
 

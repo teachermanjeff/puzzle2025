@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cgig0m354nh1q"
-path="res://.godot/imported/salad.png-38fe286d30be39e23849a8a5fd8e286d.ctex"
+uid="uid://f6gpqddmketk"
+path="res://.godot/imported/soup.png-bbe3abe5b28c8eb02c6e8855b47a7c55.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/32x32/salad.png"
-dest_files=["res://.godot/imported/salad.png-38fe286d30be39e23849a8a5fd8e286d.ctex"]
+source_file="res://assets/Game Sprites/Food sprites/soup.png"
+dest_files=["res://.godot/imported/soup.png-bbe3abe5b28c8eb02c6e8855b47a7c55.ctex"]
 
 [params]
 

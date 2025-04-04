@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dhlqu0u4t7kem"
-path="res://.godot/imported/drink_green.png-0cacd28e9224409ed5bf9d5e3b6aabeb.ctex"
+uid="uid://dx5yru7ekv84b"
+path="res://.godot/imported/pepper_02.png-77231a5183e2b60ca34652b98a6c76ab.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/32x32/drink_green.png"
-dest_files=["res://.godot/imported/drink_green.png-0cacd28e9224409ed5bf9d5e3b6aabeb.ctex"]
+source_file="res://assets/Game Sprites/Food sprites/pepper_02.png"
+dest_files=["res://.godot/imported/pepper_02.png-77231a5183e2b60ca34652b98a6c76ab.ctex"]
 
 [params]
 
