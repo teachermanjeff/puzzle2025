@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://jdu3erprt6vp"
-path="res://.godot/imported/watermelon.png-0a7320a014908ac8b17743d04bc945f4.ctex"
+path="res://.godot/imported/watermelon.png-f18fb7ac19590eaad665aec9811ac774.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/32x32/watermelon.png"
-dest_files=["res://.godot/imported/watermelon.png-0a7320a014908ac8b17743d04bc945f4.ctex"]
+source_file="res://assets/Game Sprites/Food sprites/watermelon.png"
+dest_files=["res://.godot/imported/watermelon.png-f18fb7ac19590eaad665aec9811ac774.ctex"]
 
 [params]
 

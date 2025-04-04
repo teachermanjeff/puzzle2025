@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://diycjulkwhh05"
-path="res://.godot/imported/sausage.png-a7440bbf08dc2994dbe0043f653e5827.ctex"
+path="res://.godot/imported/sausage.png-b5067f7c52426a5ebd06f9ddf13f9446.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/32x32/sausage.png"
-dest_files=["res://.godot/imported/sausage.png-a7440bbf08dc2994dbe0043f653e5827.ctex"]
+source_file="res://assets/Game Sprites/Food sprites/sausage.png"
+dest_files=["res://.godot/imported/sausage.png-b5067f7c52426a5ebd06f9ddf13f9446.ctex"]
 
 [params]
 

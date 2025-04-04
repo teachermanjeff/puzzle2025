@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://gs5h2vd768l7"
-path="res://.godot/imported/bread_loaf.png-6b11189732cd7837d2a4dbe1b0085764.ctex"
+path="res://.godot/imported/bread_loaf.png-693f504925a7b8234c45eddc7724863d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/32x32/bread_loaf.png"
-dest_files=["res://.godot/imported/bread_loaf.png-6b11189732cd7837d2a4dbe1b0085764.ctex"]
+source_file="res://assets/Game Sprites/Food sprites/bread_loaf.png"
+dest_files=["res://.godot/imported/bread_loaf.png-693f504925a7b8234c45eddc7724863d.ctex"]
 
 [params]
 

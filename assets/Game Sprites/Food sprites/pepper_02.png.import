@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dx5yru7ekv84b"
-path="res://.godot/imported/pepper_02.png-6e4fdc2fa03a3a25663a5a9eb528be8c.ctex"
+path="res://.godot/imported/pepper_02.png-77231a5183e2b60ca34652b98a6c76ab.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/32x32/pepper_02.png"
-dest_files=["res://.godot/imported/pepper_02.png-6e4fdc2fa03a3a25663a5a9eb528be8c.ctex"]
+source_file="res://assets/Game Sprites/Food sprites/pepper_02.png"
+dest_files=["res://.godot/imported/pepper_02.png-77231a5183e2b60ca34652b98a6c76ab.ctex"]
 
 [params]
 

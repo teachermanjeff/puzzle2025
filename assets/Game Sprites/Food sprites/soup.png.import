@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://f6gpqddmketk"
-path="res://.godot/imported/soup.png-f3d01d2bf89831b80dd21c8f262423f8.ctex"
+path="res://.godot/imported/soup.png-bbe3abe5b28c8eb02c6e8855b47a7c55.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/32x32/soup.png"
-dest_files=["res://.godot/imported/soup.png-f3d01d2bf89831b80dd21c8f262423f8.ctex"]
+source_file="res://assets/Game Sprites/Food sprites/soup.png"
+dest_files=["res://.godot/imported/soup.png-bbe3abe5b28c8eb02c6e8855b47a7c55.ctex"]
 
 [params]
 
