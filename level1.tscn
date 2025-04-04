@@ -4,14 +4,7 @@
 
 [node name="Node2D" type="Node2D"]
 
-[node name="ColorRect" type="ColorRect" parent="."]
-offset_left = -1.0
-offset_top = -3.0
-offset_right = 1150.0
-offset_bottom = 640.0
-color = Color(0, 0, 0, 1)
-
 [node name="WogSmg" type="Sprite2D" parent="."]
-position = Vector2(575.5, 320.5)
-scale = Vector2(3.28818, 3.71676)
+position = Vector2(543.125, 975.25)
+scale = Vector2(3.14625, 11.159)
 texture = ExtResource("1_jwv3a")
