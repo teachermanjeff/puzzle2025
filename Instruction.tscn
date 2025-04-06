@@ -1,0 +1,35 @@
+[gd_scene load_steps=3 format=3 uid="uid://bdt7h82fql1ok"]
+
+[ext_resource type="FontFile" uid="uid://drc3f4b74p0dt" path="res://Fonts/alagard/alagard.ttf" id="1_ajmqj"]
+[ext_resource type="Script" uid="uid://dlc4q8d0a0sy6" path="res://go_back.gd" id="2_wmtl7"]
+
+[node name="Instruction" type="Node2D"]
+
+[node name="rules" type="Label" parent="."]
+offset_top = 162.0
+offset_right = 1075.0
+offset_bottom = 1429.0
+theme_override_font_sizes/font_size = 80
+text = "Use your mouse to select 3 
+similar gems  to collect 
+gems. If you select 5 
+similar gems, you get a 
+power-up to get 5 more
+ moves. You need to collect 
+a certain amount of gems
+ to move towards the 
+next level."
+horizontal_alignment = 1
+
+[node name="go back" type="Button" parent="."]
+offset_left = 285.0
+offset_top = 1281.0
+offset_right = 807.0
+offset_bottom = 1576.0
+theme_override_colors/font_color = Color(0.223529, 0.678431, 0.54902, 1)
+theme_override_fonts/font = ExtResource("1_ajmqj")
+theme_override_font_sizes/font_size = 80
+text = "Go Back"
+script = ExtResource("2_wmtl7")
+
+[connection signal="button_down" from="go back" to="go back" method="_on_button_down"]
