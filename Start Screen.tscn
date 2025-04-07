@@ -1,14 +1,16 @@
-[gd_scene load_steps=4 format=3 uid="uid://di5ld0n2fe04n"]
+[gd_scene load_steps=5 format=3 uid="uid://di5ld0n2fe04n"]
 
 [ext_resource type="FontFile" uid="uid://drc3f4b74p0dt" path="res://Fonts/alagard/alagard.ttf" id="1_fhtl0"]
 [ext_resource type="Script" uid="uid://dy02subxihhb3" path="res://start_button.gd" id="2_03n6e"]
 [ext_resource type="Script" uid="uid://bm17ahh4l41i7" path="res://instructions.gd" id="3_ci4vx"]
+[ext_resource type="FontFile" uid="uid://bbexhjj6wul8h" path="res://Fonts/badpiggiesglowingyt/badpiggiesglowingyt.ttf" id="4_ci4vx"]
 
 [node name="Start Screen" type="Node2D"]
 
 [node name="Title" type="Label" parent="."]
+offset_top = 57.0
 offset_right = 1085.0
-offset_bottom = 284.0
+offset_bottom = 341.0
 theme_override_fonts/font = ExtResource("1_fhtl0")
 theme_override_font_sizes/font_size = 150
 text = "Cave Escape"
@@ -16,10 +18,11 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="start Button" type="Button" parent="."]
-offset_left = 264.0
-offset_top = 759.0
-offset_right = 765.0
-offset_bottom = 919.0
+top_level = true
+offset_left = 286.0
+offset_top = 404.0
+offset_right = 786.0
+offset_bottom = 544.0
 theme_override_colors/font_hover_color = Color(0.223529, 0.678431, 0.54902, 1)
 theme_override_colors/font_color = Color(0.224615, 0.677571, 0.550349, 1)
 theme_override_fonts/font = ExtResource("1_fhtl0")
@@ -29,11 +32,12 @@ text = "Start"
 flat = true
 script = ExtResource("2_03n6e")
 
-[node name="Instructions" type="Button" parent="."]
-offset_left = 265.0
-offset_top = 1009.0
-offset_right = 771.0
-offset_bottom = 1162.0
+[node name="Instructions Button" type="Button" parent="."]
+top_level = true
+offset_left = 250.0
+offset_top = 579.0
+offset_right = 810.0
+offset_bottom = 784.0
 theme_override_colors/font_hover_color = Color(0.223529, 0.678431, 0.54902, 1)
 theme_override_colors/font_color = Color(0.223529, 0.678431, 0.54902, 1)
 theme_override_fonts/font = ExtResource("1_fhtl0")
@@ -43,16 +47,32 @@ flat = true
 script = ExtResource("3_ci4vx")
 
 [node name="Story" type="Label" parent="."]
-offset_left = 11.0
-offset_top = 1361.0
-offset_right = 1074.0
-offset_bottom = 2093.0
-theme_override_font_sizes/font_size = 80
+offset_left = 13.0
+offset_top = 876.0
+offset_right = 1076.0
+offset_bottom = 1608.0
+theme_override_colors/font_color = Color(0.886275, 0.780392, 0.286275, 1)
+theme_override_fonts/font = ExtResource("4_ci4vx")
+theme_override_font_sizes/font_size = 90
 text = "You are trapped inside 
 the cave and need to 
 collect the gems to escape 
 from the cave."
 horizontal_alignment = 1
 
+[node name="start_bg" type="ColorRect" parent="."]
+show_behind_parent = true
+offset_left = 288.0
+offset_top = 402.0
+offset_right = 782.0
+offset_bottom = 546.0
+
+[node name="Instructions_bg" type="ColorRect" parent="."]
+show_behind_parent = true
+offset_left = 280.0
+offset_top = 590.0
+offset_right = 779.0
+offset_bottom = 788.0
+
 [connection signal="button_down" from="start Button" to="start Button" method="_on_button_down"]
-[connection signal="button_down" from="Instructions" to="Instructions" method="_on_button_down"]
+[connection signal="button_down" from="Instructions Button" to="Instructions Button" method="_on_button_down"]
