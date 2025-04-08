@@ -1,10 +1,10 @@
 [gd_scene load_steps=2 format=3 uid="uid://djoyxgkcp4rn4"]
 
-[ext_resource type="Texture2D" uid="uid://jm6wqsidbear" path="res://assets/background/WOGSmg.png" id="1_jwv3a"]
+[ext_resource type="Texture2D" uid="uid://cfij4iitjt6pv" path="res://assets/background/level 1 bg.png" id="1_wmhn2"]
 
-[node name="Node2D" type="Node2D"]
+[node name="Level 1" type="Node2D"]
 
-[node name="WogSmg" type="Sprite2D" parent="."]
-position = Vector2(543.125, 975.25)
-scale = Vector2(3.14625, 11.159)
-texture = ExtResource("1_jwv3a")
+[node name="level 1 bg" type="Sprite2D" parent="."]
+position = Vector2(262, 479.5)
+scale = Vector2(3.27523, 2.51157)
+texture = ExtResource("1_wmhn2")

@@ -1,8 +1,8 @@
 [gd_scene load_steps=5 format=3 uid="uid://di5ld0n2fe04n"]
 
 [ext_resource type="FontFile" uid="uid://drc3f4b74p0dt" path="res://Fonts/alagard/alagard.ttf" id="1_fhtl0"]
-[ext_resource type="Script" uid="uid://dy02subxihhb3" path="res://start_button.gd" id="2_03n6e"]
-[ext_resource type="Script" uid="uid://bm17ahh4l41i7" path="res://instructions.gd" id="3_ci4vx"]
+[ext_resource type="Script" uid="uid://dy02subxihhb3" path="res://scenes/start scene/start_button.gd" id="2_03n6e"]
+[ext_resource type="Script" uid="uid://bm17ahh4l41i7" path="res://scenes/instruction scenes/instructions.gd" id="3_ci4vx"]
 [ext_resource type="FontFile" uid="uid://bbexhjj6wul8h" path="res://Fonts/badpiggiesglowingyt/badpiggiesglowingyt.ttf" id="4_ci4vx"]
 
 [node name="Start Screen" type="Node2D"]
