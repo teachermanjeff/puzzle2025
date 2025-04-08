@@ -2,7 +2,7 @@
 
 [ext_resource type="FontFile" uid="uid://bbexhjj6wul8h" path="res://Fonts/badpiggiesglowingyt/badpiggiesglowingyt.ttf" id="1_71ta1"]
 [ext_resource type="FontFile" uid="uid://drc3f4b74p0dt" path="res://Fonts/alagard/alagard.ttf" id="1_ajmqj"]
-[ext_resource type="Script" uid="uid://dlc4q8d0a0sy6" path="res://go_back.gd" id="2_wmtl7"]
+[ext_resource type="Script" path="res://scenes/instruction scenes/go_back.gd" id="2_wmtl7"]
 
 [node name="Instruction" type="Node2D"]
 
