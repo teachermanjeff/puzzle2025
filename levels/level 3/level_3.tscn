@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://mrkdxqm8sw2x"]
+
+[ext_resource type="Texture2D" uid="uid://bjq5oghph4bwx" path="res://assets/background/level 3 bg.png" id="1_vkd0v"]
+
+[node name="Level 3" type="Node2D"]
+
+[node name="level 3 bg" type="Sprite2D" parent="."]
+position = Vector2(269.75, 482.25)
+scale = Vector2(3.27576, 2.48715)
+texture = ExtResource("1_vkd0v")
