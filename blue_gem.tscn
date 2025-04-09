@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://bsnv5ddg8r6mm"]
+
+[ext_resource type="Texture2D" uid="uid://qj3uuaskmk0u" path="res://assets/Game Sprites/Pixel Art Gem Pack - Animated/Pixel Art Gem Pack - Animated/GEM 1/GEM 1 - BLUE - Spritesheet.png" id="1_c6c7x"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c6c7x"]
+atlas = ExtResource("1_c6c7x")
+region = Rect2(162, 0, 18, 30)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_wb78n"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c6c7x")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Blue gem" type="Node2D"]
+
+[node name="blue gem sprite" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_wb78n")
