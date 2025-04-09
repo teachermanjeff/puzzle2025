@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bwnu3we6dufmn"
-path="res://.godot/imported/level 2 grid bg.png-8db0c0e9d3006c6c49aef4bc8b130053.ctex"
+uid="uid://crscy2dkvsqov"
+path="res://.godot/imported/GEM 1 - TURQUOISE - 0008.png-8d79f359298b384381777f8176fdb03d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/background/level 2 grid bg.png"
-dest_files=["res://.godot/imported/level 2 grid bg.png-8db0c0e9d3006c6c49aef4bc8b130053.ctex"]
+source_file="res://assets/Game Sprites/Pixel Art Gem Pack - Animated/Pixel Art Gem Pack - Animated/GEM 1/TURQUOISE/GEM 1 - TURQUOISE - 0008.png"
+dest_files=["res://.godot/imported/GEM 1 - TURQUOISE - 0008.png-8d79f359298b384381777f8176fdb03d.ctex"]
 
 [params]
 

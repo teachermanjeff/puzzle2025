@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://g477pjdcjwqa"]
+
+[ext_resource type="Texture2D" uid="uid://c2buuqy56wod2" path="res://assets/background/level 3 grid bg.png" id="1_pmve3"]
+
+[node name="3 grid" type="Node2D"]
+
+[node name="level 3 grid" type="Sprite2D" parent="."]
+texture = ExtResource("1_pmve3")

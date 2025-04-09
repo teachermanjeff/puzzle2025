@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bwnu3we6dufmn"
-path="res://.godot/imported/level 2 grid bg.png-8db0c0e9d3006c6c49aef4bc8b130053.ctex"
+uid="uid://258ay07gjhjr"
+path="res://.godot/imported/Spark - 0000.png-4c19f50940ee7eb85dde28a9a6b98bb6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/background/level 2 grid bg.png"
-dest_files=["res://.godot/imported/level 2 grid bg.png-8db0c0e9d3006c6c49aef4bc8b130053.ctex"]
+source_file="res://assets/Game Sprites/Pixel Art Gem Pack - Animated/Pixel Art Gem Pack - Animated/Spark/Sprites/Spark - 0000.png"
+dest_files=["res://.godot/imported/Spark - 0000.png-4c19f50940ee7eb85dde28a9a6b98bb6.ctex"]
 
 [params]
 
