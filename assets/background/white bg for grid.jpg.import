@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://jm6wqsidbear"
-path="res://.godot/imported/WOGSmg.png-47a3a9447153b98820a2215d8d30d7bc.ctex"
+uid="uid://be7yygndb67f3"
+path="res://.godot/imported/white bg for grid.jpg-177940bc2aeb40a724faf4204a629422.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/background/WOGSmg.png"
-dest_files=["res://.godot/imported/WOGSmg.png-47a3a9447153b98820a2215d8d30d7bc.ctex"]
+source_file="res://assets/background/white bg for grid.jpg"
+dest_files=["res://.godot/imported/white bg for grid.jpg-177940bc2aeb40a724faf4204a629422.ctex"]
 
 [params]
 
