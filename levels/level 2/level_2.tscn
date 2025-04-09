@@ -8,3 +8,10 @@
 position = Vector2(276, 497.25)
 scale = Vector2(3.16092, 2.5437)
 texture = ExtResource("1_mi4ay")
+
+[node name="Button" type="Button" parent="."]
+offset_left = 401.0
+offset_top = 5.0
+offset_right = 550.0
+offset_bottom = 59.0
+text = "pause button"
