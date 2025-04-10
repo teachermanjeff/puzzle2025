@@ -1,8 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://v85y54t2rmwj"]
+[gd_scene load_steps=3 format=3 uid="uid://v85y54t2rmwj"]
 
 [ext_resource type="Texture2D" uid="uid://c7knsgkrc7oif" path="res://assets/background/level 2 bg.png" id="1_mi4ay"]
+[ext_resource type="Script" uid="uid://df0liy5tyi61k" path="res://levels/level 2/level_2.gd" id="1_wmiuw"]
 
 [node name="Level 2" type="Node2D"]
+script = ExtResource("1_wmiuw")
 
 [node name="level 2 bg" type="Sprite2D" parent="."]
 position = Vector2(276, 497.25)
@@ -15,3 +17,5 @@ offset_top = 5.0
 offset_right = 550.0
 offset_bottom = 59.0
 text = "pause button"
+
+[connection signal="button_down" from="Button" to="." method="_on_button_button_down"]
