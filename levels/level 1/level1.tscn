@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://djoyxgkcp4rn4"]
+[gd_scene load_steps=3 format=3 uid="uid://djoyxgkcp4rn4"]
 
 [ext_resource type="Texture2D" uid="uid://cfij4iitjt6pv" path="res://assets/background/level 1 bg.png" id="1_wmhn2"]
+[ext_resource type="Script" uid="uid://c15j3w7xb5156" path="res://levels/level 1/grid script.gd" id="2_7vvte"]
 
 [node name="Level 1" type="Node2D"]
 
@@ -15,3 +16,11 @@ offset_top = -1.0
 offset_right = 537.0
 offset_bottom = 62.0
 text = "pause button"
+
+[node name="grid script" type="Node2D" parent="."]
+script = ExtResource("2_7vvte")
+width = 9
+height = 9
+x_start = 64
+y_start = 800
+offset = 64
