@@ -31,7 +31,7 @@ func make_2D_array() -> Array:
 func spawn_gems():
 	for j in range(height):  
 		for i in range(width): # added loop over width
-			var rand = floor(rand_range(0, gems.size()))
+			var rand = floor(randf_range(0, gems.size()))
 			var piece = gems[rand].instantiate()
 			add_child(piece)	
 			piece.position = grid_to_pixel(i, j)
