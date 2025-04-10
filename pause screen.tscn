@@ -59,4 +59,5 @@ theme_override_fonts/font = ExtResource("2_u85d3")
 theme_override_font_sizes/font_size = 50
 text = "Quit"
 
+[connection signal="button_down" from="restart" to="." method="_on_restart_button_down"]
 [connection signal="button_down" from="quit" to="." method="_on_quit_button_down"]
