@@ -2,6 +2,9 @@
 
 [ext_resource type="Texture2D" uid="uid://jdu3erprt6vp" path="res://assets/Game Sprites/Food sprites/watermelon.png" id="1_ur5va"]
 
-[node name="Node2D" type="Sprite2D"]
-position = Vector2(116, 36)
+[node name="Node2D" type="Node2D"]
+
+[node name="power up" type="Sprite2D" parent="."]
+position = Vector2(2, -1)
+scale = Vector2(1.85, 1.85)
 texture = ExtResource("1_ur5va")
