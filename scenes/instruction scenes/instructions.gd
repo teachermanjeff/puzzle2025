@@ -5,7 +5,3 @@ func _ready():
 	
 func _process(delta):
 	pass
-
-
-func _on_button_down():
-	get_tree().change_scene_to_file("res://Instruction.tscn")

@@ -1,0 +1,63 @@
+[gd_scene load_steps=4 format=3 uid="uid://1p7f1k0fbji1"]
+
+[ext_resource type="Script" uid="uid://bdl5js6u7fjfu" path="res://scenes/instructionscreen.gd" id="1_f3ykm"]
+[ext_resource type="FontFile" uid="uid://drc3f4b74p0dt" path="res://Fonts/alagard/alagard.ttf" id="1_jmxxo"]
+[ext_resource type="Texture2D" uid="uid://be8rsrnr0e217" path="res://assets/background/instruction_bg.png" id="2_f3ykm"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_f3ykm")
+metadata/_edit_horizontal_guides_ = [-227.0]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = -62.0
+offset_top = -175.0
+offset_right = 609.0
+offset_bottom = 1144.0
+texture = ExtResource("2_f3ykm")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 137.0
+offset_top = 104.0
+offset_right = 425.0
+offset_bottom = 173.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_jmxxo")
+theme_override_font_sizes/font_size = 50
+text = "instructions"
+
+[node name="Label" type="Label" parent="Label"]
+layout_mode = 0
+offset_left = -109.0
+offset_top = 203.0
+offset_right = 437.0
+offset_bottom = 457.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_jmxxo")
+theme_override_font_sizes/font_size = 16
+text = "how to play: you have a certain amount of moves and you must 
+                       reach a certain amount of points to move on to do
+                       this you must match 3 same colored gems or use a
+                       power up. if you run out of moves you lose"
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 214.0
+offset_top = 478.0
+offset_right = 364.0
+offset_bottom = 548.0
+theme_override_fonts/font = ExtResource("1_jmxxo")
+theme_override_font_sizes/font_size = 29
+text = "return"
+
+[connection signal="button_down" from="Button" to="." method="_on_button_button_down"]

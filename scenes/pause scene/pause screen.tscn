@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://dqon6k2rny7fv"]
 
 [ext_resource type="Texture2D" uid="uid://cahp26fkmop6w" path="res://assets/background/menu image.png" id="1_le35y"]
-[ext_resource type="Script" uid="uid://ddat7maxu43km" path="res://pause_screen.gd" id="1_u85d3"]
+[ext_resource type="Script" uid="uid://ddat7maxu43km" path="res://scenes/pause scene/pause_screen.gd" id="1_u85d3"]
 [ext_resource type="FontFile" uid="uid://drc3f4b74p0dt" path="res://Fonts/alagard/alagard.ttf" id="2_u85d3"]
 
 [node name="MENU SCREEN" type="Control"]
