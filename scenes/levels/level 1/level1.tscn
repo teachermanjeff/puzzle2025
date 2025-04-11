@@ -1,8 +1,8 @@
 [gd_scene load_steps=4 format=3 uid="uid://djoyxgkcp4rn4"]
 
-[ext_resource type="Script" uid="uid://ccbk2ghaf76h7" path="res://levels/level 1/level_1.gd" id="1_7mql6"]
+[ext_resource type="Script" uid="uid://ccbk2ghaf76h7" path="res://scenes/levels/level 1/level_1.gd" id="1_7mql6"]
 [ext_resource type="Texture2D" uid="uid://cfij4iitjt6pv" path="res://assets/background/level 1 bg.png" id="1_wmhn2"]
-[ext_resource type="Script" uid="uid://c15j3w7xb5156" path="res://levels/level 1/grid script.gd" id="2_7vvte"]
+[ext_resource type="Script" uid="uid://c15j3w7xb5156" path="res://scenes/levels/level 1/grid script.gd" id="2_7vvte"]
 
 [node name="Level 1" type="Node2D"]
 script = ExtResource("1_7mql6")

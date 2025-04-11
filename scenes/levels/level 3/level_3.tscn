@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://mrkdxqm8sw2x"]
 
-[ext_resource type="Script" uid="uid://ce5sdn60b2tsi" path="res://levels/level 3/level_3.gd" id="1_i6lnk"]
+[ext_resource type="Script" uid="uid://ce5sdn60b2tsi" path="res://scenes/levels/level 3/level_3.gd" id="1_i6lnk"]
 [ext_resource type="Texture2D" uid="uid://bjq5oghph4bwx" path="res://assets/background/level 3 bg.png" id="1_vkd0v"]
 
 [node name="Level 3" type="Node2D"]

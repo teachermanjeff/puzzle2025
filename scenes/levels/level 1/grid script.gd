@@ -8,11 +8,11 @@ extends Node2D
 
 var all_gems = []
 var gems = [
-	preload("res://blue_gem.tscn"),
-	preload("res://light_green_gem.tscn"),
-	preload("res://yellow_gem.tscn"),
-	preload("res://red_gem.tscn"),
-	preload("res://purple_gem.tscn")
+	preload("res://scenes/gem scenes/blue_gem.tscn"),
+	preload("res://scenes/gem scenes/light_green_gem.tscn"),
+	preload("res://scenes/gem scenes/yellow_gem.tscn"),
+	preload("res://scenes/gem scenes/red_gem.tscn"),
+	preload("res://scenes/gem scenes/purple_gem.tscn")
 ]
 
 func _ready():
