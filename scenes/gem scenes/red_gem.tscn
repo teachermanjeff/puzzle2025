@@ -20,4 +20,6 @@ animations = [{
 [node name="red gem" type="Node2D"]
 
 [node name="red gem sprite" type="AnimatedSprite2D" parent="."]
+position = Vector2(2, -1)
+scale = Vector2(1.85, 1.85)
 sprite_frames = SubResource("SpriteFrames_l8h70")
