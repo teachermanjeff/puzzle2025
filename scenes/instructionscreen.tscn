@@ -52,12 +52,12 @@ text = "how to play: you have a certain amount of moves and you must
 
 [node name="Button" type="Button" parent="."]
 layout_mode = 0
-offset_left = 214.0
-offset_top = 478.0
-offset_right = 364.0
-offset_bottom = 548.0
+offset_left = 136.0
+offset_top = 490.0
+offset_right = 426.0
+offset_bottom = 560.0
 theme_override_fonts/font = ExtResource("1_jmxxo")
 theme_override_font_sizes/font_size = 29
-text = "return"
+text = "return to main menu"
 
 [connection signal="button_down" from="Button" to="." method="_on_button_button_down"]

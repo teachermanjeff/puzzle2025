@@ -1,5 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://d0lurakf3cxwx"]
+[gd_scene load_steps=4 format=3 uid="uid://d0lurakf3cxwx"]
 
+[ext_resource type="Script" uid="uid://dexj3jvdwaivp" path="res://scenes/menu scene/failscreen.gd" id="1_08iva"]
 [ext_resource type="Texture2D" uid="uid://cahp26fkmop6w" path="res://assets/background/menu image.png" id="1_8oovv"]
 [ext_resource type="FontFile" uid="uid://drc3f4b74p0dt" path="res://Fonts/alagard/alagard.ttf" id="2_08iva"]
 
@@ -12,6 +13,7 @@ offset_right = -540.0
 offset_bottom = -960.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_08iva")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 0
@@ -79,3 +81,6 @@ offset_bottom = 581.0
 theme_override_fonts/font = ExtResource("2_08iva")
 theme_override_font_sizes/font_size = 34
 text = "RESTART"
+
+[connection signal="button_down" from="contd" to="." method="_on_contd_button_down"]
+[connection signal="button_down" from="instruct but" to="." method="_on_instruct_but_button_down"]
