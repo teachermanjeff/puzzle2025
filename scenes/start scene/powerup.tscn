@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://bxgjparkmoej5"]
+
+[ext_resource type="Texture2D" uid="uid://jdu3erprt6vp" path="res://assets/Game Sprites/Food sprites/watermelon.png" id="1_ur5va"]
+
+[node name="Node2D" type="Sprite2D"]
+position = Vector2(116, 36)
+texture = ExtResource("1_ur5va")
