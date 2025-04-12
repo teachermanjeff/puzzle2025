@@ -1,6 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://c1ntefegj50vd"]
+[gd_scene load_steps=5 format=3 uid="uid://c1ntefegj50vd"]
 
 [ext_resource type="FontFile" uid="uid://drc3f4b74p0dt" path="res://Fonts/alagard/alagard.ttf" id="1_fhtl0"]
+[ext_resource type="Script" uid="uid://dy02subxihhb3" path="res://scenes/start scene/start_button.gd" id="2_10vxj"]
+[ext_resource type="Script" uid="uid://1j28bp3lhybt" path="res://scenes/start scene/instructions_button.gd" id="3_ius28"]
 [ext_resource type="FontFile" uid="uid://bbexhjj6wul8h" path="res://Fonts/badpiggiesglowingyt/badpiggiesglowingyt.ttf" id="4_ci4vx"]
 
 [node name="Start Screen" type="Node2D"]
@@ -43,6 +45,7 @@ theme_override_font_sizes/font_size = 80
 action_mode = 0
 text = "Start"
 flat = true
+script = ExtResource("2_10vxj")
 
 [node name="Instructions Button" type="Button" parent="."]
 top_level = true
@@ -57,6 +60,7 @@ theme_override_font_sizes/font_size = 80
 action_mode = 0
 text = "Instructions"
 flat = true
+script = ExtResource("3_ius28")
 
 [node name="Story" type="Label" parent="."]
 offset_left = 13.0
@@ -71,3 +75,6 @@ a cave and need to
 collect the gems to escape 
 from the cave."
 horizontal_alignment = 1
+
+[connection signal="button_down" from="start Button" to="start Button" method="_on_button_down"]
+[connection signal="button_down" from="Instructions Button" to="Instructions Button" method="_on_button_down"]

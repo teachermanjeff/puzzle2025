@@ -1,4 +1,4 @@
 extends Button
 
 func _on_button_down():
-	pass
+	get_tree().change_scene_to_file("res://scenes/start scene/Start Screen.tscn")

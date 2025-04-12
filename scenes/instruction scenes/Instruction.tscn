@@ -15,8 +15,8 @@ texture = ExtResource("1_33od4")
 [node name="go back_bg" type="ColorRect" parent="."]
 offset_left = 89.0
 offset_top = 778.0
-offset_right = 435.0
-offset_bottom = 900.0
+offset_right = 422.0
+offset_bottom = 862.0
 
 [node name="rules" type="Label" parent="."]
 offset_left = 18.0
@@ -40,14 +40,16 @@ next level."
 horizontal_alignment = 1
 
 [node name="go back button" type="Button" parent="."]
+top_level = true
 offset_left = 88.0
-offset_top = 785.0
-offset_right = 458.0
-offset_bottom = 901.0
+offset_top = 764.0
+offset_right = 431.0
+offset_bottom = 880.0
 theme_override_colors/font_hover_pressed_color = Color(0.223529, 0.678431, 0.54902, 1)
 theme_override_colors/font_color = Color(0.223529, 0.678431, 0.54902, 1)
 theme_override_fonts/font = ExtResource("1_ajmqj")
 theme_override_font_sizes/font_size = 90
+action_mode = 0
 text = "Go Back"
 flat = true
 script = ExtResource("4_33od4")
