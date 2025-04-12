@@ -8,4 +8,4 @@ func _process(delta):
 	
 
 func _on_button_down():
-	get_tree().change_scene_to_file("res://Start Screen.tscn")
+	get_tree().change_scene_to_file("res://scenes/instruction scenes/go_back.gd")

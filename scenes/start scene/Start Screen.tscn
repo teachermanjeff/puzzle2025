@@ -1,21 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://di5ld0n2fe04n"]
+[gd_scene load_steps=3 format=3 uid="uid://c1ntefegj50vd"]
 
 [ext_resource type="FontFile" uid="uid://drc3f4b74p0dt" path="res://Fonts/alagard/alagard.ttf" id="1_fhtl0"]
-[ext_resource type="Script" uid="uid://b7svw7durubo7" path="res://scenes/start scene/start_screen.gd" id="1_ius28"]
-[ext_resource type="Script" uid="uid://dy02subxihhb3" path="res://scenes/start scene/start_button.gd" id="2_03n6e"]
-[ext_resource type="Texture2D" uid="uid://ciyyeqhy01nl5" path="res://assets/background/d6900b45-16cf-4816-8520-fcc0bccbc15b.png" id="2_gpajq"]
-[ext_resource type="Script" uid="uid://bm17ahh4l41i7" path="res://scenes/instruction scenes/instructions.gd" id="3_ci4vx"]
 [ext_resource type="FontFile" uid="uid://bbexhjj6wul8h" path="res://Fonts/badpiggiesglowingyt/badpiggiesglowingyt.ttf" id="4_ci4vx"]
 
 [node name="Start Screen" type="Node2D"]
-script = ExtResource("1_ius28")
-
-[node name="TextureRect" type="TextureRect" parent="."]
-offset_top = -1.0
-offset_right = 538.0
-offset_bottom = 957.0
-texture = ExtResource("2_gpajq")
-expand_mode = 1
 
 [node name="Title" type="Label" parent="."]
 offset_left = -139.0
@@ -49,27 +37,26 @@ offset_top = 245.0
 offset_right = 444.0
 offset_bottom = 345.0
 theme_override_colors/font_hover_color = Color(0.223529, 0.678431, 0.54902, 1)
-theme_override_colors/font_color = Color(0.986253, 0.999397, 0.994145, 1)
+theme_override_colors/font_color = Color(0.223529, 0.678431, 0.54902, 1)
 theme_override_fonts/font = ExtResource("1_fhtl0")
 theme_override_font_sizes/font_size = 80
 action_mode = 0
 text = "Start"
 flat = true
-script = ExtResource("2_03n6e")
 
 [node name="Instructions Button" type="Button" parent="."]
 top_level = true
-offset_left = 21.0
-offset_top = 403.0
-offset_right = 527.0
-offset_bottom = 518.0
-theme_override_colors/font_hover_color = Color(0.972549, 1, 0.988235, 0.996078)
-theme_override_colors/font_color = Color(1, 1, 1, 1)
+offset_left = 17.0
+offset_top = 397.0
+offset_right = 523.0
+offset_bottom = 512.0
+theme_override_colors/font_hover_color = Color(0.223529, 0.678431, 0.54902, 1)
+theme_override_colors/font_color = Color(0.223529, 0.678431, 0.54902, 1)
 theme_override_fonts/font = ExtResource("1_fhtl0")
 theme_override_font_sizes/font_size = 80
+action_mode = 0
 text = "Instructions"
 flat = true
-script = ExtResource("3_ci4vx")
 
 [node name="Story" type="Label" parent="."]
 offset_left = 13.0
@@ -84,8 +71,3 @@ a cave and need to
 collect the gems to escape 
 from the cave."
 horizontal_alignment = 1
-
-[connection signal="button_down" from="start Button" to="." method="_on_start_button_button_down"]
-[connection signal="button_down" from="start Button" to="start Button" method="_on_button_down"]
-[connection signal="button_down" from="Instructions Button" to="." method="_on_instructions_button_button_down"]
-[connection signal="button_down" from="Instructions Button" to="Instructions Button" method="_on_button_down"]

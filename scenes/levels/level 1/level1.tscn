@@ -12,7 +12,7 @@ position = Vector2(262, 479.5)
 scale = Vector2(3.27523, 2.51157)
 texture = ExtResource("1_wmhn2")
 
-[node name="Button" type="Button" parent="."]
+[node name="Pause Button" type="Button" parent="."]
 offset_left = 386.0
 offset_top = -1.0
 offset_right = 537.0
@@ -27,4 +27,4 @@ x_start = 64
 y_start = 800
 offset = 64
 
-[connection signal="button_down" from="Button" to="." method="_on_button_button_down"]
+[connection signal="button_down" from="Pause Button" to="." method="_on_button_button_down"]
