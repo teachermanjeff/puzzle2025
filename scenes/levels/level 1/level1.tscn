@@ -1,9 +1,26 @@
-[gd_scene load_steps=5 format=3 uid="uid://djoyxgkcp4rn4"]
+[gd_scene load_steps=9 format=3 uid="uid://djoyxgkcp4rn4"]
 
 [ext_resource type="Script" uid="uid://ccbk2ghaf76h7" path="res://scenes/levels/level 1/level_1.gd" id="1_7mql6"]
 [ext_resource type="Texture2D" uid="uid://cfij4iitjt6pv" path="res://assets/background/level 1 bg.png" id="1_wmhn2"]
 [ext_resource type="Script" uid="uid://c15j3w7xb5156" path="res://scenes/levels/level 1/grid 1 script.gd" id="2_7vvte"]
 [ext_resource type="Texture2D" uid="uid://brdhv4tcby5e0" path="res://assets/background/level 1 grid bg.png" id="4_rmw0i"]
+[ext_resource type="Texture2D" uid="uid://5ehnk5tfff0l" path="res://assets/Game Sprites/kenney_ui-pack-rpg-expansion/Spritesheet/uipack_rpg_sheet.png" id="5_cpvl0"]
+[ext_resource type="FontFile" uid="uid://drc3f4b74p0dt" path="res://Fonts/alagard/alagard.ttf" id="6_k5rfc"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m2tdy"]
+atlas = ExtResource("5_cpvl0")
+region = Rect2(0, 51, 170, 51)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6aeqc"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m2tdy")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [node name="Level 1" type="Node2D"]
 script = ExtResource("1_7mql6")
@@ -32,5 +49,21 @@ height = 8
 x_start = 43
 y_start = 650
 offset = 64
+
+[node name="level 1 title bg" type="AnimatedSprite2D" parent="."]
+position = Vector2(76, 51)
+scale = Vector2(0.770588, 1.36275)
+sprite_frames = SubResource("SpriteFrames_6aeqc")
+
+[node name="level 1 title" type="Label" parent="level 1 title bg"]
+offset_left = -82.0
+offset_top = -21.0
+offset_right = 82.0
+offset_bottom = 13.0
+theme_override_fonts/font = ExtResource("6_k5rfc")
+theme_override_font_sizes/font_size = 30
+text = "Level 1"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [connection signal="button_down" from="Pause Button 1" to="." method="_on_button_button_down"]
