@@ -1,30 +1,36 @@
-[gd_scene load_steps=4 format=3 uid="uid://djoyxgkcp4rn4"]
+[gd_scene load_steps=5 format=3 uid="uid://djoyxgkcp4rn4"]
 
 [ext_resource type="Script" uid="uid://ccbk2ghaf76h7" path="res://scenes/levels/level 1/level_1.gd" id="1_7mql6"]
 [ext_resource type="Texture2D" uid="uid://cfij4iitjt6pv" path="res://assets/background/level 1 bg.png" id="1_wmhn2"]
-[ext_resource type="Script" uid="uid://c15j3w7xb5156" path="res://scenes/levels/level 1/grid script.gd" id="2_7vvte"]
+[ext_resource type="Script" uid="uid://c15j3w7xb5156" path="res://scenes/levels/level 1/grid 1 script.gd" id="2_7vvte"]
+[ext_resource type="Texture2D" uid="uid://brdhv4tcby5e0" path="res://assets/background/level 1 grid bg.png" id="4_rmw0i"]
 
 [node name="Level 1" type="Node2D"]
 script = ExtResource("1_7mql6")
 
 [node name="level 1 bg" type="Sprite2D" parent="."]
-position = Vector2(262, 479.5)
-scale = Vector2(3.27523, 2.51157)
+position = Vector2(262.984, 479.5)
+scale = Vector2(3.28674, 2.51157)
 texture = ExtResource("1_wmhn2")
 
-[node name="Pause Button" type="Button" parent="."]
+[node name="Pause Button 1" type="Button" parent="."]
 offset_left = 386.0
 offset_top = -1.0
 offset_right = 537.0
 offset_bottom = 62.0
 text = "pause button"
 
-[node name="grid script" type="Node2D" parent="."]
+[node name="grid 1 bg" type="Sprite2D" parent="."]
+position = Vector2(272, 420.077)
+scale = Vector2(2.21053, 2.06025)
+texture = ExtResource("4_rmw0i")
+
+[node name="grid 1 script" type="Node2D" parent="."]
 script = ExtResource("2_7vvte")
 width = 9
-height = 9
-x_start = 64
-y_start = 800
+height = 8
+x_start = 43
+y_start = 650
 offset = 64
 
-[connection signal="button_down" from="Pause Button" to="." method="_on_button_button_down"]
+[connection signal="button_down" from="Pause Button 1" to="." method="_on_button_button_down"]
