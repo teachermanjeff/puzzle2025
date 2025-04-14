@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://djoyxgkcp4rn4"]
+[gd_scene load_steps=11 format=3 uid="uid://djoyxgkcp4rn4"]
 
 [ext_resource type="Script" uid="uid://ccbk2ghaf76h7" path="res://scenes/levels/level 1/level_1.gd" id="1_7mql6"]
 [ext_resource type="Texture2D" uid="uid://cfij4iitjt6pv" path="res://assets/background/level 1 bg.png" id="1_wmhn2"]
@@ -16,6 +16,21 @@ animations = [{
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_m2tdy")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cpvl0"]
+atlas = ExtResource("5_cpvl0")
+region = Rect2(0, 0, 170, 51)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_k5rfc"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cpvl0")
 }],
 "loop": true,
 "name": &"default",
@@ -65,5 +80,10 @@ theme_override_font_sizes/font_size = 30
 text = "Level 1"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="collection of gems(1)" type="AnimatedSprite2D" parent="."]
+position = Vector2(444.75, 746.5)
+scale = Vector2(0.885294, 1.78431)
+sprite_frames = SubResource("SpriteFrames_k5rfc")
 
 [connection signal="button_down" from="Pause Button 1" to="." method="_on_button_button_down"]

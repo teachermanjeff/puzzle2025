@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://v85y54t2rmwj"]
+[gd_scene load_steps=11 format=3 uid="uid://v85y54t2rmwj"]
 
 [ext_resource type="Texture2D" uid="uid://c7knsgkrc7oif" path="res://assets/background/level 2 bg.png" id="1_mi4ay"]
 [ext_resource type="Script" uid="uid://df0liy5tyi61k" path="res://scenes/levels/level 2/level_2.gd" id="1_wmiuw"]
@@ -16,6 +16,21 @@ animations = [{
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_bs36w")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4ejoj"]
+atlas = ExtResource("5_4ejoj")
+region = Rect2(0, 0, 170, 51)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_kt7cp"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4ejoj")
 }],
 "loop": true,
 "name": &"default",
@@ -64,5 +79,10 @@ theme_override_fonts/font = ExtResource("6_kt7cp")
 theme_override_font_sizes/font_size = 30
 text = "Level 2"
 horizontal_alignment = 1
+
+[node name="collection of gems(2)" type="AnimatedSprite2D" parent="."]
+position = Vector2(444.75, 746.5)
+scale = Vector2(0.885, 1.784)
+sprite_frames = SubResource("SpriteFrames_kt7cp")
 
 [connection signal="button_down" from="Pause Button 2" to="." method="_on_button_button_down"]
