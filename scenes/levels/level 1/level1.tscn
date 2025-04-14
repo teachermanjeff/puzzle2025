@@ -1,8 +1,9 @@
-[gd_scene load_steps=15 format=3 uid="uid://djoyxgkcp4rn4"]
+[gd_scene load_steps=16 format=3 uid="uid://djoyxgkcp4rn4"]
 
 [ext_resource type="Script" uid="uid://ccbk2ghaf76h7" path="res://scenes/levels/level 1/level_1.gd" id="1_7mql6"]
 [ext_resource type="Texture2D" uid="uid://cfij4iitjt6pv" path="res://assets/background/level 1 bg.png" id="1_wmhn2"]
 [ext_resource type="Script" uid="uid://c15j3w7xb5156" path="res://scenes/levels/level 1/grid 1 script.gd" id="2_7vvte"]
+[ext_resource type="Script" uid="uid://jfklcya58er0" path="res://scenes/levels/level 1/movements_countdown.gd" id="3_6aeqc"]
 [ext_resource type="Texture2D" uid="uid://brdhv4tcby5e0" path="res://assets/background/level 1 grid bg.png" id="4_rmw0i"]
 [ext_resource type="Texture2D" uid="uid://5ehnk5tfff0l" path="res://assets/Game Sprites/kenney_ui-pack-rpg-expansion/Spritesheet/uipack_rpg_sheet.png" id="5_cpvl0"]
 [ext_resource type="FontFile" uid="uid://drc3f4b74p0dt" path="res://Fonts/alagard/alagard.ttf" id="6_k5rfc"]
@@ -68,6 +69,17 @@ offset_top = -1.0
 offset_right = 537.0
 offset_bottom = 62.0
 text = "pause button"
+
+[node name="Movements-CD-L1" type="Label" parent="Pause Button 1"]
+layout_mode = 0
+offset_left = -184.0
+offset_top = 14.0
+offset_right = -44.0
+offset_bottom = 81.0
+text = "30"
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("3_6aeqc")
 
 [node name="grid 1 bg" type="Sprite2D" parent="."]
 position = Vector2(272, 420.077)

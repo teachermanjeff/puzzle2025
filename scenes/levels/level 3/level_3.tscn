@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://mrkdxqm8sw2x"]
+[gd_scene load_steps=12 format=3 uid="uid://mrkdxqm8sw2x"]
 
 [ext_resource type="Script" uid="uid://ce5sdn60b2tsi" path="res://scenes/levels/level 3/level_3.gd" id="1_i6lnk"]
 [ext_resource type="Texture2D" uid="uid://bjq5oghph4bwx" path="res://assets/background/level 3 bg.png" id="1_vkd0v"]
@@ -6,6 +6,7 @@
 [ext_resource type="Script" uid="uid://cyqikc8neafmn" path="res://scenes/levels/level 3/grid_3_script.gd" id="4_xex88"]
 [ext_resource type="Texture2D" uid="uid://5ehnk5tfff0l" path="res://assets/Game Sprites/kenney_ui-pack-rpg-expansion/Spritesheet/uipack_rpg_sheet.png" id="5_iyurd"]
 [ext_resource type="FontFile" uid="uid://drc3f4b74p0dt" path="res://Fonts/alagard/alagard.ttf" id="6_g04qi"]
+[ext_resource type="Script" uid="uid://cr2p8m2kg2w0" path="res://scenes/levels/level 3/label.gd" id="7_g04qi"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ecl8f"]
 atlas = ExtResource("5_iyurd")
@@ -83,5 +84,15 @@ horizontal_alignment = 1
 position = Vector2(444.75, 746.5)
 scale = Vector2(0.885, 1.784)
 sprite_frames = SubResource("SpriteFrames_g04qi")
+
+[node name="movements-CD-L3" type="Label" parent="."]
+offset_left = 193.0
+offset_top = 25.0
+offset_right = 316.0
+offset_bottom = 77.0
+text = "10"
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("7_g04qi")
 
 [connection signal="button_down" from="Pause Button 3" to="." method="_on_button_button_down"]
