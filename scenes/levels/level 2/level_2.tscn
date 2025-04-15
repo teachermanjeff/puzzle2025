@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://v85y54t2rmwj"]
+[gd_scene load_steps=12 format=3 uid="uid://v85y54t2rmwj"]
 
 [ext_resource type="Texture2D" uid="uid://c7knsgkrc7oif" path="res://assets/background/level 2 bg.png" id="1_mi4ay"]
 [ext_resource type="Script" uid="uid://df0liy5tyi61k" path="res://scenes/levels/level 2/level_2.gd" id="1_wmiuw"]
@@ -6,6 +6,7 @@
 [ext_resource type="Script" uid="uid://d3hoyjmpfy6k5" path="res://scenes/levels/level 2/grid_2_script.gd" id="4_onheu"]
 [ext_resource type="Texture2D" uid="uid://5ehnk5tfff0l" path="res://assets/Game Sprites/kenney_ui-pack-rpg-expansion/Spritesheet/uipack_rpg_sheet.png" id="5_4ejoj"]
 [ext_resource type="FontFile" uid="uid://drc3f4b74p0dt" path="res://Fonts/alagard/alagard.ttf" id="6_kt7cp"]
+[ext_resource type="Script" uid="uid://dng85xrtw3gmf" path="res://scenes/levels/level 2/label.gd" id="7_kt7cp"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_bs36w"]
 atlas = ExtResource("5_4ejoj")
@@ -16,6 +17,21 @@ animations = [{
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_bs36w")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4ejoj"]
+atlas = ExtResource("5_4ejoj")
+region = Rect2(0, 0, 170, 51)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_kt7cp"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4ejoj")
 }],
 "loop": true,
 "name": &"default",
@@ -64,5 +80,20 @@ theme_override_fonts/font = ExtResource("6_kt7cp")
 theme_override_font_sizes/font_size = 30
 text = "Level 2"
 horizontal_alignment = 1
+
+[node name="collection of gems(2)" type="AnimatedSprite2D" parent="."]
+position = Vector2(444.75, 746.5)
+scale = Vector2(0.885, 1.784)
+sprite_frames = SubResource("SpriteFrames_kt7cp")
+
+[node name="movements-CD-L2" type="Label" parent="."]
+offset_left = 198.0
+offset_top = 22.0
+offset_right = 338.0
+offset_bottom = 86.0
+text = "20"
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("7_kt7cp")
 
 [connection signal="button_down" from="Pause Button 2" to="." method="_on_button_button_down"]
