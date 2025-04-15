@@ -1,8 +1,9 @@
-[gd_scene load_steps=15 format=3 uid="uid://djoyxgkcp4rn4"]
+[gd_scene load_steps=16 format=3 uid="uid://djoyxgkcp4rn4"]
 
 [ext_resource type="Script" uid="uid://ccbk2ghaf76h7" path="res://scenes/levels/level 1/level_1.gd" id="1_7mql6"]
 [ext_resource type="Texture2D" uid="uid://cfij4iitjt6pv" path="res://assets/background/level 1 bg.png" id="1_wmhn2"]
 [ext_resource type="Script" uid="uid://c15j3w7xb5156" path="res://scenes/levels/level 1/grid 1 script.gd" id="2_7vvte"]
+[ext_resource type="Script" uid="uid://jfklcya58er0" path="res://scenes/levels/level 1/movements_countdown.gd" id="3_6aeqc"]
 [ext_resource type="Texture2D" uid="uid://brdhv4tcby5e0" path="res://assets/background/level 1 grid bg.png" id="4_rmw0i"]
 [ext_resource type="Texture2D" uid="uid://5ehnk5tfff0l" path="res://assets/Game Sprites/kenney_ui-pack-rpg-expansion/Spritesheet/uipack_rpg_sheet.png" id="5_cpvl0"]
 [ext_resource type="FontFile" uid="uid://drc3f4b74p0dt" path="res://Fonts/alagard/alagard.ttf" id="6_k5rfc"]
@@ -69,6 +70,17 @@ offset_right = 537.0
 offset_bottom = 62.0
 text = "pause button"
 
+[node name="Movements-CD-L1" type="Label" parent="Pause Button 1"]
+layout_mode = 0
+offset_left = -184.0
+offset_top = 14.0
+offset_right = -44.0
+offset_bottom = 81.0
+text = "30"
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("3_6aeqc")
+
 [node name="grid 1 bg" type="Sprite2D" parent="."]
 position = Vector2(272, 420.077)
 scale = Vector2(2.21053, 2.06025)
@@ -100,25 +112,36 @@ vertical_alignment = 1
 
 [node name="collection of gems (parent 1)" type="Node2D" parent="."]
 
-[node name="collection of gems(1)" type="AnimatedSprite2D" parent="collection of gems (parent 1)"]
-position = Vector2(473, 767)
-scale = Vector2(0.564706, 2.5098)
+[node name="collection of gems(1) bg" type="AnimatedSprite2D" parent="collection of gems (parent 1)"]
+position = Vector2(434, 767)
+scale = Vector2(1.02353, 2.5098)
 sprite_frames = SubResource("SpriteFrames_k5rfc")
 
-[node name="blue gem pic" type="AnimatedSprite2D" parent="collection of gems (parent 1)"]
-position = Vector2(473, 767)
+[node name="blue gem pic (1)" type="AnimatedSprite2D" parent="collection of gems (parent 1)"]
+position = Vector2(383, 768)
 scale = Vector2(1.71211, 1.3723)
 sprite_frames = SubResource("SpriteFrames_q643l")
 
-[node name="collection title" type="Label" parent="collection of gems (parent 1)"]
-offset_left = 427.824
-offset_top = 704.255
-offset_right = 496.824
-offset_bottom = 723.255
+[node name="collection title (1)" type="Label" parent="collection of gems (parent 1)"]
+offset_left = 350.0
+offset_top = 701.0
+offset_right = 522.0
+offset_bottom = 749.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("8_6aeqc")
-theme_override_font_sizes/font_size = 12
+theme_override_font_sizes/font_size = 30
 text = "collect 5 gems"
 horizontal_alignment = 1
+
+[node name="score" type="Label" parent="collection of gems (parent 1)"]
+offset_left = 394.0
+offset_top = 743.0
+offset_right = 479.0
+offset_bottom = 795.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 25
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [connection signal="button_down" from="Pause Button 1" to="." method="_on_button_button_down"]
