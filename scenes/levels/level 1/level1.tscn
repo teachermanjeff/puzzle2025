@@ -112,25 +112,36 @@ vertical_alignment = 1
 
 [node name="collection of gems (parent 1)" type="Node2D" parent="."]
 
-[node name="collection of gems(1)" type="AnimatedSprite2D" parent="collection of gems (parent 1)"]
-position = Vector2(473, 767)
-scale = Vector2(0.564706, 2.5098)
+[node name="collection of gems(1) bg" type="AnimatedSprite2D" parent="collection of gems (parent 1)"]
+position = Vector2(434, 767)
+scale = Vector2(1.02353, 2.5098)
 sprite_frames = SubResource("SpriteFrames_k5rfc")
 
-[node name="blue gem pic" type="AnimatedSprite2D" parent="collection of gems (parent 1)"]
-position = Vector2(473, 767)
+[node name="blue gem pic (1)" type="AnimatedSprite2D" parent="collection of gems (parent 1)"]
+position = Vector2(383, 768)
 scale = Vector2(1.71211, 1.3723)
 sprite_frames = SubResource("SpriteFrames_q643l")
 
-[node name="collection title" type="Label" parent="collection of gems (parent 1)"]
-offset_left = 424.0
-offset_top = 704.0
-offset_right = 603.0
-offset_bottom = 799.0
+[node name="collection title (1)" type="Label" parent="collection of gems (parent 1)"]
+offset_left = 350.0
+offset_top = 701.0
+offset_right = 522.0
+offset_bottom = 749.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("8_6aeqc")
-theme_override_font_sizes/font_size = 31
+theme_override_font_sizes/font_size = 30
 text = "collect 5 gems"
 horizontal_alignment = 1
+
+[node name="score" type="Label" parent="collection of gems (parent 1)"]
+offset_left = 394.0
+offset_top = 743.0
+offset_right = 479.0
+offset_bottom = 795.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 25
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [connection signal="button_down" from="Pause Button 1" to="." method="_on_button_button_down"]
