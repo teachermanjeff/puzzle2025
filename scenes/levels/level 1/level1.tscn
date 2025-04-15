@@ -123,13 +123,13 @@ scale = Vector2(1.71211, 1.3723)
 sprite_frames = SubResource("SpriteFrames_q643l")
 
 [node name="collection title" type="Label" parent="collection of gems (parent 1)"]
-offset_left = 427.824
-offset_top = 704.255
-offset_right = 496.824
-offset_bottom = 723.255
+offset_left = 424.0
+offset_top = 704.0
+offset_right = 603.0
+offset_bottom = 799.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("8_6aeqc")
-theme_override_font_sizes/font_size = 12
+theme_override_font_sizes/font_size = 31
 text = "collect 5 gems"
 horizontal_alignment = 1
 
