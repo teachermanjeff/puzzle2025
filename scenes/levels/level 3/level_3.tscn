@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://mrkdxqm8sw2x"]
+[gd_scene load_steps=21 format=3 uid="uid://mrkdxqm8sw2x"]
 
 [ext_resource type="Script" uid="uid://ce5sdn60b2tsi" path="res://scenes/levels/level 3/level_3.gd" id="1_i6lnk"]
 [ext_resource type="Texture2D" uid="uid://bjq5oghph4bwx" path="res://assets/background/level 3 bg.png" id="1_vkd0v"]
@@ -7,6 +7,9 @@
 [ext_resource type="Texture2D" uid="uid://5ehnk5tfff0l" path="res://assets/Game Sprites/kenney_ui-pack-rpg-expansion/Spritesheet/uipack_rpg_sheet.png" id="5_iyurd"]
 [ext_resource type="FontFile" uid="uid://drc3f4b74p0dt" path="res://Fonts/alagard/alagard.ttf" id="6_g04qi"]
 [ext_resource type="Script" uid="uid://cr2p8m2kg2w0" path="res://scenes/levels/level 3/label.gd" id="7_g04qi"]
+[ext_resource type="Texture2D" uid="uid://lja7dmq5vmh1" path="res://assets/Game Sprites/Pixel Art Gem Pack - Animated/Pixel Art Gem Pack - Animated/GEM 1/GEM 1 - PURPLE - Spritesheet.png" id="8_16ck4"]
+[ext_resource type="Texture2D" uid="uid://5ygb3685d6jp" path="res://assets/Game Sprites/Pixel Art Gem Pack - Animated/Pixel Art Gem Pack - Animated/GEM 1/GEM 1 - GOLD - Spritesheet.png" id="9_ioiww"]
+[ext_resource type="Texture2D" uid="uid://qj3uuaskmk0u" path="res://assets/Game Sprites/Pixel Art Gem Pack - Animated/Pixel Art Gem Pack - Animated/GEM 1/GEM 1 - BLUE - Spritesheet.png" id="10_3uo3b"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ecl8f"]
 atlas = ExtResource("5_iyurd")
@@ -32,6 +35,51 @@ animations = [{
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_iyurd")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hog8a"]
+atlas = ExtResource("8_16ck4")
+region = Rect2(162, 0, 18, 30)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_8rk8s"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hog8a")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o1jg3"]
+atlas = ExtResource("9_ioiww")
+region = Rect2(162, 0, 18, 30)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_46quj"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o1jg3")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y3xtp"]
+atlas = ExtResource("10_3uo3b")
+region = Rect2(144, 0, 18, 30)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_b060x"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y3xtp")
 }],
 "loop": true,
 "name": &"default",
@@ -80,11 +128,6 @@ theme_override_font_sizes/font_size = 30
 text = "Level 3"
 horizontal_alignment = 1
 
-[node name="collection of gems(3)" type="AnimatedSprite2D" parent="."]
-position = Vector2(444.75, 746.5)
-scale = Vector2(0.885, 1.784)
-sprite_frames = SubResource("SpriteFrames_g04qi")
-
 [node name="movements-CD-L3" type="Label" parent="."]
 offset_left = 193.0
 offset_top = 25.0
@@ -94,5 +137,73 @@ text = "10"
 horizontal_alignment = 1
 vertical_alignment = 1
 script = ExtResource("7_g04qi")
+
+[node name="collection of gems (parent 3)" type="Node2D" parent="."]
+
+[node name="collection of gems(3)" type="AnimatedSprite2D" parent="collection of gems (parent 3)"]
+position = Vector2(400, 854.5)
+scale = Vector2(1.377, 3.90196)
+sprite_frames = SubResource("SpriteFrames_g04qi")
+
+[node name="purple gem pic" type="AnimatedSprite2D" parent="collection of gems (parent 3)"]
+position = Vector2(318, 809)
+scale = Vector2(1.712, 1.372)
+sprite_frames = SubResource("SpriteFrames_8rk8s")
+
+[node name="yellow gem pic" type="AnimatedSprite2D" parent="collection of gems (parent 3)"]
+position = Vector2(318, 854)
+scale = Vector2(1.712, 1.372)
+sprite_frames = SubResource("SpriteFrames_46quj")
+
+[node name="blue gem pic (level 3)" type="AnimatedSprite2D" parent="collection of gems (parent 3)"]
+position = Vector2(319, 898)
+scale = Vector2(1.712, 1.372)
+sprite_frames = SubResource("SpriteFrames_b060x")
+
+[node name="collection title (3)" type="Label" parent="collection of gems (parent 3)"]
+offset_left = 288.0
+offset_top = 762.0
+offset_right = 512.0
+offset_bottom = 786.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.65098, 0.65098, 0.65098, 1)
+theme_override_constants/shadow_offset_y = 4
+theme_override_fonts/font = ExtResource("6_g04qi")
+theme_override_font_sizes/font_size = 25
+text = "Collect 5 gems each"
+horizontal_alignment = 1
+
+[node name="score purple (3)" type="Label" parent="collection of gems (parent 3)"]
+offset_left = 339.0
+offset_top = 790.0
+offset_right = 403.0
+offset_bottom = 825.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 25
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="score yellow (3)" type="Label" parent="collection of gems (parent 3)"]
+offset_left = 336.0
+offset_top = 833.0
+offset_right = 407.0
+offset_bottom = 868.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 25
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="score blue (3)" type="Label" parent="collection of gems (parent 3)"]
+offset_left = 341.0
+offset_top = 877.0
+offset_right = 399.0
+offset_bottom = 912.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 25
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [connection signal="button_down" from="Pause Button 3" to="." method="_on_button_button_down"]

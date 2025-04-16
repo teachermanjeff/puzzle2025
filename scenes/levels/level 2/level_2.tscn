@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://v85y54t2rmwj"]
+[gd_scene load_steps=18 format=3 uid="uid://v85y54t2rmwj"]
 
 [ext_resource type="Texture2D" uid="uid://c7knsgkrc7oif" path="res://assets/background/level 2 bg.png" id="1_mi4ay"]
 [ext_resource type="Script" uid="uid://df0liy5tyi61k" path="res://scenes/levels/level 2/level_2.gd" id="1_wmiuw"]
@@ -7,6 +7,8 @@
 [ext_resource type="Texture2D" uid="uid://5ehnk5tfff0l" path="res://assets/Game Sprites/kenney_ui-pack-rpg-expansion/Spritesheet/uipack_rpg_sheet.png" id="5_4ejoj"]
 [ext_resource type="FontFile" uid="uid://drc3f4b74p0dt" path="res://Fonts/alagard/alagard.ttf" id="6_kt7cp"]
 [ext_resource type="Script" uid="uid://dng85xrtw3gmf" path="res://scenes/levels/level 2/label.gd" id="7_kt7cp"]
+[ext_resource type="Texture2D" uid="uid://w5uj0c1q8lo6" path="res://assets/Game Sprites/Pixel Art Gem Pack - Animated/Pixel Art Gem Pack - Animated/GEM 1/GEM 1 - LIGHT GREEN - Spritesheet.png" id="8_ge2gm"]
+[ext_resource type="Texture2D" uid="uid://dvg4e4s75aqs3" path="res://assets/Game Sprites/Pixel Art Gem Pack - Animated/Pixel Art Gem Pack - Animated/GEM 1/GEM 1 - RED - Spritesheet.png" id="9_1dct4"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_bs36w"]
 atlas = ExtResource("5_4ejoj")
@@ -32,6 +34,36 @@ animations = [{
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_4ejoj")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3xd55"]
+atlas = ExtResource("8_ge2gm")
+region = Rect2(0, 0, 18, 30)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_kkeqq"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3xd55")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4xblw"]
+atlas = ExtResource("9_1dct4")
+region = Rect2(0, 0, 18, 30)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_tn6ht"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4xblw")
 }],
 "loop": true,
 "name": &"default",
@@ -81,11 +113,6 @@ theme_override_font_sizes/font_size = 30
 text = "Level 2"
 horizontal_alignment = 1
 
-[node name="collection of gems(2)" type="AnimatedSprite2D" parent="."]
-position = Vector2(444.75, 746.5)
-scale = Vector2(0.885, 1.784)
-sprite_frames = SubResource("SpriteFrames_kt7cp")
-
 [node name="movements-CD-L2" type="Label" parent="."]
 offset_left = 198.0
 offset_top = 22.0
@@ -95,5 +122,57 @@ text = "20"
 horizontal_alignment = 1
 vertical_alignment = 1
 script = ExtResource("7_kt7cp")
+
+[node name="collection of gems (parent 2)" type="Node2D" parent="."]
+
+[node name="collection of gems(2)" type="AnimatedSprite2D" parent="collection of gems (parent 2)"]
+position = Vector2(402, 797.497)
+scale = Vector2(1.35294, 3.70598)
+sprite_frames = SubResource("SpriteFrames_kt7cp")
+
+[node name="green gem pic" type="AnimatedSprite2D" parent="collection of gems (parent 2)"]
+position = Vector2(338, 824)
+scale = Vector2(1.712, 1.372)
+sprite_frames = SubResource("SpriteFrames_kkeqq")
+
+[node name="red gem pic" type="AnimatedSprite2D" parent="collection of gems (parent 2)"]
+position = Vector2(339, 774)
+scale = Vector2(1.712, 1.372)
+sprite_frames = SubResource("SpriteFrames_tn6ht")
+
+[node name="collection title (2)" type="Label" parent="collection of gems (parent 2)"]
+offset_left = 291.0
+offset_top = 719.0
+offset_right = 515.0
+offset_bottom = 749.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.65098, 0.65098, 0.65098, 1)
+theme_override_constants/shadow_offset_y = 4
+theme_override_fonts/font = ExtResource("6_kt7cp")
+theme_override_font_sizes/font_size = 25
+text = "Collect 5 gems each"
+horizontal_alignment = 1
+
+[node name="score red (2)" type="Label" parent="collection of gems (parent 2)"]
+offset_left = 368.0
+offset_top = 753.0
+offset_right = 455.0
+offset_bottom = 797.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 25
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="score green (2)" type="Label" parent="collection of gems (parent 2)"]
+offset_left = 374.0
+offset_top = 799.0
+offset_right = 448.0
+offset_bottom = 842.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 25
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [connection signal="button_down" from="Pause Button 2" to="." method="_on_button_button_down"]
