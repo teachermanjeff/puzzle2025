@@ -1,3 +1,5 @@
+extends Button
+
 @export var width: int
 @export var height: int
 @export var x_start: int
@@ -12,8 +14,8 @@ var gems = [
 	preload("res://scenes/gem scenes/red_gem.tscn"),
 	preload("res://scenes/gem scenes/purple_gem.tscn")
 ]
-
-func _on_button_down() -> void:
+	
+func _on_shuffle_Button_pressed() -> void:
 	randomize()
 	all_gems = make_2D_array()
 	spawn_gems()
@@ -28,17 +30,12 @@ func make_2D_array() -> Array:
 	return array
 
 func spawn_gems():
-	var parent_node = get_parent()
-	
-	if parent_node == null:
-		print("Parent node is not found. Trying to add gems to the root.")
-		parent_node = get_tree().root  # Or specify a different root if needed
 		
 	for j in range(height):
 		for i in range(width):
 			var rand = floor(randf_range(0, gems.size()))
 			var piece = gems[rand].instantiate() 
-			parent_node.add_child(piece) 
+			get_parent().add_child(piece) 
 			piece.position = grid_to_pixel(i, j) 
 			all_gems[i][j] = piece
 
@@ -64,4 +61,7 @@ func shuffle_gems():
 				var piece = gem_instances[index] 
 				piece.position = grid_to_pixel(i, j)  
 				index += 1
-							
+
+
+func _on_pressed() -> void:
+	pass # Replace with function body.

@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://djoyxgkcp4rn4"]
+[gd_scene load_steps=15 format=3 uid="uid://djoyxgkcp4rn4"]
 
 [ext_resource type="Script" uid="uid://ccbk2ghaf76h7" path="res://scenes/levels/level 1/level_1.gd" id="1_7mql6"]
 [ext_resource type="Texture2D" uid="uid://cfij4iitjt6pv" path="res://assets/background/level 1 bg.png" id="1_wmhn2"]
@@ -8,7 +8,6 @@
 [ext_resource type="Texture2D" uid="uid://5ehnk5tfff0l" path="res://assets/Game Sprites/kenney_ui-pack-rpg-expansion/Spritesheet/uipack_rpg_sheet.png" id="5_cpvl0"]
 [ext_resource type="FontFile" uid="uid://drc3f4b74p0dt" path="res://Fonts/alagard/alagard.ttf" id="6_k5rfc"]
 [ext_resource type="Texture2D" uid="uid://qj3uuaskmk0u" path="res://assets/Game Sprites/Pixel Art Gem Pack - Animated/Pixel Art Gem Pack - Animated/GEM 1/GEM 1 - BLUE - Spritesheet.png" id="7_m2tdy"]
-[ext_resource type="Script" uid="uid://clev8qj37uqv2" path="res://scenes/levels/level 1/shuffle_button.gd" id="9_6aeqc"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_m2tdy"]
 atlas = ExtResource("5_cpvl0")
@@ -151,12 +150,6 @@ offset_top = 697.0
 offset_right = 140.0
 offset_bottom = 749.0
 text = "Shuffle"
-script = ExtResource("9_6aeqc")
-width = null
-height = null
-x_start = null
-y_start = null
-offset = null
 
 [connection signal="button_down" from="Pause Button 1" to="." method="_on_button_button_down"]
-[connection signal="button_down" from="shuffle Button" to="shuffle Button" method="_on_button_down"]
+[connection signal="pressed" from="shuffle Button" to="grid 1 script" method="_on_shuffle_button_pressed"]
