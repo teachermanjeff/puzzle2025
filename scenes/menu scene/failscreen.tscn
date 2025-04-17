@@ -81,6 +81,3 @@ offset_bottom = 581.0
 theme_override_fonts/font = ExtResource("2_08iva")
 theme_override_font_sizes/font_size = 34
 text = "RESTART"
-
-[connection signal="button_down" from="contd" to="." method="_on_contd_button_down"]
-[connection signal="button_down" from="instruct but" to="." method="_on_instruct_but_button_down"]
