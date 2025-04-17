@@ -1,6 +1,5 @@
-[gd_scene load_steps=4 format=3 uid="uid://cujih0ln5uwtk"]
+[gd_scene load_steps=3 format=3 uid="uid://cujih0ln5uwtk"]
 
-[ext_resource type="Script" uid="uid://dexj3jvdwaivp" path="res://scenes/menu scene/failscreen.gd" id="1_ehxyi"]
 [ext_resource type="Texture2D" uid="uid://cahp26fkmop6w" path="res://assets/background/menu image.png" id="2_pd04t"]
 [ext_resource type="FontFile" uid="uid://drc3f4b74p0dt" path="res://Fonts/alagard/alagard.ttf" id="3_2gb7w"]
 
@@ -13,7 +12,6 @@ offset_right = -540.0
 offset_bottom = -960.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_ehxyi")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 0

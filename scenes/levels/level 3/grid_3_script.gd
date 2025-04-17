@@ -40,3 +40,6 @@ func grid_to_pixel(column, row):
 	var new_x = x_start + offset * column
 	var new_y = y_start + -offset * row
 	return Vector2(new_x, new_y)
+
+func _on_shuffle_button_pressed() -> void:
+	_ready()

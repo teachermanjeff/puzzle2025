@@ -70,16 +70,16 @@ flat = true
 script = ExtResource("3_ius28")
 
 [node name="Story" type="Label" parent="."]
-offset_left = 16.0
+offset_left = 2.0
 offset_top = 142.0
 offset_right = 543.0
 offset_bottom = 471.0
 theme_override_colors/font_color = Color(0.614495, 0.982974, 0.85683, 1)
 theme_override_fonts/font = ExtResource("4_ci4vx")
 theme_override_font_sizes/font_size = 50
-text = "You are trapped inside of 
-a cave and need to 
-collect the gems to escape 
+text = "You are trapped inside a
+cave and need to collect 
+the gems to escape 
 from the cave."
 horizontal_alignment = 1
 

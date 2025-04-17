@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://djoyxgkcp4rn4"]
+[gd_scene load_steps=19 format=3 uid="uid://djoyxgkcp4rn4"]
 
 [ext_resource type="Script" uid="uid://ccbk2ghaf76h7" path="res://scenes/levels/level 1/level_1.gd" id="1_7mql6"]
 [ext_resource type="Texture2D" uid="uid://cfij4iitjt6pv" path="res://assets/background/level 1 bg.png" id="1_wmhn2"]
@@ -8,6 +8,8 @@
 [ext_resource type="Texture2D" uid="uid://5ehnk5tfff0l" path="res://assets/Game Sprites/kenney_ui-pack-rpg-expansion/Spritesheet/uipack_rpg_sheet.png" id="5_cpvl0"]
 [ext_resource type="FontFile" uid="uid://drc3f4b74p0dt" path="res://Fonts/alagard/alagard.ttf" id="6_k5rfc"]
 [ext_resource type="Texture2D" uid="uid://qj3uuaskmk0u" path="res://assets/Game Sprites/Pixel Art Gem Pack - Animated/Pixel Art Gem Pack - Animated/GEM 1/GEM 1 - BLUE - Spritesheet.png" id="7_m2tdy"]
+[ext_resource type="Texture2D" uid="uid://f8q2t3ku6q6d" path="res://assets/Game Sprites/kenney_ui-pack-rpg-expansion/PNG/buttonSquare_grey_pressed.png" id="8_i0byi"]
+[ext_resource type="Texture2D" uid="uid://bqjmdmq20d7v3" path="res://assets/Game Sprites/kenney_ui-pack-rpg-expansion/PNG/buttonRound_grey.png" id="9_6aeqc"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_m2tdy"]
 atlas = ExtResource("5_cpvl0")
@@ -24,15 +26,15 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_cpvl0"]
-atlas = ExtResource("5_cpvl0")
-region = Rect2(0, 0, 170, 51)
+[sub_resource type="AtlasTexture" id="AtlasTexture_cdfij"]
+atlas = ExtResource("8_i0byi")
+region = Rect2(0, 0, 45, 45)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_k5rfc"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_cpvl0")
+"texture": SubResource("AtlasTexture_cdfij")
 }],
 "loop": true,
 "name": &"default",
@@ -48,6 +50,21 @@ animations = [{
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_i0byi")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q643l"]
+atlas = ExtResource("9_6aeqc")
+region = Rect2(0, 0, 35, 38)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_cdfij"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q643l")
 }],
 "loop": true,
 "name": &"default",
@@ -111,8 +128,8 @@ script = ExtResource("3_6aeqc")
 [node name="collection of gems (parent 1)" type="Node2D" parent="."]
 
 [node name="collection of gems(1) bg" type="AnimatedSprite2D" parent="collection of gems (parent 1)"]
-position = Vector2(434, 767)
-scale = Vector2(1.02353, 2.5098)
+position = Vector2(432.75, 752.265)
+scale = Vector2(3.94445, 2.21045)
 sprite_frames = SubResource("SpriteFrames_k5rfc")
 
 [node name="blue gem pic (1)" type="AnimatedSprite2D" parent="collection of gems (parent 1)"]
@@ -144,12 +161,28 @@ text = "0"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="shuffle Button" type="Button" parent="."]
-offset_left = 20.0
-offset_top = 697.0
-offset_right = 140.0
-offset_bottom = 749.0
+[node name="shuffle Button bg(1)" type="AnimatedSprite2D" parent="."]
+position = Vector2(79.5, 727)
+scale = Vector2(2.71429, 1.78947)
+sprite_frames = SubResource("SpriteFrames_cdfij")
+
+[node name="shuffle Button(1)" type="Button" parent="."]
+offset_left = 41.0
+offset_top = 705.0
+offset_right = 118.0
+offset_bottom = 741.0
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
 text = "Shuffle"
+flat = true
 
 [connection signal="button_down" from="Pause Button 1" to="." method="_on_button_button_down"]
-[connection signal="pressed" from="shuffle Button" to="grid 1 script" method="_on_shuffle_button_pressed"]
+[connection signal="pressed" from="shuffle Button(1)" to="grid 1 script" method="_on_shuffle_button_pressed"]

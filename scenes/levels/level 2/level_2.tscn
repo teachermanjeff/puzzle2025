@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://v85y54t2rmwj"]
+[gd_scene load_steps=22 format=3 uid="uid://v85y54t2rmwj"]
 
 [ext_resource type="Texture2D" uid="uid://c7knsgkrc7oif" path="res://assets/background/level 2 bg.png" id="1_mi4ay"]
 [ext_resource type="Script" uid="uid://df0liy5tyi61k" path="res://scenes/levels/level 2/level_2.gd" id="1_wmiuw"]
@@ -7,8 +7,10 @@
 [ext_resource type="Texture2D" uid="uid://5ehnk5tfff0l" path="res://assets/Game Sprites/kenney_ui-pack-rpg-expansion/Spritesheet/uipack_rpg_sheet.png" id="5_4ejoj"]
 [ext_resource type="FontFile" uid="uid://drc3f4b74p0dt" path="res://Fonts/alagard/alagard.ttf" id="6_kt7cp"]
 [ext_resource type="Script" uid="uid://dng85xrtw3gmf" path="res://scenes/levels/level 2/label.gd" id="7_kt7cp"]
+[ext_resource type="Texture2D" uid="uid://f8q2t3ku6q6d" path="res://assets/Game Sprites/kenney_ui-pack-rpg-expansion/PNG/buttonSquare_grey_pressed.png" id="8_3xd55"]
 [ext_resource type="Texture2D" uid="uid://w5uj0c1q8lo6" path="res://assets/Game Sprites/Pixel Art Gem Pack - Animated/Pixel Art Gem Pack - Animated/GEM 1/GEM 1 - LIGHT GREEN - Spritesheet.png" id="8_ge2gm"]
 [ext_resource type="Texture2D" uid="uid://dvg4e4s75aqs3" path="res://assets/Game Sprites/Pixel Art Gem Pack - Animated/Pixel Art Gem Pack - Animated/GEM 1/GEM 1 - RED - Spritesheet.png" id="9_1dct4"]
+[ext_resource type="Texture2D" uid="uid://bqjmdmq20d7v3" path="res://assets/Game Sprites/kenney_ui-pack-rpg-expansion/PNG/buttonRound_grey.png" id="10_1dct4"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_bs36w"]
 atlas = ExtResource("5_4ejoj")
@@ -25,15 +27,15 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_4ejoj"]
-atlas = ExtResource("5_4ejoj")
-region = Rect2(0, 0, 170, 51)
+[sub_resource type="AtlasTexture" id="AtlasTexture_tn6ht"]
+atlas = ExtResource("8_3xd55")
+region = Rect2(0, 0, 45, 45)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_kt7cp"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_4ejoj")
+"texture": SubResource("AtlasTexture_tn6ht")
 }],
 "loop": true,
 "name": &"default",
@@ -64,6 +66,21 @@ animations = [{
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_4xblw")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kkeqq"]
+atlas = ExtResource("10_1dct4")
+region = Rect2(0, 0, 35, 38)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4xblw"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kkeqq")
 }],
 "loop": true,
 "name": &"default",
@@ -126,8 +143,8 @@ script = ExtResource("7_kt7cp")
 [node name="collection of gems (parent 2)" type="Node2D" parent="."]
 
 [node name="collection of gems(2)" type="AnimatedSprite2D" parent="collection of gems (parent 2)"]
-position = Vector2(402, 797.497)
-scale = Vector2(1.35294, 3.70598)
+position = Vector2(402.25, 781.808)
+scale = Vector2(5.16667, 3.43077)
 sprite_frames = SubResource("SpriteFrames_kt7cp")
 
 [node name="green gem pic" type="AnimatedSprite2D" parent="collection of gems (parent 2)"]
@@ -175,11 +192,28 @@ text = "0"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="shuffle Button" type="Button" parent="."]
-offset_left = 27.0
-offset_top = 705.0
-offset_right = 132.0
-offset_bottom = 755.0
+[node name="shuffle Button bg(2)" type="AnimatedSprite2D" parent="."]
+position = Vector2(81, 740)
+scale = Vector2(2.714, 1.789)
+sprite_frames = SubResource("SpriteFrames_4xblw")
+
+[node name="shuffle Button(2)" type="Button" parent="."]
+offset_left = 30.0
+offset_top = 710.0
+offset_right = 135.0
+offset_bottom = 760.0
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
 text = "Shuffle"
+flat = true
 
 [connection signal="button_down" from="Pause Button 2" to="." method="_on_button_button_down"]
+[connection signal="pressed" from="shuffle Button(2)" to="grid 2 script" method="_on_shuffle_button_pressed"]
