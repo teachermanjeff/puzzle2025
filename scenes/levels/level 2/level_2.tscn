@@ -1,8 +1,9 @@
-[gd_scene load_steps=22 format=3 uid="uid://v85y54t2rmwj"]
+[gd_scene load_steps=25 format=3 uid="uid://v85y54t2rmwj"]
 
 [ext_resource type="Texture2D" uid="uid://c7knsgkrc7oif" path="res://assets/background/level 2 bg.png" id="1_mi4ay"]
 [ext_resource type="Script" uid="uid://df0liy5tyi61k" path="res://scenes/levels/level 2/level_2.gd" id="1_wmiuw"]
 [ext_resource type="Texture2D" uid="uid://bwnu3we6dufmn" path="res://assets/background/level 2 grid bg.png" id="3_huqas"]
+[ext_resource type="Texture2D" uid="uid://bejpkwuqfk1a5" path="res://assets/Game Sprites/kenney_onscreen-controls/Sprites/flat-light/flatLight12.png" id="3_kkeqq"]
 [ext_resource type="Script" uid="uid://d3hoyjmpfy6k5" path="res://scenes/levels/level 2/grid_2_script.gd" id="4_onheu"]
 [ext_resource type="Texture2D" uid="uid://5ehnk5tfff0l" path="res://assets/Game Sprites/kenney_ui-pack-rpg-expansion/Spritesheet/uipack_rpg_sheet.png" id="5_4ejoj"]
 [ext_resource type="FontFile" uid="uid://drc3f4b74p0dt" path="res://Fonts/alagard/alagard.ttf" id="6_kt7cp"]
@@ -11,6 +12,21 @@
 [ext_resource type="Texture2D" uid="uid://w5uj0c1q8lo6" path="res://assets/Game Sprites/Pixel Art Gem Pack - Animated/Pixel Art Gem Pack - Animated/GEM 1/GEM 1 - LIGHT GREEN - Spritesheet.png" id="8_ge2gm"]
 [ext_resource type="Texture2D" uid="uid://dvg4e4s75aqs3" path="res://assets/Game Sprites/Pixel Art Gem Pack - Animated/Pixel Art Gem Pack - Animated/GEM 1/GEM 1 - RED - Spritesheet.png" id="9_1dct4"]
 [ext_resource type="Texture2D" uid="uid://bqjmdmq20d7v3" path="res://assets/Game Sprites/kenney_ui-pack-rpg-expansion/PNG/buttonRound_grey.png" id="10_1dct4"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_if4hn"]
+atlas = ExtResource("3_kkeqq")
+region = Rect2(0, 0, 48, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_thipd"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_if4hn")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_bs36w"]
 atlas = ExtResource("5_4ejoj")
@@ -91,16 +107,20 @@ animations = [{
 script = ExtResource("1_wmiuw")
 
 [node name="level 2 bg" type="Sprite2D" parent="."]
-position = Vector2(269.5, 497.25)
-scale = Vector2(3.15517, 2.5437)
+position = Vector2(269.5, 490)
+scale = Vector2(3.15517, 2.58098)
 texture = ExtResource("1_mi4ay")
 
+[node name="pause bg 2" type="AnimatedSprite2D" parent="."]
+position = Vector2(484, 37)
+sprite_frames = SubResource("SpriteFrames_thipd")
+
 [node name="Pause Button 2" type="Button" parent="."]
-offset_left = 401.0
-offset_top = 5.0
-offset_right = 550.0
-offset_bottom = 59.0
-text = "pause button"
+offset_left = 460.0
+offset_top = 13.0
+offset_right = 509.0
+offset_bottom = 61.0
+flat = true
 
 [node name="grid  2 bg" type="Sprite2D" parent="."]
 position = Vector2(272, 438.5)
