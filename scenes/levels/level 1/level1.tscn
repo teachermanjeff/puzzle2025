@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://djoyxgkcp4rn4"]
+[gd_scene load_steps=25 format=3 uid="uid://djoyxgkcp4rn4"]
 
 [ext_resource type="Script" uid="uid://ccbk2ghaf76h7" path="res://scenes/levels/level 1/level_1.gd" id="1_7mql6"]
 [ext_resource type="Texture2D" uid="uid://cfij4iitjt6pv" path="res://assets/background/level 1 bg.png" id="1_wmhn2"]
@@ -11,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://qj3uuaskmk0u" path="res://assets/Game Sprites/Pixel Art Gem Pack - Animated/Pixel Art Gem Pack - Animated/GEM 1/GEM 1 - BLUE - Spritesheet.png" id="7_m2tdy"]
 [ext_resource type="Texture2D" uid="uid://f8q2t3ku6q6d" path="res://assets/Game Sprites/kenney_ui-pack-rpg-expansion/PNG/buttonSquare_grey_pressed.png" id="8_i0byi"]
 [ext_resource type="Texture2D" uid="uid://bqjmdmq20d7v3" path="res://assets/Game Sprites/kenney_ui-pack-rpg-expansion/PNG/buttonRound_grey.png" id="9_6aeqc"]
+[ext_resource type="Texture2D" uid="uid://dr2fbaoc3buc0" path="res://assets/Game Sprites/kenney_ui-pack-rpg-expansion/PNG/buttonSquare_beige_pressed.png" id="12_cdfij"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ggdaa"]
 atlas = ExtResource("3_q643l")
@@ -87,6 +88,21 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_vwe5i"]
+atlas = ExtResource("12_cdfij")
+region = Rect2(0, 0, 45, 45)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_m1dhb"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vwe5i")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
 [node name="Level 1" type="Node2D"]
 script = ExtResource("1_7mql6")
 
@@ -95,15 +111,20 @@ position = Vector2(262.984, 479.5)
 scale = Vector2(3.28674, 2.51157)
 texture = ExtResource("1_wmhn2")
 
-[node name="pause bg 1" type="AnimatedSprite2D" parent="."]
-position = Vector2(484, 37)
+[node name="Pause button 1" type="Node2D" parent="."]
+position = Vector2(-1.00002, 0)
+scale = Vector2(3.10556, 1.95025)
+
+[node name="pause bg 1" type="AnimatedSprite2D" parent="Pause button 1"]
+position = Vector2(155.528, 21.4324)
+scale = Vector2(0.334637, 0.55979)
 sprite_frames = SubResource("SpriteFrames_vwe5i")
 
-[node name="Pause Button 1" type="Button" parent="."]
-offset_left = 457.0
-offset_top = 11.0
-offset_right = 510.0
-offset_bottom = 62.0
+[node name="Pause Button 1" type="Button" parent="Pause button 1"]
+offset_left = 147.0
+offset_top = 6.0
+offset_right = 163.0
+offset_bottom = 35.0
 flat = true
 
 [node name="grid 1 bg" type="Sprite2D" parent="."]
@@ -181,12 +202,14 @@ text = "0"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="shuffle Button bg(1)" type="AnimatedSprite2D" parent="."]
+[node name="Shuffle button 1" type="Node2D" parent="."]
+
+[node name="shuffle Button bg(1)" type="AnimatedSprite2D" parent="Shuffle button 1"]
 position = Vector2(79.5, 727)
 scale = Vector2(2.71429, 1.78947)
 sprite_frames = SubResource("SpriteFrames_cdfij")
 
-[node name="shuffle Button(1)" type="Button" parent="."]
+[node name="shuffle Button(1)" type="Button" parent="Shuffle button 1"]
 offset_left = 41.0
 offset_top = 705.0
 offset_right = 118.0
@@ -204,5 +227,29 @@ theme_override_font_sizes/font_size = 20
 text = "Shuffle"
 flat = true
 
-[connection signal="button_down" from="Pause Button 1" to="." method="_on_button_button_down"]
-[connection signal="pressed" from="shuffle Button(1)" to="grid 1 script" method="_on_shuffle_button_pressed"]
+[node name="Power-up 1" type="Node2D" parent="."]
+position = Vector2(-2.00002, -9)
+scale = Vector2(3.10556, 1.95025)
+
+[node name="power-up (rand) bg 1" type="AnimatedSprite2D" parent="Power-up 1"]
+position = Vector2(86.5284, 385.879)
+scale = Vector2(1.02639, 0.921599)
+sprite_frames = SubResource("SpriteFrames_m1dhb")
+
+[node name="LB power-up 1" type="Label" parent="."]
+offset_left = 212.0
+offset_top = 718.0
+offset_right = 328.0
+offset_bottom = 769.0
+theme_override_colors/font_color = Color(1, 0.301961, 0.329412, 1)
+theme_override_colors/font_shadow_color = Color(1, 0.905882, 0.890196, 1)
+theme_override_constants/shadow_offset_y = 4
+theme_override_fonts/font = ExtResource("6_k5rfc")
+theme_override_font_sizes/font_size = 25
+text = "You got a 
+Power-up"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="button_down" from="Pause button 1/Pause Button 1" to="." method="_on_button_button_down"]
+[connection signal="pressed" from="Shuffle button 1/shuffle Button(1)" to="grid 1 script" method="_on_shuffle_button_pressed"]

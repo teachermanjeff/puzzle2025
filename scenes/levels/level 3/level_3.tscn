@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://mrkdxqm8sw2x"]
+[gd_scene load_steps=31 format=3 uid="uid://mrkdxqm8sw2x"]
 
 [ext_resource type="Script" uid="uid://ce5sdn60b2tsi" path="res://scenes/levels/level 3/level_3.gd" id="1_i6lnk"]
 [ext_resource type="Texture2D" uid="uid://bjq5oghph4bwx" path="res://assets/background/level 3 bg.png" id="1_vkd0v"]
@@ -13,6 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://5ygb3685d6jp" path="res://assets/Game Sprites/Pixel Art Gem Pack - Animated/Pixel Art Gem Pack - Animated/GEM 1/GEM 1 - GOLD - Spritesheet.png" id="9_ioiww"]
 [ext_resource type="Texture2D" uid="uid://qj3uuaskmk0u" path="res://assets/Game Sprites/Pixel Art Gem Pack - Animated/Pixel Art Gem Pack - Animated/GEM 1/GEM 1 - BLUE - Spritesheet.png" id="10_3uo3b"]
 [ext_resource type="Texture2D" uid="uid://bqjmdmq20d7v3" path="res://assets/Game Sprites/kenney_ui-pack-rpg-expansion/PNG/buttonRound_grey.png" id="11_ioiww"]
+[ext_resource type="Texture2D" uid="uid://dr2fbaoc3buc0" path="res://assets/Game Sprites/kenney_ui-pack-rpg-expansion/PNG/buttonSquare_beige_pressed.png" id="14_8rk8s"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_46quj"]
 atlas = ExtResource("3_hog8a")
@@ -119,6 +120,21 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_b060x"]
+atlas = ExtResource("14_8rk8s")
+region = Rect2(0, 0, 45, 45)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_cyhwt"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b060x")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
 [node name="Level 3" type="Node2D"]
 script = ExtResource("1_i6lnk")
 
@@ -127,11 +143,13 @@ position = Vector2(269.75, 480.5)
 scale = Vector2(3.27576, 2.49615)
 texture = ExtResource("1_vkd0v")
 
-[node name="pause bg 3" type="AnimatedSprite2D" parent="."]
+[node name="Pause button 3" type="Node2D" parent="."]
+
+[node name="pause bg 3" type="AnimatedSprite2D" parent="Pause button 3"]
 position = Vector2(484, 37)
 sprite_frames = SubResource("SpriteFrames_y3xtp")
 
-[node name="Pause Button 3" type="Button" parent="."]
+[node name="Pause Button 3" type="Button" parent="Pause button 3"]
 offset_left = 460.0
 offset_top = 12.0
 offset_right = 509.0
@@ -244,12 +262,14 @@ text = "0"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="shuffle Button bg (3)" type="AnimatedSprite2D" parent="."]
+[node name="Shuffle button 3" type="Node2D" parent="."]
+
+[node name="shuffle Button bg (3)" type="AnimatedSprite2D" parent="Shuffle button 3"]
 position = Vector2(68, 790)
 scale = Vector2(2.714, 1.789)
 sprite_frames = SubResource("SpriteFrames_hog8a")
 
-[node name="shuffle Button(3)" type="Button" parent="."]
+[node name="shuffle Button(3)" type="Button" parent="Shuffle button 3"]
 offset_left = 18.0
 offset_top = 764.0
 offset_right = 117.0
@@ -268,5 +288,27 @@ text = "Shuffle
 "
 flat = true
 
-[connection signal="button_down" from="Pause Button 3" to="." method="_on_button_button_down"]
-[connection signal="pressed" from="shuffle Button(3)" to="grid 3 script" method="_on_shuffle_button_pressed"]
+[node name="Power-up 3" type="Node2D" parent="."]
+
+[node name="power-up (rand) bg 3" type="AnimatedSprite2D" parent="Power-up 3"]
+position = Vector2(207.625, 796.813)
+scale = Vector2(2.78333, 1.74166)
+sprite_frames = SubResource("SpriteFrames_cyhwt")
+
+[node name="LB power-up 3" type="Label" parent="Power-up 3"]
+offset_left = 150.0
+offset_top = 770.0
+offset_right = 266.0
+offset_bottom = 821.0
+theme_override_colors/font_color = Color(1, 0.301961, 0.329412, 1)
+theme_override_colors/font_shadow_color = Color(1, 0.905882, 0.890196, 1)
+theme_override_constants/shadow_offset_y = 4
+theme_override_fonts/font = ExtResource("6_g04qi")
+theme_override_font_sizes/font_size = 25
+text = "You got a 
+Power-up"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="button_down" from="Pause button 3/Pause Button 3" to="." method="_on_button_button_down"]
+[connection signal="pressed" from="Shuffle button 3/shuffle Button(3)" to="grid 3 script" method="_on_shuffle_button_pressed"]

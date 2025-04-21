@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://v85y54t2rmwj"]
+[gd_scene load_steps=29 format=3 uid="uid://v85y54t2rmwj"]
 
 [ext_resource type="Texture2D" uid="uid://c7knsgkrc7oif" path="res://assets/background/level 2 bg.png" id="1_mi4ay"]
 [ext_resource type="Script" uid="uid://df0liy5tyi61k" path="res://scenes/levels/level 2/level_2.gd" id="1_wmiuw"]
@@ -12,6 +12,8 @@
 [ext_resource type="Texture2D" uid="uid://w5uj0c1q8lo6" path="res://assets/Game Sprites/Pixel Art Gem Pack - Animated/Pixel Art Gem Pack - Animated/GEM 1/GEM 1 - LIGHT GREEN - Spritesheet.png" id="8_ge2gm"]
 [ext_resource type="Texture2D" uid="uid://dvg4e4s75aqs3" path="res://assets/Game Sprites/Pixel Art Gem Pack - Animated/Pixel Art Gem Pack - Animated/GEM 1/GEM 1 - RED - Spritesheet.png" id="9_1dct4"]
 [ext_resource type="Texture2D" uid="uid://bqjmdmq20d7v3" path="res://assets/Game Sprites/kenney_ui-pack-rpg-expansion/PNG/buttonRound_grey.png" id="10_1dct4"]
+[ext_resource type="Texture2D" uid="uid://dr2fbaoc3buc0" path="res://assets/Game Sprites/kenney_ui-pack-rpg-expansion/PNG/buttonSquare_beige_pressed.png" id="13_4xblw"]
+[ext_resource type="Script" uid="uid://cqt0xrins683r" path="res://scenes/levels/level 2/power_up_2.gd" id="13_tn6ht"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_if4hn"]
 atlas = ExtResource("3_kkeqq")
@@ -103,6 +105,21 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_thipd"]
+atlas = ExtResource("13_4xblw")
+region = Rect2(0, 0, 45, 45)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_gkqe2"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_thipd")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
 [node name="Level 2" type="Node2D"]
 script = ExtResource("1_wmiuw")
 
@@ -111,11 +128,13 @@ position = Vector2(269.5, 490)
 scale = Vector2(3.15517, 2.58098)
 texture = ExtResource("1_mi4ay")
 
-[node name="pause bg 2" type="AnimatedSprite2D" parent="."]
+[node name="Pause button 2" type="Node2D" parent="."]
+
+[node name="pause bg 2" type="AnimatedSprite2D" parent="Pause button 2"]
 position = Vector2(484, 37)
 sprite_frames = SubResource("SpriteFrames_thipd")
 
-[node name="Pause Button 2" type="Button" parent="."]
+[node name="Pause Button 2" type="Button" parent="Pause button 2"]
 offset_left = 460.0
 offset_top = 13.0
 offset_right = 509.0
@@ -212,12 +231,14 @@ text = "0"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="shuffle Button bg(2)" type="AnimatedSprite2D" parent="."]
+[node name="Shuffle button 2" type="Node2D" parent="."]
+
+[node name="shuffle Button bg(2)" type="AnimatedSprite2D" parent="Shuffle button 2"]
 position = Vector2(81, 740)
 scale = Vector2(2.714, 1.789)
 sprite_frames = SubResource("SpriteFrames_4xblw")
 
-[node name="shuffle Button(2)" type="Button" parent="."]
+[node name="shuffle Button(2)" type="Button" parent="Shuffle button 2"]
 offset_left = 30.0
 offset_top = 710.0
 offset_right = 135.0
@@ -235,5 +256,29 @@ theme_override_font_sizes/font_size = 20
 text = "Shuffle"
 flat = true
 
-[connection signal="button_down" from="Pause Button 2" to="." method="_on_button_button_down"]
-[connection signal="pressed" from="shuffle Button(2)" to="grid 2 script" method="_on_shuffle_button_pressed"]
+[node name="Power-up 2" type="Node2D" parent="."]
+position = Vector2(-2, 7)
+script = ExtResource("13_tn6ht")
+
+[node name="power-up (rand) bg 2" type="AnimatedSprite2D" parent="Power-up 2"]
+position = Vector2(211, 738)
+scale = Vector2(3.06111, 1.64722)
+sprite_frames = SubResource("SpriteFrames_gkqe2")
+
+[node name="LB power-up 2" type="Label" parent="Power-up 2"]
+offset_left = 151.0
+offset_top = 701.0
+offset_right = 267.0
+offset_bottom = 774.0
+theme_override_colors/font_color = Color(1, 0.301961, 0.329412, 1)
+theme_override_colors/font_shadow_color = Color(1, 0.905882, 0.890196, 1)
+theme_override_constants/shadow_offset_y = 4
+theme_override_fonts/font = ExtResource("6_kt7cp")
+theme_override_font_sizes/font_size = 25
+text = "You got a
+Power-up"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="button_down" from="Pause button 2/Pause Button 2" to="." method="_on_button_button_down"]
+[connection signal="pressed" from="Shuffle button 2/shuffle Button(2)" to="grid 2 script" method="_on_shuffle_button_pressed"]
