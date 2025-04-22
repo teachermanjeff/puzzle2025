@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://djoyxgkcp4rn4"]
+[gd_scene load_steps=26 format=3 uid="uid://djoyxgkcp4rn4"]
 
 [ext_resource type="Script" uid="uid://ccbk2ghaf76h7" path="res://scenes/levels/level 1/level_1.gd" id="1_7mql6"]
 [ext_resource type="Texture2D" uid="uid://cfij4iitjt6pv" path="res://assets/background/level 1 bg.png" id="1_wmhn2"]
@@ -12,6 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://f8q2t3ku6q6d" path="res://assets/Game Sprites/kenney_ui-pack-rpg-expansion/PNG/buttonSquare_grey_pressed.png" id="8_i0byi"]
 [ext_resource type="Texture2D" uid="uid://bqjmdmq20d7v3" path="res://assets/Game Sprites/kenney_ui-pack-rpg-expansion/PNG/buttonRound_grey.png" id="9_6aeqc"]
 [ext_resource type="Texture2D" uid="uid://dr2fbaoc3buc0" path="res://assets/Game Sprites/kenney_ui-pack-rpg-expansion/PNG/buttonSquare_beige_pressed.png" id="12_cdfij"]
+[ext_resource type="Script" uid="uid://cmtanu1poqaon" path="res://scenes/levels/level 1/power_up_1.gd" id="12_ggdaa"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ggdaa"]
 atlas = ExtResource("3_q643l")
@@ -230,26 +231,16 @@ flat = true
 [node name="Power-up 1" type="Node2D" parent="."]
 position = Vector2(-2.00002, -9)
 scale = Vector2(3.10556, 1.95025)
+script = ExtResource("12_ggdaa")
 
 [node name="power-up (rand) bg 1" type="AnimatedSprite2D" parent="Power-up 1"]
 position = Vector2(86.5284, 385.879)
 scale = Vector2(1.02639, 0.921599)
 sprite_frames = SubResource("SpriteFrames_m1dhb")
 
-[node name="LB power-up 1" type="Label" parent="."]
-offset_left = 212.0
-offset_top = 718.0
-offset_right = 328.0
-offset_bottom = 769.0
-theme_override_colors/font_color = Color(1, 0.301961, 0.329412, 1)
-theme_override_colors/font_shadow_color = Color(1, 0.905882, 0.890196, 1)
-theme_override_constants/shadow_offset_y = 4
-theme_override_fonts/font = ExtResource("6_k5rfc")
-theme_override_font_sizes/font_size = 25
-text = "You got a 
-Power-up"
-horizontal_alignment = 1
-vertical_alignment = 1
+[node name="power-up Timer 1" type="Timer" parent="Power-up 1"]
+wait_time = 30.0
 
 [connection signal="button_down" from="Pause button 1/Pause Button 1" to="." method="_on_button_button_down"]
 [connection signal="pressed" from="Shuffle button 1/shuffle Button(1)" to="grid 1 script" method="_on_shuffle_button_pressed"]
+[connection signal="timeout" from="Power-up 1/power-up Timer 1" to="Power-up 1" method="_on_powerup_timer_1_timeout"]

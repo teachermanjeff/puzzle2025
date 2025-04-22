@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=3 uid="uid://mrkdxqm8sw2x"]
+[gd_scene load_steps=32 format=3 uid="uid://mrkdxqm8sw2x"]
 
 [ext_resource type="Script" uid="uid://ce5sdn60b2tsi" path="res://scenes/levels/level 3/level_3.gd" id="1_i6lnk"]
 [ext_resource type="Texture2D" uid="uid://bjq5oghph4bwx" path="res://assets/background/level 3 bg.png" id="1_vkd0v"]
@@ -14,6 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://qj3uuaskmk0u" path="res://assets/Game Sprites/Pixel Art Gem Pack - Animated/Pixel Art Gem Pack - Animated/GEM 1/GEM 1 - BLUE - Spritesheet.png" id="10_3uo3b"]
 [ext_resource type="Texture2D" uid="uid://bqjmdmq20d7v3" path="res://assets/Game Sprites/kenney_ui-pack-rpg-expansion/PNG/buttonRound_grey.png" id="11_ioiww"]
 [ext_resource type="Texture2D" uid="uid://dr2fbaoc3buc0" path="res://assets/Game Sprites/kenney_ui-pack-rpg-expansion/PNG/buttonSquare_beige_pressed.png" id="14_8rk8s"]
+[ext_resource type="Script" uid="uid://ctay6xc4v255i" path="res://scenes/levels/level 3/power_up_3.gd" id="14_o1jg3"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_46quj"]
 atlas = ExtResource("3_hog8a")
@@ -289,26 +290,16 @@ text = "Shuffle
 flat = true
 
 [node name="Power-up 3" type="Node2D" parent="."]
+script = ExtResource("14_o1jg3")
 
 [node name="power-up (rand) bg 3" type="AnimatedSprite2D" parent="Power-up 3"]
 position = Vector2(207.625, 796.813)
 scale = Vector2(2.78333, 1.74166)
 sprite_frames = SubResource("SpriteFrames_cyhwt")
 
-[node name="LB power-up 3" type="Label" parent="Power-up 3"]
-offset_left = 150.0
-offset_top = 770.0
-offset_right = 266.0
-offset_bottom = 821.0
-theme_override_colors/font_color = Color(1, 0.301961, 0.329412, 1)
-theme_override_colors/font_shadow_color = Color(1, 0.905882, 0.890196, 1)
-theme_override_constants/shadow_offset_y = 4
-theme_override_fonts/font = ExtResource("6_g04qi")
-theme_override_font_sizes/font_size = 25
-text = "You got a 
-Power-up"
-horizontal_alignment = 1
-vertical_alignment = 1
+[node name="power-up Timer 3" type="Timer" parent="Power-up 3"]
+wait_time = 120.0
 
 [connection signal="button_down" from="Pause button 3/Pause Button 3" to="." method="_on_button_button_down"]
 [connection signal="pressed" from="Shuffle button 3/shuffle Button(3)" to="grid 3 script" method="_on_shuffle_button_pressed"]
+[connection signal="timeout" from="Power-up 3/power-up Timer 3" to="Power-up 3" method="_on_powerup_timer_3_timeout"]

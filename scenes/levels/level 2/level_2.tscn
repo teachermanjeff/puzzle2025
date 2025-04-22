@@ -261,24 +261,13 @@ position = Vector2(-2, 7)
 script = ExtResource("13_tn6ht")
 
 [node name="power-up (rand) bg 2" type="AnimatedSprite2D" parent="Power-up 2"]
-position = Vector2(211, 738)
-scale = Vector2(3.06111, 1.64722)
+position = Vector2(227.75, 750.25)
+scale = Vector2(1.74444, 1.98889)
 sprite_frames = SubResource("SpriteFrames_gkqe2")
 
-[node name="LB power-up 2" type="Label" parent="Power-up 2"]
-offset_left = 151.0
-offset_top = 701.0
-offset_right = 267.0
-offset_bottom = 774.0
-theme_override_colors/font_color = Color(1, 0.301961, 0.329412, 1)
-theme_override_colors/font_shadow_color = Color(1, 0.905882, 0.890196, 1)
-theme_override_constants/shadow_offset_y = 4
-theme_override_fonts/font = ExtResource("6_kt7cp")
-theme_override_font_sizes/font_size = 25
-text = "You got a
-Power-up"
-horizontal_alignment = 1
-vertical_alignment = 1
+[node name="power-up Timer 2" type="Timer" parent="Power-up 2"]
+wait_time = 60.0
 
 [connection signal="button_down" from="Pause button 2/Pause Button 2" to="." method="_on_button_button_down"]
 [connection signal="pressed" from="Shuffle button 2/shuffle Button(2)" to="grid 2 script" method="_on_shuffle_button_pressed"]
+[connection signal="timeout" from="Power-up 2/power-up Timer 2" to="Power-up 2" method="_on_powerup_timer_2_timeout"]
