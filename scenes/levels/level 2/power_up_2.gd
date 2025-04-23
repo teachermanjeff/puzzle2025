@@ -1,8 +1,8 @@
 extends Node2D
 
 #variables
-var timer = Time
-var disappear_timer = Time
+var timer = Timer
+var disappear_timer = Timer
 var object_to_appear =Node
 
 func _ready() -> void:
