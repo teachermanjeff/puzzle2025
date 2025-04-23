@@ -6,6 +6,7 @@ extends Node2D
 @export var x_start: int
 @export var y_start: int
 @export var offset: int
+signal gemswap
 
 #gem array
 var all_gems = []
@@ -68,6 +69,7 @@ func touch_input():
 			touch_difference(pixel_to_grid(first_touch.x, first_touch.y), grid_position);
 			controlling = false;
 func swap_pieces(colomn, row, direction):
+	emit_signal("gemswap")
 	var first_piece = all_gems[colomn][row];
 	var other_piece = all_gems[colomn+ direction.x][row+ direction.y];
 	all_gems[colomn][row]=other_piece;

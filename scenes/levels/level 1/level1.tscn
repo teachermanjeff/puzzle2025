@@ -3,16 +3,16 @@
 [ext_resource type="Script" uid="uid://ccbk2ghaf76h7" path="res://scenes/levels/level 1/level_1.gd" id="1_7mql6"]
 [ext_resource type="Texture2D" uid="uid://cfij4iitjt6pv" path="res://assets/background/level 1 bg.png" id="1_wmhn2"]
 [ext_resource type="Script" uid="uid://c15j3w7xb5156" path="res://scenes/levels/level 1/grid 1 script.gd" id="2_7vvte"]
-[ext_resource type="Script" uid="uid://jfklcya58er0" path="res://scenes/levels/level 1/movements_countdown.gd" id="3_6aeqc"]
 [ext_resource type="Texture2D" uid="uid://bejpkwuqfk1a5" path="res://assets/Game Sprites/kenney_onscreen-controls/Sprites/flat-light/flatLight12.png" id="3_q643l"]
 [ext_resource type="Texture2D" uid="uid://brdhv4tcby5e0" path="res://assets/background/level 1 grid bg.png" id="4_rmw0i"]
 [ext_resource type="Texture2D" uid="uid://5ehnk5tfff0l" path="res://assets/Game Sprites/kenney_ui-pack-rpg-expansion/Spritesheet/uipack_rpg_sheet.png" id="5_cpvl0"]
 [ext_resource type="FontFile" uid="uid://drc3f4b74p0dt" path="res://Fonts/alagard/alagard.ttf" id="6_k5rfc"]
 [ext_resource type="Texture2D" uid="uid://qj3uuaskmk0u" path="res://assets/Game Sprites/Pixel Art Gem Pack - Animated/Pixel Art Gem Pack - Animated/GEM 1/GEM 1 - BLUE - Spritesheet.png" id="7_m2tdy"]
+[ext_resource type="PackedScene" uid="uid://dckc0c6e23amv" path="res://scenes/levels/movements_cd.tscn" id="8_ggdaa"]
 [ext_resource type="Texture2D" uid="uid://f8q2t3ku6q6d" path="res://assets/Game Sprites/kenney_ui-pack-rpg-expansion/PNG/buttonSquare_grey_pressed.png" id="8_i0byi"]
 [ext_resource type="Texture2D" uid="uid://bqjmdmq20d7v3" path="res://assets/Game Sprites/kenney_ui-pack-rpg-expansion/PNG/buttonRound_grey.png" id="9_6aeqc"]
 [ext_resource type="Texture2D" uid="uid://dr2fbaoc3buc0" path="res://assets/Game Sprites/kenney_ui-pack-rpg-expansion/PNG/buttonSquare_beige_pressed.png" id="12_cdfij"]
-[ext_resource type="Script" uid="uid://cmtanu1poqaon" path="res://scenes/levels/level 1/power_up_1.gd" id="12_ggdaa"]
+[ext_resource type="Script" path="res://scenes/levels/level 1/power_up_1.gd" id="12_ggdaa"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ggdaa"]
 atlas = ExtResource("3_q643l")
@@ -157,15 +157,7 @@ text = "Level 1"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Movements-CD-L1" type="Label" parent="."]
-offset_left = 202.0
-offset_top = 13.0
-offset_right = 342.0
-offset_bottom = 80.0
-text = "30"
-horizontal_alignment = 1
-vertical_alignment = 1
-script = ExtResource("3_6aeqc")
+[node name="Movements-CD" parent="." instance=ExtResource("8_ggdaa")]
 
 [node name="collection of gems (parent 1)" type="Node2D" parent="."]
 
