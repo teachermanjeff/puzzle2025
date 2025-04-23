@@ -1,7 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://okn4aipsrwej"]
+[gd_scene load_steps=5 format=3 uid="uid://okn4aipsrwej"]
 
 [ext_resource type="Texture2D" uid="uid://dvdg458v3dhep" path="res://assets/background/Cave Entrance.png" id="1_bt6k4"]
 [ext_resource type="FontFile" uid="uid://drc3f4b74p0dt" path="res://Fonts/alagard/alagard.ttf" id="2_rcrpa"]
+[ext_resource type="Script" uid="uid://008wvjascbtj" path="res://scenes/menu scene/instruct_but.gd" id="3_11ikk"]
+[ext_resource type="Script" uid="uid://ccp2g2nn2je0e" path="res://scenes/menu scene/restart_but.gd" id="4_771so"]
 
 [node name="MENU SCREEN" type="Control"]
 layout_mode = 3
@@ -13,18 +15,19 @@ offset_bottom = -960.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="TextureRect" type="TextureRect" parent="."]
+[node name="background" type="TextureRect" parent="."]
+texture_filter = 3
 layout_mode = 0
 offset_right = 543.0
 offset_bottom = 965.0
 texture = ExtResource("1_bt6k4")
 
-[node name="menu name" type="Label" parent="."]
+[node name="menu_lbl" type="Label" parent="."]
 layout_mode = 0
-offset_left = 141.0
-offset_top = 78.0
-offset_right = 407.0
-offset_bottom = 153.0
+offset_left = 163.0
+offset_top = 77.0
+offset_right = 429.0
+offset_bottom = 152.0
 theme_override_fonts/font = ExtResource("2_rcrpa")
 theme_override_font_sizes/font_size = 79
 text = "MENU"
@@ -37,7 +40,7 @@ offset_right = 335.0
 offset_bottom = 259.0
 theme_override_fonts/font = ExtResource("2_rcrpa")
 theme_override_font_sizes/font_size = 34
-text = "continue"
+text = "CONTINUE"
 
 [node name="instruct but" type="Button" parent="."]
 layout_mode = 0
@@ -48,8 +51,9 @@ offset_bottom = 364.0
 theme_override_fonts/font = ExtResource("2_rcrpa")
 theme_override_font_sizes/font_size = 34
 text = "INSTRUCTIONS"
+script = ExtResource("3_11ikk")
 
-[node name="instruct but2" type="Button" parent="."]
+[node name="restart but" type="Button" parent="."]
 layout_mode = 0
 offset_left = 196.0
 offset_top = 416.0
@@ -58,3 +62,7 @@ offset_bottom = 465.0
 theme_override_fonts/font = ExtResource("2_rcrpa")
 theme_override_font_sizes/font_size = 34
 text = "RESTART"
+script = ExtResource("4_771so")
+
+[connection signal="pressed" from="instruct but" to="instruct but" method="_on_pressed"]
+[connection signal="pressed" from="restart but" to="restart but" method="_on_pressed"]
