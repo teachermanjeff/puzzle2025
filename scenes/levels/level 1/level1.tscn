@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://djoyxgkcp4rn4"]
+[gd_scene load_steps=29 format=3 uid="uid://djoyxgkcp4rn4"]
 
 [ext_resource type="Script" uid="uid://ccbk2ghaf76h7" path="res://scenes/levels/level 1/level_1.gd" id="1_7mql6"]
 [ext_resource type="Texture2D" uid="uid://cfij4iitjt6pv" path="res://assets/background/level 1 bg.png" id="1_wmhn2"]
@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://qj3uuaskmk0u" path="res://assets/Game Sprites/Pixel Art Gem Pack - Animated/Pixel Art Gem Pack - Animated/GEM 1/GEM 1 - BLUE - Spritesheet.png" id="7_m2tdy"]
 [ext_resource type="PackedScene" uid="uid://dckc0c6e23amv" path="res://scenes/levels/movements_cd.tscn" id="8_ggdaa"]
 [ext_resource type="Texture2D" uid="uid://f8q2t3ku6q6d" path="res://assets/Game Sprites/kenney_ui-pack-rpg-expansion/PNG/buttonSquare_grey_pressed.png" id="8_i0byi"]
+[ext_resource type="Texture2D" uid="uid://7rrwgss1op4f" path="res://assets/Game Sprites/kenney_ui-pack-rpg-expansion/PNG/panelInset_beigeLight.png" id="8_vwe5i"]
 [ext_resource type="Texture2D" uid="uid://bqjmdmq20d7v3" path="res://assets/Game Sprites/kenney_ui-pack-rpg-expansion/PNG/buttonRound_grey.png" id="9_6aeqc"]
 [ext_resource type="Texture2D" uid="uid://dr2fbaoc3buc0" path="res://assets/Game Sprites/kenney_ui-pack-rpg-expansion/PNG/buttonSquare_beige_pressed.png" id="12_cdfij"]
 [ext_resource type="Script" path="res://scenes/levels/level 1/power_up_1.gd" id="12_ggdaa"]
@@ -38,6 +39,21 @@ animations = [{
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_m2tdy")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m1dhb"]
+atlas = ExtResource("8_vwe5i")
+region = Rect2(0, 0, 93, 94)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_wswc2"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m1dhb")
 }],
 "loop": true,
 "name": &"default",
@@ -157,7 +173,42 @@ text = "Level 1"
 horizontal_alignment = 1
 vertical_alignment = 1
 
+<<<<<<< HEAD
 [node name="Movements-CD" parent="." instance=ExtResource("8_ggdaa")]
+=======
+[node name="Moves left 1" type="Node2D" parent="."]
+
+[node name="Moves left bg 1" type="AnimatedSprite2D" parent="Moves left 1"]
+position = Vector2(257.125, 60)
+scale = Vector2(1.82527, 1)
+sprite_frames = SubResource("SpriteFrames_wswc2")
+
+[node name="Movements-CD-L1" type="Label" parent="Moves left 1"]
+offset_left = 261.0
+offset_top = 57.0
+offset_right = 335.0
+offset_bottom = 100.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_k5rfc")
+theme_override_font_sizes/font_size = 33
+text = "30"
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("3_6aeqc")
+>>>>>>> a22317b8e1b403baafe22758dae9debaba72ea17
+
+[node name="Moves left title 1" type="Label" parent="Moves left 1"]
+offset_left = 191.0
+offset_top = 26.0
+offset_right = 276.0
+offset_bottom = 99.0
+theme_override_colors/font_color = Color(0.699238, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.968627, 0.811765, 0, 1)
+theme_override_constants/shadow_offset_y = 4
+theme_override_fonts/font = ExtResource("6_k5rfc")
+theme_override_font_sizes/font_size = 33
+text = "Moves 
+Left:"
 
 [node name="collection of gems (parent 1)" type="Node2D" parent="."]
 
@@ -230,9 +281,13 @@ position = Vector2(86.5284, 385.879)
 scale = Vector2(1.02639, 0.921599)
 sprite_frames = SubResource("SpriteFrames_m1dhb")
 
-[node name="power-up Timer 1" type="Timer" parent="Power-up 1"]
+[node name="power-up Timer 1 (appear)" type="Timer" parent="Power-up 1"]
 wait_time = 30.0
 
+[node name="power-up Timer 1 (disappear)" type="Timer" parent="Power-up 1"]
+wait_time = 10.0
+
 [connection signal="button_down" from="Pause button 1/Pause Button 1" to="." method="_on_button_button_down"]
-[connection signal="pressed" from="Shuffle button 1/shuffle Button(1)" to="grid 1 script" method="_on_shuffle_button_pressed"]
-[connection signal="timeout" from="Power-up 1/power-up Timer 1" to="Power-up 1" method="_on_powerup_timer_1_timeout"]
+[connection signal="pressed" from="Shuffle button 1/shuffle Button(1)" to="grid 1 script" method="_on_shuffle_button_1_pressed"]
+[connection signal="timeout" from="Power-up 1/power-up Timer 1 (appear)" to="Power-up 1" method="_on_powerup_timer_1_appear_timeout"]
+[connection signal="timeout" from="Power-up 1/power-up Timer 1 (disappear)" to="Power-up 1" method="_on_powerup_timer_1_disappear_timeout"]
