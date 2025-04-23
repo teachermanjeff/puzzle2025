@@ -6,6 +6,7 @@ extends Node2D
 @export var x_start: int
 @export var y_start: int
 @export var offset: int
+signal gemswap
 
 # gem array
 var all_gems = []
@@ -52,22 +53,44 @@ func grid_to_pixel(column, row):
 	var new_y = y_start + -offset * row
 	return Vector2(new_x, new_y)
 
-var first_touch = Vector2(0, 0)
-var final_touch = Vector2(0, 0)
-var controlling = false
+
+	
+var first_touch = Vector2(0,0);
+var final_touch = Vector2(0,0);
+var controlling = false;
 
 # Convert pixel coordinates to grid coordinates
 func pixel_to_grid(pixel_x, pixel_y):
-	var new_x = round((pixel_x - x_start) / offset)
-	var new_y = round((pixel_y - y_start) / -offset)
-	return Vector2(new_x, new_y)
+	var new_x = round((pixel_x - x_start) / offset);
+	var new_y = round((pixel_y - y_start) / -offset);
+	return Vector2 (new_x, new_y);
+	pass;
+	
+func _on_shuffle_button_1_pressed() -> void:
+	_ready()
 
+	
 func touch_input():
 	if Input.is_action_just_pressed("ui_touch"):
 		first_touch = get_global_mouse_position()
 		var grid_position = pixel_to_grid(first_touch.x, first_touch.y)
 		if is_in_grid(grid_position.x, grid_position.y):
-			controlling = true
+			controlling = true;
+			
+	if Input.is_action_just_released("ui_touch"):
+		final_touch = get_global_mouse_position();
+		var grid_position = pixel_to_grid(final_touch.x, final_touch.y);
+		if is_in_grid(grid_position.x, grid_position.y):
+			touch_difference(pixel_to_grid(first_touch.x, first_touch.y), grid_position);
+			controlling = false;
+func swap_pieces(colomn, row, direction):
+	emit_signal("gemswap")
+	var first_piece = all_gems[colomn][row];
+	var other_piece = all_gems[colomn+ direction.x][row+ direction.y];
+	all_gems[colomn][row]=other_piece;
+	all_gems[colomn+direction.x][row+direction.y]=first_piece;
+	first_piece.position = grid_to_pixel(colomn+direction.x, row+direction.y);
+	other_piece.position = grid_to_pixel(colomn, row);
 	
 	if Input.is_action_just_released("ui_touch"):
 		final_touch = get_global_mouse_position()
