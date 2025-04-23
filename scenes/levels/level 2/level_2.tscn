@@ -169,7 +169,9 @@ theme_override_font_sizes/font_size = 30
 text = "Level 2"
 horizontal_alignment = 1
 
-[node name="movements-CD-L2" type="Label" parent="."]
+[node name="Moves left 2" type="Node2D" parent="."]
+
+[node name="movements-CD-L2" type="Label" parent="Moves left 2"]
 offset_left = 198.0
 offset_top = 22.0
 offset_right = 338.0
@@ -265,9 +267,12 @@ position = Vector2(227.75, 750.25)
 scale = Vector2(1.74444, 1.98889)
 sprite_frames = SubResource("SpriteFrames_gkqe2")
 
-[node name="power-up Timer 2" type="Timer" parent="Power-up 2"]
+[node name="power-up Timer 2 (appear)" type="Timer" parent="Power-up 2"]
 wait_time = 60.0
+
+[node name="power-up Timer 2 (disappear)" type="Timer" parent="Power-up 2"]
 
 [connection signal="button_down" from="Pause button 2/Pause Button 2" to="." method="_on_button_button_down"]
 [connection signal="pressed" from="Shuffle button 2/shuffle Button(2)" to="grid 2 script" method="_on_shuffle_button_pressed"]
-[connection signal="timeout" from="Power-up 2/power-up Timer 2" to="Power-up 2" method="_on_powerup_timer_2_timeout"]
+[connection signal="timeout" from="Power-up 2/power-up Timer 2 (appear)" to="Power-up 2" method="_on_powerup_timer_2_timeout"]
+[connection signal="timeout" from="Power-up 2/power-up Timer 2 (disappear)" to="Power-up 2" method="_on_powerup_timer_2_disappear_timeout"]

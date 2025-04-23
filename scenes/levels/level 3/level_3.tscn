@@ -185,7 +185,9 @@ theme_override_font_sizes/font_size = 30
 text = "Level 3"
 horizontal_alignment = 1
 
-[node name="movements-CD-L3" type="Label" parent="."]
+[node name="Moves left 3" type="Node2D" parent="."]
+
+[node name="movements-CD-L3" type="Label" parent="Moves left 3"]
 offset_left = 193.0
 offset_top = 25.0
 offset_right = 316.0
@@ -297,9 +299,12 @@ position = Vector2(207.625, 796.813)
 scale = Vector2(2.78333, 1.74166)
 sprite_frames = SubResource("SpriteFrames_cyhwt")
 
-[node name="power-up Timer 3" type="Timer" parent="Power-up 3"]
+[node name="power-up Timer 3 (appear)" type="Timer" parent="Power-up 3"]
 wait_time = 120.0
+
+[node name="power-up Timer 3 (disappear)" type="Timer" parent="Power-up 3"]
 
 [connection signal="button_down" from="Pause button 3/Pause Button 3" to="." method="_on_button_button_down"]
 [connection signal="pressed" from="Shuffle button 3/shuffle Button(3)" to="grid 3 script" method="_on_shuffle_button_pressed"]
-[connection signal="timeout" from="Power-up 3/power-up Timer 3" to="Power-up 3" method="_on_powerup_timer_3_timeout"]
+[connection signal="timeout" from="Power-up 3/power-up Timer 3 (appear)" to="Power-up 3" method="_on_powerup_timer_3_timeout"]
+[connection signal="timeout" from="Power-up 3/power-up Timer 3 (disappear)" to="Power-up 3" method="_on_powerup_timer_3_disappear_timeout"]

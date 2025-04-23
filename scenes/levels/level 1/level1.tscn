@@ -157,7 +157,9 @@ text = "Level 1"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Movements-CD-L1" type="Label" parent="."]
+[node name="Moves left 1" type="Node2D" parent="."]
+
+[node name="Movements-CD-L1" type="Label" parent="Moves left 1"]
 offset_left = 202.0
 offset_top = 13.0
 offset_right = 342.0
@@ -238,9 +240,12 @@ position = Vector2(86.5284, 385.879)
 scale = Vector2(1.02639, 0.921599)
 sprite_frames = SubResource("SpriteFrames_m1dhb")
 
-[node name="power-up Timer 1" type="Timer" parent="Power-up 1"]
+[node name="power-up Timer 1 (appear)" type="Timer" parent="Power-up 1"]
 wait_time = 30.0
+
+[node name="power-up Timer 1 (disappear)" type="Timer" parent="Power-up 1"]
 
 [connection signal="button_down" from="Pause button 1/Pause Button 1" to="." method="_on_button_button_down"]
 [connection signal="pressed" from="Shuffle button 1/shuffle Button(1)" to="grid 1 script" method="_on_shuffle_button_pressed"]
-[connection signal="timeout" from="Power-up 1/power-up Timer 1" to="Power-up 1" method="_on_powerup_timer_1_timeout"]
+[connection signal="timeout" from="Power-up 1/power-up Timer 1 (appear)" to="Power-up 1" method="_on_powerup_timer_1_timeout"]
+[connection signal="timeout" from="Power-up 1/power-up Timer 1 (disappear)" to="Power-up 1" method="_on_powerup_timer_1_disappear_timeout"]
