@@ -13,10 +13,10 @@ scale = Vector2(1.41107, 2.69)
 texture = ExtResource("1_33od4")
 
 [node name="rules" type="Label" parent="."]
-offset_left = 1.0
-offset_top = 93.0
-offset_right = 528.0
-offset_bottom = 840.0
+offset_left = 18.0
+offset_top = 89.0
+offset_right = 545.0
+offset_bottom = 836.0
 theme_override_colors/font_color = Color(0.0313726, 0.254902, 0.478431, 1)
 theme_override_colors/font_outline_color = Color(0.800491, 0.800491, 0.800491, 1)
 theme_override_fonts/font = ExtResource("1_71ta1")
@@ -24,12 +24,13 @@ theme_override_font_sizes/font_size = 40
 text = "Select 3 
 similar gems to collect 
 the required amount of  
-gems. The power-up appears
-randomly and  you get a 
-5 more moves. You need
-to collect  a certain
-amount of gems to move 
-towards the next level."
+gems. If you select 5 
+similar gems, you get a 
+power-up of  5 more
+ moves. You need to collect 
+a certain amount of gems
+ to move towards the 
+next level."
 horizontal_alignment = 1
 
 [node name="go back button" type="Button" parent="."]

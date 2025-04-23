@@ -9,7 +9,6 @@
 [node name="Start Screen" type="Node2D"]
 
 [node name="bg" type="Sprite2D" parent="."]
-texture_filter = 3
 position = Vector2(275, 484.5)
 scale = Vector2(7.55556, 7.57031)
 texture = ExtResource("1_ius28")

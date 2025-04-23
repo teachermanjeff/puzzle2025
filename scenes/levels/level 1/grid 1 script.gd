@@ -44,7 +44,6 @@ func grid_to_pixel(column, row):
 	var new_y = y_start + -offset * row
 	return Vector2(new_x, new_y)
 
-
 	
 var first_touch = Vector2(0,0);
 var final_touch = Vector2(0,0);
@@ -55,10 +54,6 @@ func pixel_to_grid(pixel_x, pixel_y):
 	var new_y = round((pixel_y - y_start) / -offset);
 	return Vector2 (new_x, new_y);
 	pass;
-	
-func _on_shuffle_button_1_pressed() -> void:
-	_ready()
-
 	
 func touch_input():
 	if Input.is_action_just_pressed("ui_touch"):
