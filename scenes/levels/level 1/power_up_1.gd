@@ -17,9 +17,10 @@ func _ready() -> void:
 	object_to_appear = $"power-up (rand) bg 1"
 	object_to_appear.visible = false #in start invisible 
 	
-func _on_powerup_timer_1_timeout() -> void:
+	
+func _on_powerup_timer_1_appear_timeout():
 	object_to_appear.visible = true
 	disappear_timer.start()
-	
+
 func _on_powerup_timer_1_disappear_timeout():
 	object_to_appear.visible = false

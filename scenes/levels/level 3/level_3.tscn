@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=3 uid="uid://mrkdxqm8sw2x"]
+[gd_scene load_steps=35 format=3 uid="uid://mrkdxqm8sw2x"]
 
 [ext_resource type="Script" uid="uid://ce5sdn60b2tsi" path="res://scenes/levels/level 3/level_3.gd" id="1_i6lnk"]
 [ext_resource type="Texture2D" uid="uid://bjq5oghph4bwx" path="res://assets/background/level 3 bg.png" id="1_vkd0v"]
@@ -10,6 +10,7 @@
 [ext_resource type="Script" uid="uid://cr2p8m2kg2w0" path="res://scenes/levels/level 3/label.gd" id="7_g04qi"]
 [ext_resource type="Texture2D" uid="uid://f8q2t3ku6q6d" path="res://assets/Game Sprites/kenney_ui-pack-rpg-expansion/PNG/buttonSquare_grey_pressed.png" id="8_3uo3b"]
 [ext_resource type="Texture2D" uid="uid://lja7dmq5vmh1" path="res://assets/Game Sprites/Pixel Art Gem Pack - Animated/Pixel Art Gem Pack - Animated/GEM 1/GEM 1 - PURPLE - Spritesheet.png" id="8_16ck4"]
+[ext_resource type="Texture2D" uid="uid://7rrwgss1op4f" path="res://assets/Game Sprites/kenney_ui-pack-rpg-expansion/PNG/panelInset_beigeLight.png" id="8_46quj"]
 [ext_resource type="Texture2D" uid="uid://5ygb3685d6jp" path="res://assets/Game Sprites/Pixel Art Gem Pack - Animated/Pixel Art Gem Pack - Animated/GEM 1/GEM 1 - GOLD - Spritesheet.png" id="9_ioiww"]
 [ext_resource type="Texture2D" uid="uid://qj3uuaskmk0u" path="res://assets/Game Sprites/Pixel Art Gem Pack - Animated/Pixel Art Gem Pack - Animated/GEM 1/GEM 1 - BLUE - Spritesheet.png" id="10_3uo3b"]
 [ext_resource type="Texture2D" uid="uid://bqjmdmq20d7v3" path="res://assets/Game Sprites/kenney_ui-pack-rpg-expansion/PNG/buttonRound_grey.png" id="11_ioiww"]
@@ -40,6 +41,21 @@ animations = [{
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_ecl8f")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cyhwt"]
+atlas = ExtResource("8_46quj")
+region = Rect2(0, 0, 93, 94)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_lpl0w"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cyhwt")
 }],
 "loop": true,
 "name": &"default",
@@ -187,15 +203,36 @@ horizontal_alignment = 1
 
 [node name="Moves left 3" type="Node2D" parent="."]
 
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Moves left 3"]
+position = Vector2(257.125, 60)
+scale = Vector2(1.825, 1)
+sprite_frames = SubResource("SpriteFrames_lpl0w")
+
 [node name="movements-CD-L3" type="Label" parent="Moves left 3"]
-offset_left = 193.0
-offset_top = 25.0
-offset_right = 316.0
-offset_bottom = 77.0
+offset_left = 261.0
+offset_top = 63.0
+offset_right = 327.0
+offset_bottom = 98.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_g04qi")
+theme_override_font_sizes/font_size = 33
 text = "10"
 horizontal_alignment = 1
 vertical_alignment = 1
 script = ExtResource("7_g04qi")
+
+[node name="Moves Left title 3" type="Label" parent="Moves left 3"]
+offset_left = 188.0
+offset_top = 28.0
+offset_right = 281.0
+offset_bottom = 95.0
+theme_override_colors/font_color = Color(0.698039, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.968627, 0.811765, 0, 1)
+theme_override_constants/shadow_offset_y = 4
+theme_override_fonts/font = ExtResource("6_g04qi")
+theme_override_font_sizes/font_size = 33
+text = "Moves
+Left:"
 
 [node name="collection of gems (parent 3)" type="Node2D" parent="."]
 
@@ -303,8 +340,9 @@ sprite_frames = SubResource("SpriteFrames_cyhwt")
 wait_time = 120.0
 
 [node name="power-up Timer 3 (disappear)" type="Timer" parent="Power-up 3"]
+wait_time = 10.0
 
 [connection signal="button_down" from="Pause button 3/Pause Button 3" to="." method="_on_button_button_down"]
 [connection signal="pressed" from="Shuffle button 3/shuffle Button(3)" to="grid 3 script" method="_on_shuffle_button_pressed"]
-[connection signal="timeout" from="Power-up 3/power-up Timer 3 (appear)" to="Power-up 3" method="_on_powerup_timer_3_timeout"]
+[connection signal="timeout" from="Power-up 3/power-up Timer 3 (appear)" to="Power-up 3" method="_on_powerup_timer_3_appear_timeout"]
 [connection signal="timeout" from="Power-up 3/power-up Timer 3 (disappear)" to="Power-up 3" method="_on_powerup_timer_3_disappear_timeout"]
