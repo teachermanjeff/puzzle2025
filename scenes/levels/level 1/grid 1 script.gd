@@ -83,7 +83,7 @@ func touch_input():
 		if is_in_grid(grid_position.x, grid_position.y):
 			touch_difference(pixel_to_grid(first_touch.x, first_touch.y), grid_position);
 			controlling = false;
-func swap_pieces(colomn, row, direction):
+func swap_pieces1(colomn, row, direction):
 	emit_signal("gemswap")
 	var first_piece = all_gems[colomn][row];
 	var other_piece = all_gems[colomn+ direction.x][row+ direction.y];

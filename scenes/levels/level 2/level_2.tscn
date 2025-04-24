@@ -7,14 +7,14 @@
 [ext_resource type="Script" uid="uid://d3hoyjmpfy6k5" path="res://scenes/levels/level 2/grid_2_script.gd" id="4_onheu"]
 [ext_resource type="Texture2D" uid="uid://5ehnk5tfff0l" path="res://assets/Game Sprites/kenney_ui-pack-rpg-expansion/Spritesheet/uipack_rpg_sheet.png" id="5_4ejoj"]
 [ext_resource type="FontFile" uid="uid://drc3f4b74p0dt" path="res://Fonts/alagard/alagard.ttf" id="6_kt7cp"]
-[ext_resource type="Script" path="res://scenes/levels/level 2/label.gd" id="7_kt7cp"]
+[ext_resource type="Script" uid="uid://dng85xrtw3gmf" path="res://scenes/levels/level 2/label.gd" id="7_kt7cp"]
 [ext_resource type="Texture2D" uid="uid://f8q2t3ku6q6d" path="res://assets/Game Sprites/kenney_ui-pack-rpg-expansion/PNG/buttonSquare_grey_pressed.png" id="8_3xd55"]
 [ext_resource type="Texture2D" uid="uid://w5uj0c1q8lo6" path="res://assets/Game Sprites/Pixel Art Gem Pack - Animated/Pixel Art Gem Pack - Animated/GEM 1/GEM 1 - LIGHT GREEN - Spritesheet.png" id="8_ge2gm"]
 [ext_resource type="Texture2D" uid="uid://7rrwgss1op4f" path="res://assets/Game Sprites/kenney_ui-pack-rpg-expansion/PNG/panelInset_beigeLight.png" id="8_if4hn"]
 [ext_resource type="Texture2D" uid="uid://dvg4e4s75aqs3" path="res://assets/Game Sprites/Pixel Art Gem Pack - Animated/Pixel Art Gem Pack - Animated/GEM 1/GEM 1 - RED - Spritesheet.png" id="9_1dct4"]
 [ext_resource type="Texture2D" uid="uid://bqjmdmq20d7v3" path="res://assets/Game Sprites/kenney_ui-pack-rpg-expansion/PNG/buttonRound_grey.png" id="10_1dct4"]
 [ext_resource type="Texture2D" uid="uid://dr2fbaoc3buc0" path="res://assets/Game Sprites/kenney_ui-pack-rpg-expansion/PNG/buttonSquare_beige_pressed.png" id="13_4xblw"]
-[ext_resource type="Script" path="res://scenes/levels/level 2/power_up_2.gd" id="13_tn6ht"]
+[ext_resource type="Script" uid="uid://cqt0xrins683r" path="res://scenes/levels/level 2/power_up_2.gd" id="13_tn6ht"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_if4hn"]
 atlas = ExtResource("3_kkeqq")

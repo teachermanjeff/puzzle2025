@@ -1,23 +1,24 @@
-[gd_scene load_steps=32 format=3 uid="uid://mrkdxqm8sw2x"]
+[gd_scene load_steps=35 format=3 uid="uid://bc3gna71sxu2"]
 
 [ext_resource type="Script" uid="uid://ce5sdn60b2tsi" path="res://scenes/levels/level 3/level_3.gd" id="1_i6lnk"]
 [ext_resource type="Texture2D" uid="uid://bjq5oghph4bwx" path="res://assets/background/level 3 bg.png" id="1_vkd0v"]
 [ext_resource type="Texture2D" uid="uid://c2buuqy56wod2" path="res://assets/background/level 3 grid bg.png" id="3_3qswj"]
-[ext_resource type="Texture2D" uid="uid://bejpkwuqfk1a5" path="res://assets/Game Sprites/kenney_onscreen-controls/Sprites/flat-light/flatLight12.png" id="3_hog8a"]
 [ext_resource type="Script" uid="uid://cyqikc8neafmn" path="res://scenes/levels/level 3/grid_3_script.gd" id="4_xex88"]
 [ext_resource type="Texture2D" uid="uid://5ehnk5tfff0l" path="res://assets/Game Sprites/kenney_ui-pack-rpg-expansion/Spritesheet/uipack_rpg_sheet.png" id="5_iyurd"]
 [ext_resource type="FontFile" uid="uid://drc3f4b74p0dt" path="res://Fonts/alagard/alagard.ttf" id="6_g04qi"]
 [ext_resource type="Script" uid="uid://cr2p8m2kg2w0" path="res://scenes/levels/level 3/label.gd" id="7_g04qi"]
 [ext_resource type="Texture2D" uid="uid://f8q2t3ku6q6d" path="res://assets/Game Sprites/kenney_ui-pack-rpg-expansion/PNG/buttonSquare_grey_pressed.png" id="8_3uo3b"]
 [ext_resource type="Texture2D" uid="uid://lja7dmq5vmh1" path="res://assets/Game Sprites/Pixel Art Gem Pack - Animated/Pixel Art Gem Pack - Animated/GEM 1/GEM 1 - PURPLE - Spritesheet.png" id="8_16ck4"]
+[ext_resource type="Texture2D" uid="uid://7rrwgss1op4f" path="res://assets/Game Sprites/kenney_ui-pack-rpg-expansion/PNG/panelInset_beigeLight.png" id="8_46quj"]
+[ext_resource type="Texture2D" uid="uid://bejpkwuqfk1a5" path="res://assets/Game Sprites/kenney_onscreen-controls/Sprites/flat-light/flatLight12.png" id="3_kkeqq"]
 [ext_resource type="Texture2D" uid="uid://5ygb3685d6jp" path="res://assets/Game Sprites/Pixel Art Gem Pack - Animated/Pixel Art Gem Pack - Animated/GEM 1/GEM 1 - GOLD - Spritesheet.png" id="9_ioiww"]
 [ext_resource type="Texture2D" uid="uid://qj3uuaskmk0u" path="res://assets/Game Sprites/Pixel Art Gem Pack - Animated/Pixel Art Gem Pack - Animated/GEM 1/GEM 1 - BLUE - Spritesheet.png" id="10_3uo3b"]
 [ext_resource type="Texture2D" uid="uid://bqjmdmq20d7v3" path="res://assets/Game Sprites/kenney_ui-pack-rpg-expansion/PNG/buttonRound_grey.png" id="11_ioiww"]
 [ext_resource type="Texture2D" uid="uid://dr2fbaoc3buc0" path="res://assets/Game Sprites/kenney_ui-pack-rpg-expansion/PNG/buttonSquare_beige_pressed.png" id="14_8rk8s"]
-[ext_resource type="Script" uid="uid://ctay6xc4v255i" path="res://scenes/levels/level 3/power_up_3.gd" id="14_o1jg3"]
+[ext_resource type="Script" path="res://scenes/levels/level 3/power_up_3.gd" id="14_o1jg3"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_46quj"]
-atlas = ExtResource("3_hog8a")
+atlas = ExtResource("3_kkeqq")
 region = Rect2(0, 0, 48, 48)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_y3xtp"]
@@ -46,6 +47,21 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_cyhwt"]
+atlas = ExtResource("8_46quj")
+region = Rect2(0, 0, 93, 94)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_lpl0w"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cyhwt")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_8rk8s"]
 atlas = ExtResource("8_3uo3b")
 region = Rect2(0, 0, 45, 45)
@@ -54,82 +70,7 @@ region = Rect2(0, 0, 45, 45)
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_8rk8s")
-}],
-"loop": true,
-"name": &"default",
-"speed": 5.0
-}]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_hog8a"]
-atlas = ExtResource("8_16ck4")
-region = Rect2(162, 0, 18, 30)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_8rk8s"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_hog8a")
-}],
-"loop": true,
-"name": &"default",
-"speed": 5.0
-}]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_o1jg3"]
-atlas = ExtResource("9_ioiww")
-region = Rect2(162, 0, 18, 30)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_46quj"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_o1jg3")
-}],
-"loop": true,
-"name": &"default",
-"speed": 5.0
-}]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_y3xtp"]
-atlas = ExtResource("10_3uo3b")
-region = Rect2(144, 0, 18, 30)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_b060x"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_y3xtp")
-}],
-"loop": true,
-"name": &"default",
-"speed": 5.0
-}]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_3uo3b"]
-atlas = ExtResource("11_ioiww")
-region = Rect2(0, 0, 35, 38)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_hog8a"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_3uo3b")
-}],
-"loop": true,
-"name": &"default",
-"speed": 5.0
-}]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_b060x"]
-atlas = ExtResource("14_8rk8s")
-region = Rect2(0, 0, 45, 45)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_cyhwt"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_b060x")
+"texture": SubResource("AtlasTexture_iyurd")
 }],
 "loop": true,
 "name": &"default",
@@ -140,22 +81,15 @@ animations = [{
 script = ExtResource("1_i6lnk")
 
 [node name="level 3 bg" type="Sprite2D" parent="."]
-position = Vector2(269.75, 480.5)
-scale = Vector2(3.27576, 2.49615)
+position = Vector2(269.75, 482.25)
+scale = Vector2(3.27576, 2.48715)
 texture = ExtResource("1_vkd0v")
 
-[node name="Pause button 3" type="Node2D" parent="."]
-
-[node name="pause bg 3" type="AnimatedSprite2D" parent="Pause button 3"]
-position = Vector2(484, 37)
-sprite_frames = SubResource("SpriteFrames_y3xtp")
-
-[node name="Pause Button 3" type="Button" parent="Pause button 3"]
-offset_left = 460.0
-offset_top = 12.0
-offset_right = 509.0
-offset_bottom = 62.0
-flat = true
+[node name="Pause Button 3" type="Button" parent="."]
+offset_left = 372.0
+offset_right = 535.0
+offset_bottom = 70.0
+text = "pause button"
 
 [node name="grid 3 bg" type="Sprite2D" parent="."]
 position = Vector2(268, 477)
@@ -185,15 +119,38 @@ theme_override_font_sizes/font_size = 30
 text = "Level 3"
 horizontal_alignment = 1
 
-[node name="movements-CD-L3" type="Label" parent="."]
-offset_left = 193.0
-offset_top = 25.0
-offset_right = 316.0
-offset_bottom = 77.0
+[node name="Moves left 3" type="Node2D" parent="."]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Moves left 3"]
+position = Vector2(257.125, 60)
+scale = Vector2(1.825, 1)
+sprite_frames = SubResource("SpriteFrames_lpl0w")
+
+[node name="movements-CD-L3" type="Label" parent="Moves left 3"]
+offset_left = 261.0
+offset_top = 63.0
+offset_right = 327.0
+offset_bottom = 98.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_g04qi")
+theme_override_font_sizes/font_size = 33
 text = "10"
 horizontal_alignment = 1
 vertical_alignment = 1
 script = ExtResource("7_g04qi")
+
+[node name="Moves Left title 3" type="Label" parent="Moves left 3"]
+offset_left = 188.0
+offset_top = 28.0
+offset_right = 281.0
+offset_bottom = 95.0
+theme_override_colors/font_color = Color(0.698039, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.968627, 0.811765, 0, 1)
+theme_override_constants/shadow_offset_y = 4
+theme_override_fonts/font = ExtResource("6_g04qi")
+theme_override_font_sizes/font_size = 33
+text = "Moves
+Left:"
 
 [node name="collection of gems (parent 3)" type="Node2D" parent="."]
 
@@ -202,10 +159,8 @@ position = Vector2(396, 844)
 scale = Vector2(5.26666, 3.90196)
 sprite_frames = SubResource("SpriteFrames_g04qi")
 
-[node name="purple gem pic" type="AnimatedSprite2D" parent="collection of gems (parent 3)"]
-position = Vector2(318, 809)
-scale = Vector2(1.712, 1.372)
-sprite_frames = SubResource("SpriteFrames_8rk8s")
+[node name="Movements-CD" parent="." instance=ExtResource("7_g04qi")]
+max_attempts = 10
 
 [node name="yellow gem pic" type="AnimatedSprite2D" parent="collection of gems (parent 3)"]
 position = Vector2(318, 854)
@@ -263,7 +218,6 @@ text = "0"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Shuffle button 3" type="Node2D" parent="."]
 
 [node name="shuffle Button bg (3)" type="AnimatedSprite2D" parent="Shuffle button 3"]
 position = Vector2(68, 790)
@@ -297,9 +251,13 @@ position = Vector2(207.625, 796.813)
 scale = Vector2(2.78333, 1.74166)
 sprite_frames = SubResource("SpriteFrames_cyhwt")
 
-[node name="power-up Timer 3" type="Timer" parent="Power-up 3"]
+[node name="power-up Timer 3 (appear)" type="Timer" parent="Power-up 3"]
 wait_time = 120.0
+
+[node name="power-up Timer 3 (disappear)" type="Timer" parent="Power-up 3"]
+wait_time = 10.0
 
 [connection signal="button_down" from="Pause button 3/Pause Button 3" to="." method="_on_button_button_down"]
 [connection signal="pressed" from="Shuffle button 3/shuffle Button(3)" to="grid 3 script" method="_on_shuffle_button_pressed"]
-[connection signal="timeout" from="Power-up 3/power-up Timer 3" to="Power-up 3" method="_on_powerup_timer_3_timeout"]
+[connection signal="timeout" from="Power-up 3/power-up Timer 3 (appear)" to="Power-up 3" method="_on_powerup_timer_3_appear_timeout"]
+[connection signal="timeout" from="Power-up 3/power-up Timer 3 (disappear)" to="Power-up 3" method="_on_powerup_timer_3_disappear_timeout"]
