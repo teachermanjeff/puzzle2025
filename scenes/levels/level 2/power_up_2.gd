@@ -5,7 +5,6 @@ var timer = Timer
 var disappear_timer = Timer
 var object_to_appear = Node
 var extra_moves = Node
-
 @onready var movements_cd_l_2: Label = $"../Moves left 2/movements-CD-L2"
 
 func _ready() -> void:
@@ -26,9 +25,9 @@ func _ready() -> void:
 	object_to_appear.visible = false #in start invisible 
 	
 	
-func _on_powerup_timer_1_appear_timeout():
+func _on_powerup_timer_2_appear_timeout():
 	object_to_appear.visible = true
 	disappear_timer.start()
 
-func _on_powerup_timer_1_disappear_timeout():
+func _on_powerup_timer_2_disappear_timeout():
 	object_to_appear.visible = false
