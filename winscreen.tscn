@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://cahp26fkmop6w" path="res://assets/background/menu image.png" id="2_pd04t"]
 [ext_resource type="FontFile" uid="uid://drc3f4b74p0dt" path="res://Fonts/alagard/alagard.ttf" id="3_2gb7w"]
 
-[node name="MENU SCREEN" type="Control"]
+[node name="Win SCREEN" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0

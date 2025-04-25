@@ -15,3 +15,11 @@ func _ready() -> void:
 func _on_powerup_timer_1_timeout() -> void:
 	object_to_appear.visible = true 
 	
+func _on_powerup_timer_1_appear_timeout():
+	object_to_appear.visible = true
+	disappear_timer.start()
+	movements_cd_l_1.attempts_left += 5
+	print("extra_moves",extra_moves)
+
+func _on_powerup_timer_1_disappear_timeout():
+	object_to_appear.visible = false
