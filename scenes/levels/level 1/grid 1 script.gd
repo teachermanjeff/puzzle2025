@@ -113,6 +113,14 @@ func swap_pieces(column, row, direction):
 		other_piece.position = grid_to_pixel(column, row)
 	else:
 		print("Error: One or both pieces are Nil.")
+	#working on checking if three gems are in a row here - Aira
+	var counter=0
+	for j in range(0,7):
+		for i in range(0,7):
+			print("Item Number"+str(counter))
+			print(all_gems[j][i].name)
+			counter+=1
+			
 
 # Handle touch input differences to swap pieces
 func touch_difference(grid_2, grid_1):
