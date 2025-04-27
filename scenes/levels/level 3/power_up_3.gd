@@ -7,7 +7,7 @@ var extra_moves = Node
 @onready var movements_cd_l_3: Label = $"../Moves left 3/movements-CD-L3"
 
 func _ready() -> void:
-	timer = $"power-up Timer 2"
+	timer = $"power-up (rand) bg 3"
 	timer.wait_time = 120 # 120sec timer
 	timer.one_shot = false #repeat time
 	timer.start()
