@@ -10,6 +10,8 @@ func _ready() -> void:
 	timer = $"power-up Timer 2"
 	timer.wait_time = 60 # 60sec timer
 	timer.one_shot = false #repeat time
+	movements_cd_l_2.attempts_left += 5
+	print("extra_moves",extra_moves)
 	timer.start()
 	
 	#the time it is not visible for
@@ -20,11 +22,10 @@ func _ready() -> void:
 	object_to_appear = $"power-up (rand) bg 2"
 	object_to_appear.visible = false #in start invisible 
 	
+	
 func _on_powerup_timer_2_appear_timeout():
 	object_to_appear.visible = true
 	disappear_timer.start()
-	movements_cd_l_2.attempts_left += 5
-	print("extra_moves",extra_moves)
 
 func _on_powerup_timer_2_disappear_timeout():
 	object_to_appear.visible = false
