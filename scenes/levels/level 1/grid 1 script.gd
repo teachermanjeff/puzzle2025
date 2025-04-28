@@ -10,6 +10,7 @@ signal gemswap
 
 # gem array
 var all_gems = []
+
 var gems = [
 	preload("res://scenes/gem scenes/blue_gem.tscn"),
 	preload("res://scenes/gem scenes/light_green_gem.tscn"),
@@ -53,7 +54,6 @@ func grid_to_pixel(column, row):
 	var new_y = y_start + -offset * row
 	return Vector2(new_x, new_y)
 
-	
 var first_touch = Vector2(0,0);
 var final_touch = Vector2(0,0);
 var controlling = false;
