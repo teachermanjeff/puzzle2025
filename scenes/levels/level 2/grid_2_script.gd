@@ -23,7 +23,17 @@ func _ready():
 	randomize()
 	all_gems = make_2D_array()
 	spawn_gems()
-	process_grid()
+
+func _process(delta: float) -> void:
+	touch_input()
+	matches.clear()
+	var matches = detect_matches()
+	#print("matches detected: ", matches)
+	if matches.size() > 0:
+		remove_matches(matches)
+		shift_gems_down()
+		spawn_new_gems()
+	
 
 # Create a 2D array for all the gems
 func make_2D_array() -> Array:
@@ -127,9 +137,6 @@ func touch_difference(grid_2, grid_1):
 		elif difference.y < 0:
 			swap_pieces(grid_1.x, grid_1.y, Vector2(0, -1))
 
-func _process(_delta):
-	touch_input()
-
 # Check if the grid coordinates are within bounds
 func is_in_grid(column, row):
 	if column >= 0 && column < width:
@@ -140,19 +147,17 @@ func is_in_grid(column, row):
 #Check if any gems match
 func detect_matches():
 	#check rows for matches (check if right beside is there simmilar gems)
-	for row in range(height):
+	for row in range(height-1):
 		for col in range(width - 2): #checks if other two gems beside it is same
-			if all_gems[col][row] != null && all_gems[col][row].name == all_gems[col + 
-			1][row].name && all_gems[col +1][row].name == all_gems[col +2][row].name:
+			if all_gems[col][row] != null && all_gems[col][row].name == all_gems[col + 1][row].name && all_gems[col +1][row].name == all_gems[col +2][row].name:
 				matches.append(Vector2(col,row))
 				matches.append(Vector2(col +1,row))
 				matches.append(Vector2(col +2,row))
 					
 	#check rows for matches (check if right beside is there simmilar gems)				
-	for col in range(width):
+	for col in range(width-1):
 		for row in range(height - 2):
-			if all_gems[col][row] != null && all_gems[col][row].name == all_gems[col + 
-			1][row].name && all_gems[col +1][row].name == all_gems[col +2][row].name:
+			if all_gems[col][row] != null && all_gems[col][row].name == all_gems[col + 1][row].name && all_gems[col +1][row].name == all_gems[col +2][row].name:
 				matches.append(Vector2(col,row))
 				matches.append(Vector2(col,row + 1))
 				matches.append(Vector2(col,row + 2))
@@ -192,12 +197,3 @@ func spawn_new_gems():
 				else:
 					print("fail to instantiate the new gem")		
 #combine & show it all				
-func process_grid():
-	matches.clear()
-	var matches = detect_matches()
-	print("matches detected: ", matches)
-	if matches.size() > 0:
-		remove_matches(matches)
-		shift_gems_down()
-		spawn_new_gems()
-		process_grid() #to clear reapetedly
