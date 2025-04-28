@@ -55,6 +55,9 @@ func grid_to_pixel(column, row):
 	var new_y = y_start + -offset * row
 	return Vector2(new_x, new_y)
 
+func _on_shuffle_button_pressed() -> void:
+	_ready()
+
 var first_touch = Vector2(0,0);
 var final_touch = Vector2(0,0);
 var controlling = false;
@@ -140,7 +143,7 @@ func detect_matches():
 	for row in range(height):
 		for col in range(width - 2): #checks if other two gems beside it is same
 			if all_gems[col][row] != null && all_gems[col][row].name == all_gems[col + 
-			1][row].name == all_gems[col +2][row].name:
+			1][row].name && all_gems[col +1][row].name == all_gems[col +2][row].name:
 				matches.append(Vector2(col,row))
 				matches.append(Vector2(col +1,row))
 				matches.append(Vector2(col +2,row))
@@ -149,7 +152,7 @@ func detect_matches():
 	for col in range(width):
 		for row in range(height - 2):
 			if all_gems[col][row] != null && all_gems[col][row].name == all_gems[col + 
-			1][row].name == all_gems[col +2][row].name:
+			1][row].name && all_gems[col +1][row].name == all_gems[col +2][row].name:
 				matches.append(Vector2(col,row))
 				matches.append(Vector2(col,row + 1))
 				matches.append(Vector2(col,row + 2))
