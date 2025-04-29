@@ -11,6 +11,7 @@ signal gemswap
 # gem array
 var all_gems = []
 var matches = []
+var is_updating = false
 var gems = [
 	preload("res://scenes/gem scenes/blue_gem.tscn"),
 	preload("res://scenes/gem scenes/light_green_gem.tscn"),
@@ -80,6 +81,9 @@ func pixel_to_grid(pixel_x, pixel_y):
 	pass;
 	
 func touch_input():
+	if is_updating:
+		return # skip input handling if the grid is being updated
+		
 	if Input.is_action_just_pressed("ui_touch"):
 		first_touch = get_global_mouse_position()
 		var grid_position = pixel_to_grid(first_touch.x, first_touch.y)
