@@ -6,8 +6,9 @@ var attempts_left # How many attempts are left
 
 func _ready():
 	# Optionally, set up your UI to show countdown and points
-	update_ui()
 	attempts_left = max_attempts
+	update_ui()
+	
 	
 func _process(delta: float) -> void:
 	update_ui()
@@ -16,5 +17,11 @@ func _process(delta: float) -> void:
 func update_ui():
 	text = str(attempts_left)
 
+
 func _on_grid_1_script_gemswap() -> void:
-	attempts_left -= 1  # Subtract one attempt
+	attempts_left -= 1
+
+
+func _on_grid_2_script_gemswap() -> void:
+	attempts_left -= 1
+	

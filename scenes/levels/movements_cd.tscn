@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://dckc0c6e23amv"]
 
-[ext_resource type="Script" uid="uid://jfklcya58er0" path="res://scenes/levels/level 1/movements_countdown.gd" id="1_825g0"]
+[ext_resource type="Script" uid="uid://jfklcya58er0" path="res://scenes/levels/movements_countdown.gd" id="1_825g0"]
 
 [node name="Movements-CD" type="Label"]
 offset_left = 202.0

@@ -99,6 +99,7 @@ func swap_pieces1(colomn, row, direction):
 
 # Swap the positions of two pieces on the grid
 func swap_pieces(column, row, direction):
+	emit_signal("gemswap")
 	var first_piece = all_gems[column][row]
 	var other_piece = all_gems[column + direction.x][row + direction.y]
 	
