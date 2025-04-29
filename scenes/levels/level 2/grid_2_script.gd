@@ -25,10 +25,14 @@ func _ready():
 	all_gems = make_2D_array()
 	spawn_gems()
 
-func _process(delta: float) -> void:
-	touch_input()
-	matches.clear()
+func _process(_delta: float) -> void:
 	var matches = detect_matches()
+	if spawn_gems() == is_updating:
+		touch_input()
+		matches.clear()
+	else:
+		detect_matches() == false
+	
 	#print("matches detected: ", matches)
 	if matches.size() > 0:
 		remove_matches(matches)
@@ -153,18 +157,20 @@ func detect_matches():
 	#check rows for matches (check if right beside is there simmilar gems)
 	for row in range(height-1):
 		for col in range(width - 2): #checks if other two gems beside it is same
-			if all_gems[col][row] != null && all_gems[col][row].name == all_gems[col + 1][row].name && all_gems[col +1][row].name == all_gems[col +2][row].name:
+			if all_gems[col][row] != null && all_gems[col][row].get_groups() == all_gems[col + 1][row].get_groups() && all_gems[col +1][row].get_groups() == all_gems[col +2][row].get_groups():
 				matches.append(Vector2(col,row))
 				matches.append(Vector2(col +1,row))
 				matches.append(Vector2(col +2,row))
+			print(all_gems[col][row].get_groups())
 					
 	#check rows for matches (check if right beside is there simmilar gems)				
 	for col in range(width-1):
 		for row in range(height - 2):
-			if all_gems[col][row] != null && all_gems[col][row].name == all_gems[col + 1][row].name && all_gems[col +1][row].name == all_gems[col +2][row].name:
+			if all_gems[col][row] != null && all_gems[col][row].get_groups() == all_gems[col + 1][row].get_groups() && all_gems[col +1][row].get_groups() == all_gems[col +2][row].get_groups():
 				matches.append(Vector2(col,row))
 				matches.append(Vector2(col,row + 1))
 				matches.append(Vector2(col,row + 2))
+				print(all_gems[col][row].get_groups())
 	return matches
 	
 #remove matched gems (empty the space)
@@ -200,4 +206,4 @@ func spawn_new_gems():
 					all_gems[col][row] = new_gems	
 				else:
 					print("fail to instantiate the new gem")		
-#combine & show it all				
+				

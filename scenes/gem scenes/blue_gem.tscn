@@ -17,7 +17,7 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="Blue gem" type="Node2D"]
+[node name="Blue gem" type="Node2D" groups=["blue_gems"]]
 
 [node name="blue gem sprite" type="AnimatedSprite2D" parent="."]
 position = Vector2(2, -1)
