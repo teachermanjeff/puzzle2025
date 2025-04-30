@@ -2,11 +2,11 @@
 
 [ext_resource type="Script" uid="uid://ccbk2ghaf76h7" path="res://scenes/levels/level 1/level_1.gd" id="1_7mql6"]
 [ext_resource type="Texture2D" uid="uid://cfij4iitjt6pv" path="res://assets/background/level 1 bg.png" id="1_wmhn2"]
-[ext_resource type="Script" uid="uid://c15j3w7xb5156" path="res://scenes/levels/level 1/grid 1 script.gd" id="2_7vvte"]
 [ext_resource type="Script" uid="uid://jfklcya58er0" path="res://scenes/levels/movements_countdown.gd" id="3_6aeqc"]
 [ext_resource type="Texture2D" uid="uid://bejpkwuqfk1a5" path="res://assets/Game Sprites/kenney_onscreen-controls/Sprites/flat-light/flatLight12.png" id="3_q643l"]
 [ext_resource type="Texture2D" uid="uid://brdhv4tcby5e0" path="res://assets/background/level 1 grid bg.png" id="4_rmw0i"]
 [ext_resource type="Texture2D" uid="uid://5ehnk5tfff0l" path="res://assets/Game Sprites/kenney_ui-pack-rpg-expansion/Spritesheet/uipack_rpg_sheet.png" id="5_cpvl0"]
+[ext_resource type="PackedScene" uid="uid://by4h2at2sr6n4" path="res://scenes/levels/grid__script.tscn" id="5_vwe5i"]
 [ext_resource type="FontFile" uid="uid://drc3f4b74p0dt" path="res://Fonts/alagard/alagard.ttf" id="6_k5rfc"]
 [ext_resource type="Texture2D" uid="uid://qj3uuaskmk0u" path="res://assets/Game Sprites/Pixel Art Gem Pack - Animated/Pixel Art Gem Pack - Animated/GEM 1/GEM 1 - BLUE - Spritesheet.png" id="7_m2tdy"]
 [ext_resource type="Texture2D" uid="uid://f8q2t3ku6q6d" path="res://assets/Game Sprites/kenney_ui-pack-rpg-expansion/PNG/buttonSquare_grey_pressed.png" id="8_i0byi"]
@@ -149,13 +149,7 @@ position = Vector2(272, 420.077)
 scale = Vector2(2.21053, 2.06025)
 texture = ExtResource("4_rmw0i")
 
-[node name="grid 1 script" type="Node2D" parent="."]
-script = ExtResource("2_7vvte")
-width = 9
-height = 8
-x_start = 43
-y_start = 650
-offset = 64
+[node name="grid  script" parent="." instance=ExtResource("5_vwe5i")]
 
 [node name="level 1 title bg" type="AnimatedSprite2D" parent="."]
 position = Vector2(76, 51)
@@ -283,8 +277,6 @@ wait_time = 30.0
 wait_time = 10.0
 
 [connection signal="button_down" from="Pause button 1/Pause Button 1" to="." method="_on_button_button_down"]
-[connection signal="gemswap" from="grid 1 script" to="Moves left 1/Movements-CD-L1" method="_on_grid_1_script_gemswap"]
-[connection signal="pressed" from="Shuffle button 1/shuffle Button(1)" to="grid 1 script" method="_on_shuffle_button_pressed"]
-[connection signal="pressed" from="Shuffle button 1/shuffle Button(1)" to="grid 1 script" method="_on_shuffle_button_1_pressed"]
+[connection signal="gemswap" from="grid  script" to="Moves left 1/Movements-CD-L1" method="_on_grid__script_gemswap"]
 [connection signal="timeout" from="Power-up 1/power-up Timer 1 (appear)" to="Power-up 1" method="_on_powerup_timer_1_appear_timeout"]
 [connection signal="timeout" from="Power-up 1/power-up Timer 1 (disappear)" to="Power-up 1" method="_on_powerup_timer_1_disappear_timeout"]

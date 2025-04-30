@@ -25,3 +25,7 @@ func _on_grid_1_script_gemswap() -> void:
 func _on_grid_2_script_gemswap() -> void:
 	attempts_left -= 1
 	
+
+
+func _on_grid__script_gemswap():
+	pass # Replace with function body.
