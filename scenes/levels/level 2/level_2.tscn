@@ -4,8 +4,8 @@
 [ext_resource type="Script" uid="uid://df0liy5tyi61k" path="res://scenes/levels/level 2/level_2.gd" id="1_wmiuw"]
 [ext_resource type="Texture2D" uid="uid://bwnu3we6dufmn" path="res://assets/background/level 2 grid bg.png" id="3_huqas"]
 [ext_resource type="Texture2D" uid="uid://bejpkwuqfk1a5" path="res://assets/Game Sprites/kenney_onscreen-controls/Sprites/flat-light/flatLight12.png" id="3_kkeqq"]
+[ext_resource type="Script" uid="uid://d3hoyjmpfy6k5" path="res://scenes/levels/level 2/grid_2_script.gd" id="4_onheu"]
 [ext_resource type="Texture2D" uid="uid://5ehnk5tfff0l" path="res://assets/Game Sprites/kenney_ui-pack-rpg-expansion/Spritesheet/uipack_rpg_sheet.png" id="5_4ejoj"]
-[ext_resource type="PackedScene" uid="uid://by4h2at2sr6n4" path="res://scenes/levels/grid__script.tscn" id="5_tn6ht"]
 [ext_resource type="FontFile" uid="uid://drc3f4b74p0dt" path="res://Fonts/alagard/alagard.ttf" id="6_kt7cp"]
 [ext_resource type="Texture2D" uid="uid://f8q2t3ku6q6d" path="res://assets/Game Sprites/kenney_ui-pack-rpg-expansion/PNG/buttonSquare_grey_pressed.png" id="8_3xd55"]
 [ext_resource type="Texture2D" uid="uid://w5uj0c1q8lo6" path="res://assets/Game Sprites/Pixel Art Gem Pack - Animated/Pixel Art Gem Pack - Animated/GEM 1/GEM 1 - LIGHT GREEN - Spritesheet.png" id="8_ge2gm"]
@@ -146,7 +146,13 @@ position = Vector2(272, 438.5)
 scale = Vector2(2.17067, 1.98851)
 texture = ExtResource("3_huqas")
 
-[node name="grid  script" parent="." instance=ExtResource("5_tn6ht")]
+[node name="grid 2 script" type="Node2D" parent="."]
+script = ExtResource("4_onheu")
+width = 8
+height = 8
+x_start = 46
+y_start = 663
+offset = 64
 
 [node name="level 2 title bg" type="AnimatedSprite2D" parent="."]
 position = Vector2(76, 51)
@@ -264,6 +270,7 @@ wait_time = 60.0
 [node name="power-up Timer 2 (disappear)" type="Timer" parent="Power-up 2"]
 
 [connection signal="button_down" from="Pause button 2/Pause Button 2" to="." method="_on_button_button_down"]
-[connection signal="gemswap" from="grid  script" to="movements-CD-L2" method="_on_grid__script_gemswap"]
+[connection signal="gemswap" from="grid 2 script" to="movements-CD-L2" method="_on_grid_2_script_gemswap"]
+[connection signal="pressed" from="Shuffle button 2/shuffle Button(2)" to="grid 2 script" method="_on_shuffle_button_pressed"]
 [connection signal="timeout" from="Power-up 2/power-up Timer 2 (appear)" to="Power-up 2" method="_on_powerup_timer_2_appear_timeout"]
 [connection signal="timeout" from="Power-up 2/power-up Timer 2 (disappear)" to="Power-up 2" method="_on_powerup_timer_2_disappear_timeout"]

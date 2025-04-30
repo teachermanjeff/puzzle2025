@@ -1,8 +1,8 @@
 extends Node2D
 
 # grid variables
-@export var width: int = 8
-@export var height: int = 8
+@export var width: int
+@export var height: int
 @export var x_start: int
 @export var y_start: int
 @export var offset: int
@@ -24,10 +24,6 @@ func _ready():
 	randomize()
 	all_gems = make_2D_array()
 	spawn_gems()
-	print ("grid initialized with width: ", width, " height: ", height)
-	print ("columns: ", len(all_gems))
-	if len(all_gems) > 0:
-		print("rows:", len(all_gems[0]))
 
 func _process(_delta: float) -> void:
 	var matches = detect_matches()
@@ -162,24 +158,20 @@ func detect_matches():
 	#check rows for matches (check if right beside is there simmilar gems)
 	for row in range(height-1):
 		for col in range(width - 2): #checks if other two gems beside it is same
-			if col+ 2 < width && all_gems[col][row] != null: # don't go pass the array limit
-				if all_gems[col][row] != null && all_gems[col][row].get_groups() == all_gems[col + 1][row].get_groups() && all_gems[col +1][row].get_groups() == all_gems[col +2][row].get_groups():
-					matches.append(Vector2(col,row))
-					matches.append(Vector2(col +1,row))
-					matches.append(Vector2(col +2,row))
-					print ("row match detected at: col", col," row", row)
-					print(all_gems[col][row].get_groups())
+			if all_gems[col][row] != null && all_gems[col][row].get_groups() == all_gems[col + 1][row].get_groups() && all_gems[col +1][row].get_groups() == all_gems[col +2][row].get_groups():
+				matches.append(Vector2(col,row))
+				matches.append(Vector2(col +1,row))
+				matches.append(Vector2(col +2,row))
+			print(all_gems[col][row].get_groups())
 					
 	#check rows for matches (check if right beside is there simmilar gems)				
 	for col in range(width-1):
 		for row in range(height - 2):
-			if row + 2 < height && all_gems[col][row] != null: # don't go pass the array limit
-				if all_gems[col][row] != null && all_gems[col][row].get_groups() == all_gems[col + 1][row].get_groups() && all_gems[col +1][row].get_groups() == all_gems[col +2][row].get_groups():
-					matches.append(Vector2(col,row))
-					matches.append(Vector2(col,row + 1))
-					matches.append(Vector2(col,row + 2))
-					print ("column match detected at: col", col, " row", row)
-					print(all_gems[col][row].get_groups())
+			if all_gems[col][row] != null && all_gems[col][row].get_groups() == all_gems[col + 1][row].get_groups() && all_gems[col +1][row].get_groups() == all_gems[col +2][row].get_groups():
+				matches.append(Vector2(col,row))
+				matches.append(Vector2(col,row + 1))
+				matches.append(Vector2(col,row + 2))
+				print(all_gems[col][row].get_groups())
 	return matches
 	
 #remove matched gems (empty the space)
