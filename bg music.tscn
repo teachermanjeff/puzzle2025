@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://cgxg7dfbby4hi"]
+
+[ext_resource type="AudioStream" uid="uid://qq2ixxa03r5c" path="res://Thunder-Unison-Action-Dramatic-Epic-Music-chosic.com_.mp3" id="1_5p2ia"]
+
+[node name="background music" type="AudioStreamPlayer"]
+stream = ExtResource("1_5p2ia")
+autoplay = true
