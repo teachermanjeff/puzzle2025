@@ -148,7 +148,7 @@ texture = ExtResource("3_huqas")
 
 [node name="grid 2 script" type="Node2D" parent="."]
 script = ExtResource("4_onheu")
-width = 8
+width = 9
 height = 8
 x_start = 46
 y_start = 663

@@ -31,7 +31,8 @@ func _process(_delta: float) -> void:
 		touch_input()
 		matches.clear()
 	else:
-		detect_matches() == false
+		pass
+		#detect_matches() == false
 	
 	#print("matches detected: ", matches)
 	if matches.size() > 0:
@@ -157,7 +158,7 @@ func is_in_grid(column, row):
 func detect_matches():
 	#check rows for matches (check if right beside is there simmilar gems)
 	for row in range(height-1):
-		for col in range(width - 2): #checks if other two gems beside it is same
+		for col in range(width - 3): #checks if other two gems beside it is same
 			if all_gems[col][row] != null && all_gems[col][row].get_groups() == all_gems[col + 1][row].get_groups() && all_gems[col +1][row].get_groups() == all_gems[col +2][row].get_groups():
 				matches.append(Vector2(col,row))
 				matches.append(Vector2(col +1,row))
@@ -165,13 +166,15 @@ func detect_matches():
 			print(all_gems[col][row].get_groups())
 					
 	#check rows for matches (check if right beside is there simmilar gems)				
-	for col in range(width-1):
-		for row in range(height - 2):
-			if all_gems[col][row] != null && all_gems[col][row].get_groups() == all_gems[col + 1][row].get_groups() && all_gems[col +1][row].get_groups() == all_gems[col +2][row].get_groups():
-				matches.append(Vector2(col,row))
-				matches.append(Vector2(col,row + 1))
-				matches.append(Vector2(col,row + 2))
-				print(all_gems[col][row].get_groups())
+	#for col in range(width-1):
+		#print("Col is", col)
+		#for row in range(height - 3):
+			#print("Row is",row)
+			#if all_gems[col][row] != null && all_gems[col][row].get_groups() == all_gems[col + 1][row].get_groups() && all_gems[col +1][row].get_groups() == all_gems[col +2][row].get_groups():
+				#matches.append(Vector2(col,row))
+				#matches.append(Vector2(col,row + 1))
+				#matches.append(Vector2(col,row + 2))
+				#print(all_gems[col][row].get_groups())
 	return matches
 	
 #remove matched gems (empty the space)
@@ -195,8 +198,8 @@ func shift_gems_down():
 						break
 #shows new gems randomly in that place						
 func spawn_new_gems():
-	for col in range(width):
-		for row in range(height):
+	for col in range(width-1):
+		for row in range(height-1):
 			if all_gems[col][row] == null:
 				print("spawning new gem at: ", col, row)
 				var rand = floor(randf_range(0, gems.size))

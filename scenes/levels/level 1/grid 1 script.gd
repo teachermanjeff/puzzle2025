@@ -10,6 +10,8 @@ signal gemswap
 
 # gem array
 var all_gems = []
+var matches = []
+var is_updating = false
 
 var gems = [
 	preload("res://scenes/gem scenes/blue_gem.tscn"),
@@ -47,6 +49,7 @@ func spawn_gems():
 				all_gems[i][j] = piece  # Store the gem in the array at the grid position
 			else:
 				print("Error: Piece not instantiated correctly.")
+	detect_matches()
 				
 # Convert grid coordinates to pixel coordinates
 func grid_to_pixel(column, row):
@@ -110,8 +113,10 @@ func swap_pieces(column, row, direction):
 		
 		first_piece.position = grid_to_pixel(column + direction.x, row + direction.y)
 		other_piece.position = grid_to_pixel(column, row)
+		detect_matches()
 	else:
 		print("Error: One or both pieces are Nil.")
+	
 
 # Handle touch input differences to swap pieces
 func touch_difference(grid_2, grid_1):
@@ -136,3 +141,66 @@ func is_in_grid(column, row):
 		if row >= 0 && row < height:
 			return true
 	return false
+	
+func detect_matches():
+	#check rows for matches (check if right beside is there simmilar gems)
+	for row in range(height-1):
+		for col in range(width - 3): #checks if other two gems beside it is same
+			if all_gems[col][row] != null && all_gems[col][row].get_groups() == all_gems[col + 1][row].get_groups() && all_gems[col +1][row].get_groups() == all_gems[col +2][row].get_groups():
+				#matches.append([all_gems[col][row].get_groups(),col,row])
+				#matches.append([all_gems[col+1][row].get_groups(),col+1,row])
+				#matches.append([all_gems[col+2][row].get_groups(),col+2,row])
+				
+				matches.append(Vector2(col,row))
+				matches.append(Vector2(col +1,row))
+				matches.append(Vector2(col +2,row))
+			#print(all_gems[col][row].get_groups()) #debugging
+	
+					
+	#check rows for matches (check if right beside is there simmilar gems)				
+	for col in range(width-1):
+		for row in range(height - 3):
+			if  all_gems[col][row] != null && all_gems[col][row].get_groups() == all_gems[col][row+1].get_groups() && all_gems[col][row+1].get_groups() == all_gems[col][row+2].get_groups():
+				#matches.append([all_gems[col][row].get_groups(),col,row])
+				#matches.append([all_gems[col][row+1].get_groups(),col,row+1])
+				#matches.append([all_gems[col][row+2].get_groups(),col,row+2])
+				
+				matches.append(Vector2(col,row))
+				matches.append(Vector2(col,row +1))
+				matches.append(Vector2(col,row +2))
+	remove_matches(matches)
+	
+#remove matched gems (empty the space)
+func remove_matches(matches):
+	for position in matches:
+		var gem = all_gems[position.x][position.y]
+		if gem != null:
+			print("Removing gem at: ", position)
+			all_gems[position.x][position.y] = null
+			gem.queue_free() #gems are removed from the grid
+			
+func shift_gems_down():
+	for col in range(width):
+		for row in range(height -1, -1, -1): #start checking from bottom row
+			if all_gems[col][row] == null:
+				for upper_row in range(row - 1,-1, -1): #check top row
+					if all_gems[col][upper_row] != null:
+						all_gems[col][row] = all_gems[col][upper_row]
+						all_gems[col][row].position = grid_to_pixel(col,row)
+						all_gems[col][upper_row] = null
+						break
+#shows new gems randomly in that place						
+func spawn_new_gems():
+	for col in range(width-1):
+		for row in range(height-1):
+			if all_gems[col][row] == null:
+				print("spawning new gem at: ", col, row)
+				var rand = floor(randf_range(0, gems.size))
+				var new_gems = gems[rand].instantiate()
+				if new_gems != null:
+					add_child(new_gems)
+					new_gems.position = grid_to_pixel(col,row)
+					all_gems[col][row] = new_gems	
+				else:
+					print("fail to instantiate the new gem")		
+				
