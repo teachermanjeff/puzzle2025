@@ -284,7 +284,7 @@ wait_time = 10.0
 
 [connection signal="button_down" from="Pause button 1/Pause Button 1" to="." method="_on_button_button_down"]
 [connection signal="gemswap" from="grid 1 script" to="Moves left 1/Movements-CD-L1" method="_on_grid_1_script_gemswap"]
-[connection signal="pressed" from="Shuffle button 1/shuffle Button(1)" to="grid 1 script" method="_on_shuffle_button_pressed"]
 [connection signal="pressed" from="Shuffle button 1/shuffle Button(1)" to="grid 1 script" method="_on_shuffle_button_1_pressed"]
+[connection signal="pressed" from="Shuffle button 1/shuffle Button(1)" to="grid 1 script" method="_on_shuffle_button_pressed"]
 [connection signal="timeout" from="Power-up 1/power-up Timer 1 (appear)" to="Power-up 1" method="_on_powerup_timer_1_appear_timeout"]
 [connection signal="timeout" from="Power-up 1/power-up Timer 1 (disappear)" to="Power-up 1" method="_on_powerup_timer_1_disappear_timeout"]
