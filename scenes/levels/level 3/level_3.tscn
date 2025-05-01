@@ -156,6 +156,7 @@ animations = [{
 script = ExtResource("1_i6lnk")
 
 [node name="level 3 bg" type="Sprite2D" parent="."]
+texture_filter = 3
 position = Vector2(269.75, 480.5)
 scale = Vector2(3.27576, 2.49615)
 texture = ExtResource("1_vkd0v")
