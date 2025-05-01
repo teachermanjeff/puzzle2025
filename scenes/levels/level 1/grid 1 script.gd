@@ -178,6 +178,7 @@ func remove_matches(matches):
 			print("Removing gem at: ", position)
 			all_gems[position.x][position.y] = null
 			gem.queue_free() #gems are removed from the grid
+	spawn_new_gems()
 			
 func shift_gems_down():
 	for col in range(width):

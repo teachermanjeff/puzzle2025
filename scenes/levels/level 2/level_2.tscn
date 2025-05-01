@@ -174,6 +174,7 @@ offset_left = 198.0
 offset_top = 22.0
 offset_right = 338.0
 offset_bottom = 86.0
+text = "20"
 horizontal_alignment = 1
 vertical_alignment = 1
 script = ExtResource("8_tn6ht")
