@@ -1,0 +1,52 @@
+[gd_scene load_steps=6 format=3 uid="uid://b23xlpdoms6q6"]
+
+[ext_resource type="Texture2D" uid="uid://7rrwgss1op4f" path="res://assets/Game Sprites/kenney_ui-pack-rpg-expansion/PNG/panelInset_beigeLight.png" id="1_1x8kg"]
+[ext_resource type="FontFile" uid="uid://drc3f4b74p0dt" path="res://Fonts/alagard/alagard.ttf" id="2_0cj4j"]
+[ext_resource type="Script" uid="uid://jfklcya58er0" path="res://scenes/levels/movements_countdown.gd" id="3_yv8pw"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m1dhb"]
+atlas = ExtResource("1_1x8kg")
+region = Rect2(0, 0, 93, 94)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_wswc2"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m1dhb")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Moves left 1" type="Node2D"]
+
+[node name="Moves left bg 1" type="AnimatedSprite2D" parent="."]
+position = Vector2(257.125, 60)
+scale = Vector2(1.82527, 1)
+sprite_frames = SubResource("SpriteFrames_wswc2")
+
+[node name="Movements-CD-L1" type="Label" parent="."]
+offset_left = 261.0
+offset_top = 57.0
+offset_right = 335.0
+offset_bottom = 100.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_0cj4j")
+theme_override_font_sizes/font_size = 33
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("3_yv8pw")
+
+[node name="Moves left title 1" type="Label" parent="."]
+offset_left = 191.0
+offset_top = 26.0
+offset_right = 276.0
+offset_bottom = 99.0
+theme_override_colors/font_color = Color(0.699238, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.968627, 0.811765, 0, 1)
+theme_override_constants/shadow_offset_y = 4
+theme_override_fonts/font = ExtResource("2_0cj4j")
+theme_override_font_sizes/font_size = 33
+text = "Moves 
+Left:"

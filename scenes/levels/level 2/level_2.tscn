@@ -9,11 +9,11 @@
 [ext_resource type="FontFile" uid="uid://drc3f4b74p0dt" path="res://Fonts/alagard/alagard.ttf" id="6_kt7cp"]
 [ext_resource type="Texture2D" uid="uid://f8q2t3ku6q6d" path="res://assets/Game Sprites/kenney_ui-pack-rpg-expansion/PNG/buttonSquare_grey_pressed.png" id="8_3xd55"]
 [ext_resource type="Texture2D" uid="uid://w5uj0c1q8lo6" path="res://assets/Game Sprites/Pixel Art Gem Pack - Animated/Pixel Art Gem Pack - Animated/GEM 1/GEM 1 - LIGHT GREEN - Spritesheet.png" id="8_ge2gm"]
-[ext_resource type="Script" uid="uid://jfklcya58er0" path="res://scenes/levels/movements_countdown.gd" id="8_tn6ht"]
 [ext_resource type="Texture2D" uid="uid://dvg4e4s75aqs3" path="res://assets/Game Sprites/Pixel Art Gem Pack - Animated/Pixel Art Gem Pack - Animated/GEM 1/GEM 1 - RED - Spritesheet.png" id="9_1dct4"]
 [ext_resource type="Texture2D" uid="uid://bqjmdmq20d7v3" path="res://assets/Game Sprites/kenney_ui-pack-rpg-expansion/PNG/buttonRound_grey.png" id="10_1dct4"]
 [ext_resource type="Texture2D" uid="uid://dr2fbaoc3buc0" path="res://assets/Game Sprites/kenney_ui-pack-rpg-expansion/PNG/buttonSquare_beige_pressed.png" id="13_4xblw"]
 [ext_resource type="Script" uid="uid://cqt0xrins683r" path="res://scenes/levels/level 2/power_up_2.gd" id="13_tn6ht"]
+[ext_resource type="PackedScene" uid="uid://b23xlpdoms6q6" path="res://scenes/moves_left_counter.tscn" id="14_tn6ht"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_if4hn"]
 atlas = ExtResource("3_kkeqq")
@@ -169,16 +169,6 @@ theme_override_font_sizes/font_size = 30
 text = "Level 2"
 horizontal_alignment = 1
 
-[node name="movements-CD-L2" type="Label" parent="."]
-offset_left = 198.0
-offset_top = 22.0
-offset_right = 338.0
-offset_bottom = 86.0
-text = "20"
-horizontal_alignment = 1
-vertical_alignment = 1
-script = ExtResource("8_tn6ht")
-
 [node name="collection of gems (parent 2)" type="Node2D" parent="."]
 
 [node name="collection of gems(2)" type="AnimatedSprite2D" parent="collection of gems (parent 2)"]
@@ -270,8 +260,14 @@ wait_time = 60.0
 
 [node name="power-up Timer 2 (disappear)" type="Timer" parent="Power-up 2"]
 
+[node name="Moves left 1" parent="." instance=ExtResource("14_tn6ht")]
+
+[node name="Movements-CD-L1" parent="Moves left 1" index="1"]
+max_attempts = 20
+
 [connection signal="button_down" from="Pause button 2/Pause Button 2" to="." method="_on_button_button_down"]
-[connection signal="gemswap" from="grid 2 script" to="movements-CD-L2" method="_on_grid_2_script_gemswap"]
 [connection signal="pressed" from="Shuffle button 2/shuffle Button(2)" to="grid 2 script" method="_on_shuffle_button_pressed"]
 [connection signal="timeout" from="Power-up 2/power-up Timer 2 (appear)" to="Power-up 2" method="_on_powerup_timer_2_appear_timeout"]
 [connection signal="timeout" from="Power-up 2/power-up Timer 2 (disappear)" to="Power-up 2" method="_on_powerup_timer_2_disappear_timeout"]
+
+[editable path="Moves left 1"]
