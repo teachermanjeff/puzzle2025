@@ -193,26 +193,12 @@ func remove_matches(matches):
 	
 	
 #shows new gems randomly in that place						
-#func spawn_new_gems():
-	#for col in range(width-1):
-		#for row in range(height-1):
-			#if all_gems[col][row] == null: # checks if the grid is empty
-				#print("spawning new gem at: ", col, row)
-				#var rand = floor(randf_range(0, gems.size))
-				#var new_gems = gems[rand].instantiate()
-				#if new_gems != null:
-					#add_child(new_gems)
-					#new_gems.position = grid_to_pixel(col,row)
-					#all_gems[col][row] = new_gems	
-				#else:
-					#print("fail to instantiate the new gem")		
-				
 func spawn_new_gems():
 	for col in range(width-1):
-		for row in range(height-1):
+		for row in range(height-1): 
 			if all_gems[col][row] == null: # checks if the grid is empty
 				print("spawning new gem at: ", col, row)
-				var rand = floor(randf_range(0, gems.size))
+				var rand = floor(randf_range(0, gems.size())) # add random gems in the empty space 
 				var new_gems = gems[rand].instantiate()
 				if new_gems != null:
 					add_child(new_gems)
@@ -220,4 +206,3 @@ func spawn_new_gems():
 					all_gems[col][row] = new_gems	
 				else:
 					print("fail to instantiate the new gem")		
-				
