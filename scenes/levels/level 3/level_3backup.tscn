@@ -1,0 +1,263 @@
+[gd_scene load_steps=35 format=3 uid="uid://bc3gna71sxu2"]
+
+[ext_resource type="Script" uid="uid://ce5sdn60b2tsi" path="res://scenes/levels/level 3/level_3.gd" id="1_i6lnk"]
+[ext_resource type="Texture2D" uid="uid://bjq5oghph4bwx" path="res://assets/background/level 3 bg.png" id="1_vkd0v"]
+[ext_resource type="Texture2D" uid="uid://c2buuqy56wod2" path="res://assets/background/level 3 grid bg.png" id="3_3qswj"]
+[ext_resource type="Script" uid="uid://cyqikc8neafmn" path="res://scenes/levels/level 3/grid_3_script.gd" id="4_xex88"]
+[ext_resource type="Texture2D" uid="uid://5ehnk5tfff0l" path="res://assets/Game Sprites/kenney_ui-pack-rpg-expansion/Spritesheet/uipack_rpg_sheet.png" id="5_iyurd"]
+[ext_resource type="FontFile" uid="uid://drc3f4b74p0dt" path="res://Fonts/alagard/alagard.ttf" id="6_g04qi"]
+[ext_resource type="Script" uid="uid://cr2p8m2kg2w0" path="res://scenes/levels/level 3/label.gd" id="7_g04qi"]
+[ext_resource type="Texture2D" uid="uid://f8q2t3ku6q6d" path="res://assets/Game Sprites/kenney_ui-pack-rpg-expansion/PNG/buttonSquare_grey_pressed.png" id="8_3uo3b"]
+[ext_resource type="Texture2D" uid="uid://lja7dmq5vmh1" path="res://assets/Game Sprites/Pixel Art Gem Pack - Animated/Pixel Art Gem Pack - Animated/GEM 1/GEM 1 - PURPLE - Spritesheet.png" id="8_16ck4"]
+[ext_resource type="Texture2D" uid="uid://7rrwgss1op4f" path="res://assets/Game Sprites/kenney_ui-pack-rpg-expansion/PNG/panelInset_beigeLight.png" id="8_46quj"]
+[ext_resource type="Texture2D" uid="uid://bejpkwuqfk1a5" path="res://assets/Game Sprites/kenney_onscreen-controls/Sprites/flat-light/flatLight12.png" id="3_kkeqq"]
+[ext_resource type="Texture2D" uid="uid://5ygb3685d6jp" path="res://assets/Game Sprites/Pixel Art Gem Pack - Animated/Pixel Art Gem Pack - Animated/GEM 1/GEM 1 - GOLD - Spritesheet.png" id="9_ioiww"]
+[ext_resource type="Texture2D" uid="uid://qj3uuaskmk0u" path="res://assets/Game Sprites/Pixel Art Gem Pack - Animated/Pixel Art Gem Pack - Animated/GEM 1/GEM 1 - BLUE - Spritesheet.png" id="10_3uo3b"]
+[ext_resource type="Texture2D" uid="uid://bqjmdmq20d7v3" path="res://assets/Game Sprites/kenney_ui-pack-rpg-expansion/PNG/buttonRound_grey.png" id="11_ioiww"]
+[ext_resource type="Texture2D" uid="uid://dr2fbaoc3buc0" path="res://assets/Game Sprites/kenney_ui-pack-rpg-expansion/PNG/buttonSquare_beige_pressed.png" id="14_8rk8s"]
+[ext_resource type="Script" path="res://scenes/levels/level 3/power_up_3.gd" id="14_o1jg3"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_46quj"]
+atlas = ExtResource("3_kkeqq")
+region = Rect2(0, 0, 48, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_y3xtp"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_46quj")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ecl8f"]
+atlas = ExtResource("5_iyurd")
+region = Rect2(0, 51, 170, 51)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_hy5b2"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ecl8f")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cyhwt"]
+atlas = ExtResource("8_46quj")
+region = Rect2(0, 0, 93, 94)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_lpl0w"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cyhwt")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8rk8s"]
+atlas = ExtResource("8_3uo3b")
+region = Rect2(0, 0, 45, 45)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_g04qi"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iyurd")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Level 3" type="Node2D"]
+script = ExtResource("1_i6lnk")
+
+[node name="level 3 bg" type="Sprite2D" parent="."]
+position = Vector2(269.75, 482.25)
+scale = Vector2(3.27576, 2.48715)
+texture = ExtResource("1_vkd0v")
+
+[node name="Pause Button 3" type="Button" parent="."]
+offset_left = 372.0
+offset_right = 535.0
+offset_bottom = 70.0
+text = "pause button"
+
+[node name="grid 3 bg" type="Sprite2D" parent="."]
+position = Vector2(268, 477)
+scale = Vector2(1.62745, 1.23715)
+texture = ExtResource("3_3qswj")
+
+[node name="grid 3 script" type="Node2D" parent="."]
+script = ExtResource("4_xex88")
+width = 9
+height = 8
+x_start = 43
+y_start = 700
+offset = 64
+
+[node name="level 3 title bg" type="AnimatedSprite2D" parent="."]
+position = Vector2(76, 51)
+scale = Vector2(0.771, 1.363)
+sprite_frames = SubResource("SpriteFrames_hy5b2")
+
+[node name="level 3 title" type="Label" parent="level 3 title bg"]
+offset_left = -83.0
+offset_top = -18.0
+offset_right = 83.0
+offset_bottom = 12.0
+theme_override_fonts/font = ExtResource("6_g04qi")
+theme_override_font_sizes/font_size = 30
+text = "Level 3"
+horizontal_alignment = 1
+
+[node name="Moves left 3" type="Node2D" parent="."]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Moves left 3"]
+position = Vector2(257.125, 60)
+scale = Vector2(1.825, 1)
+sprite_frames = SubResource("SpriteFrames_lpl0w")
+
+[node name="movements-CD-L3" type="Label" parent="Moves left 3"]
+offset_left = 261.0
+offset_top = 63.0
+offset_right = 327.0
+offset_bottom = 98.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_g04qi")
+theme_override_font_sizes/font_size = 33
+text = "10"
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("7_g04qi")
+
+[node name="Moves Left title 3" type="Label" parent="Moves left 3"]
+offset_left = 188.0
+offset_top = 28.0
+offset_right = 281.0
+offset_bottom = 95.0
+theme_override_colors/font_color = Color(0.698039, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.968627, 0.811765, 0, 1)
+theme_override_constants/shadow_offset_y = 4
+theme_override_fonts/font = ExtResource("6_g04qi")
+theme_override_font_sizes/font_size = 33
+text = "Moves
+Left:"
+
+[node name="collection of gems (parent 3)" type="Node2D" parent="."]
+
+[node name="collection of gems(3)" type="AnimatedSprite2D" parent="collection of gems (parent 3)"]
+position = Vector2(396, 844)
+scale = Vector2(5.26666, 3.90196)
+sprite_frames = SubResource("SpriteFrames_g04qi")
+
+[node name="Movements-CD" parent="." instance=ExtResource("7_g04qi")]
+max_attempts = 10
+
+[node name="yellow gem pic" type="AnimatedSprite2D" parent="collection of gems (parent 3)"]
+position = Vector2(318, 854)
+scale = Vector2(1.712, 1.372)
+sprite_frames = SubResource("SpriteFrames_46quj")
+
+[node name="blue gem pic (level 3)" type="AnimatedSprite2D" parent="collection of gems (parent 3)"]
+position = Vector2(319, 898)
+scale = Vector2(1.712, 1.372)
+sprite_frames = SubResource("SpriteFrames_b060x")
+
+[node name="collection title (3)" type="Label" parent="collection of gems (parent 3)"]
+offset_left = 288.0
+offset_top = 762.0
+offset_right = 512.0
+offset_bottom = 786.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.65098, 0.65098, 0.65098, 1)
+theme_override_constants/shadow_offset_y = 4
+theme_override_fonts/font = ExtResource("6_g04qi")
+theme_override_font_sizes/font_size = 25
+text = "Collect 5 gems each"
+horizontal_alignment = 1
+
+[node name="score purple (3)" type="Label" parent="collection of gems (parent 3)"]
+offset_left = 339.0
+offset_top = 790.0
+offset_right = 403.0
+offset_bottom = 825.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 25
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="score yellow (3)" type="Label" parent="collection of gems (parent 3)"]
+offset_left = 336.0
+offset_top = 833.0
+offset_right = 407.0
+offset_bottom = 868.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 25
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="score blue (3)" type="Label" parent="collection of gems (parent 3)"]
+offset_left = 341.0
+offset_top = 877.0
+offset_right = 399.0
+offset_bottom = 912.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 25
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+
+[node name="shuffle Button bg (3)" type="AnimatedSprite2D" parent="Shuffle button 3"]
+position = Vector2(68, 790)
+scale = Vector2(2.714, 1.789)
+sprite_frames = SubResource("SpriteFrames_hog8a")
+
+[node name="shuffle Button(3)" type="Button" parent="Shuffle button 3"]
+offset_left = 18.0
+offset_top = 764.0
+offset_right = 117.0
+offset_bottom = 804.0
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+text = "Shuffle
+"
+flat = true
+
+[node name="Power-up 3" type="Node2D" parent="."]
+script = ExtResource("14_o1jg3")
+
+[node name="power-up (rand) bg 3" type="AnimatedSprite2D" parent="Power-up 3"]
+position = Vector2(207.625, 796.813)
+scale = Vector2(2.78333, 1.74166)
+sprite_frames = SubResource("SpriteFrames_cyhwt")
+
+[node name="power-up Timer 3 (appear)" type="Timer" parent="Power-up 3"]
+wait_time = 120.0
+
+[node name="power-up Timer 3 (disappear)" type="Timer" parent="Power-up 3"]
+wait_time = 10.0
+
+[connection signal="button_down" from="Pause button 3/Pause Button 3" to="." method="_on_button_button_down"]
+[connection signal="pressed" from="Shuffle button 3/shuffle Button(3)" to="grid 3 script" method="_on_shuffle_button_pressed"]
+[connection signal="timeout" from="Power-up 3/power-up Timer 3 (appear)" to="Power-up 3" method="_on_powerup_timer_3_appear_timeout"]
+[connection signal="timeout" from="Power-up 3/power-up Timer 3 (disappear)" to="Power-up 3" method="_on_powerup_timer_3_disappear_timeout"]
