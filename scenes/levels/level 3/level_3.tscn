@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=3 uid="uid://mrkdxqm8sw2x"]
+[gd_scene load_steps=21 format=3 uid="uid://mrkdxqm8sw2x"]
 
 [ext_resource type="Script" uid="uid://ce5sdn60b2tsi" path="res://scenes/levels/level 3/level_3.gd" id="1_i6lnk"]
 [ext_resource type="Texture2D" uid="uid://bjq5oghph4bwx" path="res://assets/background/level 3 bg.png" id="1_vkd0v"]
@@ -7,15 +7,11 @@
 [ext_resource type="Script" uid="uid://cyqikc8neafmn" path="res://scenes/levels/level 3/grid_3_script.gd" id="4_xex88"]
 [ext_resource type="Texture2D" uid="uid://5ehnk5tfff0l" path="res://assets/Game Sprites/kenney_ui-pack-rpg-expansion/Spritesheet/uipack_rpg_sheet.png" id="5_iyurd"]
 [ext_resource type="FontFile" uid="uid://drc3f4b74p0dt" path="res://Fonts/alagard/alagard.ttf" id="6_g04qi"]
-[ext_resource type="Texture2D" uid="uid://f8q2t3ku6q6d" path="res://assets/Game Sprites/kenney_ui-pack-rpg-expansion/PNG/buttonSquare_grey_pressed.png" id="8_3uo3b"]
-[ext_resource type="Texture2D" uid="uid://lja7dmq5vmh1" path="res://assets/Game Sprites/Pixel Art Gem Pack - Animated/Pixel Art Gem Pack - Animated/GEM 1/GEM 1 - PURPLE - Spritesheet.png" id="8_16ck4"]
-[ext_resource type="Texture2D" uid="uid://7rrwgss1op4f" path="res://assets/Game Sprites/kenney_ui-pack-rpg-expansion/PNG/panelInset_beigeLight.png" id="8_46quj"]
-[ext_resource type="Script" uid="uid://jfklcya58er0" path="res://scenes/levels/movements_countdown.gd" id="9_46quj"]
-[ext_resource type="Texture2D" uid="uid://5ygb3685d6jp" path="res://assets/Game Sprites/Pixel Art Gem Pack - Animated/Pixel Art Gem Pack - Animated/GEM 1/GEM 1 - GOLD - Spritesheet.png" id="9_ioiww"]
-[ext_resource type="Texture2D" uid="uid://qj3uuaskmk0u" path="res://assets/Game Sprites/Pixel Art Gem Pack - Animated/Pixel Art Gem Pack - Animated/GEM 1/GEM 1 - BLUE - Spritesheet.png" id="10_3uo3b"]
 [ext_resource type="Texture2D" uid="uid://bqjmdmq20d7v3" path="res://assets/Game Sprites/kenney_ui-pack-rpg-expansion/PNG/buttonRound_grey.png" id="11_ioiww"]
+[ext_resource type="PackedScene" uid="uid://cektohyhvd82t" path="res://scenes/new_score.tscn" id="12_3uo3b"]
 [ext_resource type="Texture2D" uid="uid://dr2fbaoc3buc0" path="res://assets/Game Sprites/kenney_ui-pack-rpg-expansion/PNG/buttonSquare_beige_pressed.png" id="14_8rk8s"]
 [ext_resource type="Script" uid="uid://ctay6xc4v255i" path="res://scenes/levels/level 3/power_up_3.gd" id="14_o1jg3"]
+[ext_resource type="PackedScene" uid="uid://b23xlpdoms6q6" path="res://scenes/moves_left_counter.tscn" id="15_o1jg3"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_46quj"]
 atlas = ExtResource("3_hog8a")
@@ -41,81 +37,6 @@ animations = [{
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_ecl8f")
-}],
-"loop": true,
-"name": &"default",
-"speed": 5.0
-}]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_cyhwt"]
-atlas = ExtResource("8_46quj")
-region = Rect2(0, 0, 93, 94)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_lpl0w"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_cyhwt")
-}],
-"loop": true,
-"name": &"default",
-"speed": 5.0
-}]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_8rk8s"]
-atlas = ExtResource("8_3uo3b")
-region = Rect2(0, 0, 45, 45)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_g04qi"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_8rk8s")
-}],
-"loop": true,
-"name": &"default",
-"speed": 5.0
-}]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_hog8a"]
-atlas = ExtResource("8_16ck4")
-region = Rect2(162, 0, 18, 30)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_8rk8s"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_hog8a")
-}],
-"loop": true,
-"name": &"default",
-"speed": 5.0
-}]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_o1jg3"]
-atlas = ExtResource("9_ioiww")
-region = Rect2(162, 0, 18, 30)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_46quj"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_o1jg3")
-}],
-"loop": true,
-"name": &"default",
-"speed": 5.0
-}]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_y3xtp"]
-atlas = ExtResource("10_3uo3b")
-region = Rect2(144, 0, 18, 30)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_b060x"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_y3xtp")
 }],
 "loop": true,
 "name": &"default",
@@ -202,108 +123,6 @@ theme_override_font_sizes/font_size = 30
 text = "Level 3"
 horizontal_alignment = 1
 
-[node name="Moves left 3" type="Node2D" parent="."]
-
-[node name="Moves left bg 3" type="AnimatedSprite2D" parent="Moves left 3"]
-position = Vector2(257.125, 60)
-scale = Vector2(1.825, 1)
-sprite_frames = SubResource("SpriteFrames_lpl0w")
-
-[node name="movements-CD-L3" type="Label" parent="Moves left 3"]
-offset_left = 231.0
-offset_top = 53.0
-offset_right = 354.0
-offset_bottom = 105.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("6_g04qi")
-theme_override_font_sizes/font_size = 33
-text = "10"
-horizontal_alignment = 1
-vertical_alignment = 1
-script = ExtResource("9_46quj")
-metadata/_edit_use_anchors_ = true
-
-[node name="Moves left title 3" type="Label" parent="Moves left 3"]
-offset_left = 189.0
-offset_top = 26.0
-offset_right = 297.0
-offset_bottom = 93.0
-theme_override_colors/font_color = Color(0.698039, 0, 0, 1)
-theme_override_colors/font_shadow_color = Color(0.968627, 0.811765, 0, 1)
-theme_override_constants/shadow_offset_y = 4
-theme_override_fonts/font = ExtResource("6_g04qi")
-theme_override_font_sizes/font_size = 33
-text = "Moves
-Left:"
-
-[node name="collection of gems (parent 3)" type="Node2D" parent="."]
-
-[node name="collection of gems(3)" type="AnimatedSprite2D" parent="collection of gems (parent 3)"]
-position = Vector2(396, 844)
-scale = Vector2(5.26666, 3.90196)
-sprite_frames = SubResource("SpriteFrames_g04qi")
-
-[node name="purple gem pic" type="AnimatedSprite2D" parent="collection of gems (parent 3)"]
-position = Vector2(318, 809)
-scale = Vector2(1.712, 1.372)
-sprite_frames = SubResource("SpriteFrames_8rk8s")
-
-[node name="yellow gem pic" type="AnimatedSprite2D" parent="collection of gems (parent 3)"]
-position = Vector2(318, 854)
-scale = Vector2(1.712, 1.372)
-sprite_frames = SubResource("SpriteFrames_46quj")
-
-[node name="blue gem pic (level 3)" type="AnimatedSprite2D" parent="collection of gems (parent 3)"]
-position = Vector2(319, 898)
-scale = Vector2(1.712, 1.372)
-sprite_frames = SubResource("SpriteFrames_b060x")
-
-[node name="collection title (3)" type="Label" parent="collection of gems (parent 3)"]
-offset_left = 288.0
-offset_top = 762.0
-offset_right = 512.0
-offset_bottom = 786.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/font_shadow_color = Color(0.65098, 0.65098, 0.65098, 1)
-theme_override_constants/shadow_offset_y = 4
-theme_override_fonts/font = ExtResource("6_g04qi")
-theme_override_font_sizes/font_size = 25
-text = "Collect 5 gems each"
-horizontal_alignment = 1
-
-[node name="score purple (3)" type="Label" parent="collection of gems (parent 3)"]
-offset_left = 339.0
-offset_top = 790.0
-offset_right = 403.0
-offset_bottom = 825.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 25
-text = "0"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="score yellow (3)" type="Label" parent="collection of gems (parent 3)"]
-offset_left = 336.0
-offset_top = 833.0
-offset_right = 407.0
-offset_bottom = 868.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 25
-text = "0"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="score blue (3)" type="Label" parent="collection of gems (parent 3)"]
-offset_left = 341.0
-offset_top = 877.0
-offset_right = 399.0
-offset_bottom = 912.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 25
-text = "0"
-horizontal_alignment = 1
-vertical_alignment = 1
-
 [node name="Shuffle button 3" type="Node2D" parent="."]
 
 [node name="shuffle Button bg (3)" type="AnimatedSprite2D" parent="Shuffle button 3"]
@@ -344,7 +163,19 @@ wait_time = 120.0
 [node name="power-up Timer 3 (disappear)" type="Timer" parent="Power-up 3"]
 wait_time = 10.0
 
+[node name="Movements-CD-L1" parent="." instance=ExtResource("15_o1jg3")]
+offset_left = 272.0
+offset_top = 77.0
+offset_right = 346.0
+offset_bottom = 120.0
+text = ""
+max_attempts = 10
+
+[node name="score" parent="." instance=ExtResource("12_3uo3b")]
+
 [connection signal="button_down" from="Pause button 3/Pause Button 3" to="." method="_on_button_button_down"]
+[connection signal="addpoints" from="grid 3 script" to="score" method="_on_grid_3_script_addpoints"]
+[connection signal="gemswap" from="grid 3 script" to="Movements-CD-L1" method="_on_grid_3_script_gemswap"]
 [connection signal="pressed" from="Shuffle button 3/shuffle Button(3)" to="grid 3 script" method="_on_shuffle_button_pressed"]
 [connection signal="timeout" from="Power-up 3/power-up Timer 3 (appear)" to="Power-up 3" method="_on_powerup_timer_3_appear_timeout"]
 [connection signal="timeout" from="Power-up 3/power-up Timer 3 (disappear)" to="Power-up 3" method="_on_powerup_timer_3_disappear_timeout"]

@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://bg82fq8ldj22y"]
+
+[ext_resource type="Script" uid="uid://dcdb0vl7q8jsl" path="res://scenes/levels/level 1/score.gd" id="1_8juob"]
+
+[node name="score" type="Label"]
+offset_left = 368.0
+offset_top = 774.0
+offset_right = 495.0
+offset_bottom = 843.0
+script = ExtResource("1_8juob")

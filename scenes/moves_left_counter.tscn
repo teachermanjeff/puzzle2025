@@ -19,30 +19,30 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="Moves left 1" type="Node2D"]
-
-[node name="Moves left bg 1" type="AnimatedSprite2D" parent="."]
-position = Vector2(257.125, 60)
-scale = Vector2(1.82527, 1)
-sprite_frames = SubResource("SpriteFrames_wswc2")
-
-[node name="Movements-CD-L1" type="Label" parent="."]
-offset_left = 261.0
-offset_top = 57.0
-offset_right = 335.0
-offset_bottom = 100.0
+[node name="Movements-CD-L1" type="Label"]
+z_index = 4096
+z_as_relative = false
+offset_right = 74.0
+offset_bottom = 43.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_0cj4j")
 theme_override_font_sizes/font_size = 33
+text = "test"
 horizontal_alignment = 1
 vertical_alignment = 1
 script = ExtResource("3_yv8pw")
 
+[node name="Moves left bg 1" type="AnimatedSprite2D" parent="."]
+z_as_relative = false
+position = Vector2(-1, 1)
+scale = Vector2(1.82527, 1)
+sprite_frames = SubResource("SpriteFrames_wswc2")
+
 [node name="Moves left title 1" type="Label" parent="."]
-offset_left = 191.0
-offset_top = 26.0
-offset_right = 276.0
-offset_bottom = 99.0
+offset_left = -77.0
+offset_top = -35.0
+offset_right = 27.0
+offset_bottom = 38.0
 theme_override_colors/font_color = Color(0.699238, 0, 0, 1)
 theme_override_colors/font_shadow_color = Color(0.968627, 0.811765, 0, 1)
 theme_override_constants/shadow_offset_y = 4

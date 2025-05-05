@@ -1,4 +1,4 @@
-extends Label
+extends Node2D
 
 # Variables for the movement countdown and points
 @export var max_attempts = 30  # Maximum number of attempts
@@ -23,8 +23,4 @@ func _on_grid_1_script_gemswap() -> void:
 
 
 func _on_grid_2_script_gemswap() -> void:
-	attempts_left -= 1
-
-
-func _on_grid_3_script_gemswap() -> void:
 	attempts_left -= 1

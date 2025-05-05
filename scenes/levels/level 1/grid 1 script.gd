@@ -7,6 +7,7 @@ extends Node2D
 @export var y_start: int
 @export var offset: int
 signal gemswap
+signal addpoints(points)
 
 # gem array
 var all_gems = []
@@ -206,7 +207,8 @@ func detect_matches():
 	
 #remove matched gems (empty the space)
 func remove_matches(rem_matches):
-	print("Matches are ", rem_matches)
+	print("I have scored",len(matches))
+	emit_signal("addpoints",len(matches))
 	for position in rem_matches:
 		var gem = all_gems[position.x][position.y]
 		if gem != null:
@@ -215,6 +217,7 @@ func remove_matches(rem_matches):
 			gem.queue_free() #gems are removed from the grid
 	spawn_new_gems()
 	matches = []
+	
 	
 	
 #shows new gems randomly in that place						

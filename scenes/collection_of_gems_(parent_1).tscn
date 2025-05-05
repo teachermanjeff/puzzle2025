@@ -1,0 +1,51 @@
+[gd_scene load_steps=6 format=3 uid="uid://b305d4tjd385u"]
+
+[ext_resource type="Texture2D" uid="uid://f8q2t3ku6q6d" path="res://assets/Game Sprites/kenney_ui-pack-rpg-expansion/PNG/buttonSquare_grey_pressed.png" id="1_22080"]
+[ext_resource type="FontFile" uid="uid://drc3f4b74p0dt" path="res://Fonts/alagard/alagard.ttf" id="2_qjuex"]
+[ext_resource type="Script" uid="uid://dcdb0vl7q8jsl" path="res://scenes/levels/level 1/score.gd" id="3_k8hyl"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cdfij"]
+atlas = ExtResource("1_22080")
+region = Rect2(0, 0, 45, 45)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_k5rfc"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cdfij")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="score" type="Label"]
+offset_left = 394.0
+offset_top = 743.0
+offset_right = 479.0
+offset_bottom = 795.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 25
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("3_k8hyl")
+
+[node name="collection of gems (parent 1)" type="Node2D" parent="."]
+
+[node name="collection of gems(1) bg" type="AnimatedSprite2D" parent="collection of gems (parent 1)"]
+position = Vector2(432.75, 752.265)
+scale = Vector2(3.94445, 2.21045)
+sprite_frames = SubResource("SpriteFrames_k5rfc")
+
+[node name="collection title (1)" type="Label" parent="collection of gems (parent 1)"]
+offset_left = 338.0
+offset_top = 714.0
+offset_right = 531.0
+offset_bottom = 762.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.650128, 0.650128, 0.650128, 1)
+theme_override_constants/shadow_offset_y = 4
+theme_override_fonts/font = ExtResource("2_qjuex")
+theme_override_font_sizes/font_size = 25
+text = "Score"
+horizontal_alignment = 1
