@@ -1,0 +1,58 @@
+[gd_scene load_steps=8 format=3 uid="uid://bgo5bek61e0qe"]
+
+[ext_resource type="Texture2D" uid="uid://dfo01f3a33nuf" path="res://assets/Game Sprites/Character animation/Cave Miner bubble text.png" id="1_ffnmn"]
+[ext_resource type="FontFile" uid="uid://drc3f4b74p0dt" path="res://Fonts/alagard/alagard.ttf" id="2_op80c"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_aciio"]
+atlas = ExtResource("1_ffnmn")
+region = Rect2(0, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d7aeq"]
+atlas = ExtResource("1_ffnmn")
+region = Rect2(96, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ih1rd"]
+atlas = ExtResource("1_ffnmn")
+region = Rect2(0, 96, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7kdt0"]
+atlas = ExtResource("1_ffnmn")
+region = Rect2(96, 96, 96, 96)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_78gbv"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_aciio")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d7aeq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ih1rd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7kdt0")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="character_loss_animation" type="Node2D"]
+
+[node name="miner_loss_animation" type="AnimatedSprite2D" parent="."]
+texture_filter = 3
+position = Vector2(-1, -1)
+scale = Vector2(4.30208, 4.30208)
+sprite_frames = SubResource("SpriteFrames_78gbv")
+
+[node name="loss_text" type="Label" parent="."]
+offset_left = 43.0
+offset_top = -185.0
+offset_right = 190.0
+offset_bottom = -153.0
+theme_override_colors/font_color = Color(0.231373, 0.231373, 0.215686, 1)
+theme_override_fonts/font = ExtResource("2_op80c")
+theme_override_font_sizes/font_size = 12
+text = "BETTER LUCK NEXT TIME"

@@ -20,6 +20,7 @@ animations = [{
 [node name="light green gem" type="Node2D" groups=["light_green _gems"]]
 
 [node name="light green gem sprite" type="AnimatedSprite2D" parent="." groups=["light_green _gems"]]
+texture_filter = 3
 position = Vector2(2, -1)
 scale = Vector2(1.85, 1.85)
 sprite_frames = SubResource("SpriteFrames_qwj4q")

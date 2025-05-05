@@ -108,6 +108,7 @@ animations = [{
 script = ExtResource("1_7mql6")
 
 [node name="level 1 bg" type="Sprite2D" parent="."]
+texture_filter = 3
 position = Vector2(262.984, 479.5)
 scale = Vector2(3.28674, 2.51157)
 texture = ExtResource("1_wmhn2")

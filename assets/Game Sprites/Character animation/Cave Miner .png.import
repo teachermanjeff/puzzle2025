@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dfo01f3a33nuf"
-path="res://.godot/imported/Cave Miner bubble text.png-f6ccaa05a9efd322a4963c24e23f6419.ctex"
+uid="uid://vl5bc17e6pik"
+path="res://.godot/imported/Cave Miner .png-b372389a77db89f4dd8d9d16b45220b9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Game Sprites/Character animation/Cave Miner bubble text.png"
-dest_files=["res://.godot/imported/Cave Miner bubble text.png-f6ccaa05a9efd322a4963c24e23f6419.ctex"]
+source_file="res://assets/Game Sprites/Character animation/Cave Miner .png"
+dest_files=["res://.godot/imported/Cave Miner .png-b372389a77db89f4dd8d9d16b45220b9.ctex"]
 
 [params]
 

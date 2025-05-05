@@ -124,6 +124,7 @@ animations = [{
 script = ExtResource("1_wmiuw")
 
 [node name="level 2 bg" type="Sprite2D" parent="."]
+texture_filter = 3
 position = Vector2(269.5, 490)
 scale = Vector2(3.15517, 2.58098)
 texture = ExtResource("1_mi4ay")
@@ -169,10 +170,7 @@ theme_override_font_sizes/font_size = 30
 text = "Level 2"
 horizontal_alignment = 1
 
-[node name="Moves left 1" parent="." instance=ExtResource("14_tn6ht")]
-
-[node name="Movements-CD-L1" parent="Moves left 1" index="1"]
-max_attempts = 20
+[node name="Moves left 2" parent="." instance=ExtResource("14_tn6ht")]
 
 [node name="collection of gems (parent 2)" type="Node2D" parent="."]
 
@@ -270,4 +268,4 @@ wait_time = 60.0
 [connection signal="timeout" from="Power-up 2/power-up Timer 2 (appear)" to="Power-up 2" method="_on_powerup_timer_2_appear_timeout"]
 [connection signal="timeout" from="Power-up 2/power-up Timer 2 (disappear)" to="Power-up 2" method="_on_powerup_timer_2_disappear_timeout"]
 
-[editable path="Moves left 1"]
+[editable path="Moves left 2"]

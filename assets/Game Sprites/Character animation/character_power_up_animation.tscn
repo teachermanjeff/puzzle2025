@@ -1,0 +1,59 @@
+[gd_scene load_steps=8 format=3 uid="uid://mmi6vwnxo3nd"]
+
+[ext_resource type="Texture2D" uid="uid://dfo01f3a33nuf" path="res://assets/Game Sprites/Character animation/Cave Miner bubble text.png" id="1_7f6u3"]
+[ext_resource type="FontFile" uid="uid://drc3f4b74p0dt" path="res://Fonts/alagard/alagard.ttf" id="2_u2y8v"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1h0q4"]
+atlas = ExtResource("1_7f6u3")
+region = Rect2(0, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k2w2y"]
+atlas = ExtResource("1_7f6u3")
+region = Rect2(96, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sv5uv"]
+atlas = ExtResource("1_7f6u3")
+region = Rect2(0, 96, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h0lmk"]
+atlas = ExtResource("1_7f6u3")
+region = Rect2(96, 96, 96, 96)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4ft1w"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1h0q4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k2w2y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sv5uv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h0lmk")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="character_power-up_animation" type="Node2D"]
+
+[node name="miner_power-up_aniamtion" type="AnimatedSprite2D" parent="."]
+texture_filter = 3
+position = Vector2(0, 2)
+scale = Vector2(2.92708, 2.92708)
+sprite_frames = SubResource("SpriteFrames_4ft1w")
+
+[node name="power-up_text" type="Label" parent="."]
+texture_filter = 3
+offset_left = 33.0
+offset_top = -122.0
+offset_right = 207.0
+offset_bottom = -89.0
+theme_override_colors/font_color = Color(0.231373, 0.231373, 0.215686, 1)
+theme_override_fonts/font = ExtResource("2_u2y8v")
+theme_override_font_sizes/font_size = 9
+text = "YOU GOT A POWER-UP"

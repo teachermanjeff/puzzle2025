@@ -1,0 +1,46 @@
+[gd_scene load_steps=7 format=3 uid="uid://bcdeyrr8gmmkb"]
+
+[ext_resource type="Texture2D" uid="uid://vl5bc17e6pik" path="res://assets/Game Sprites/Character animation/Cave Miner .png" id="1_llfe1"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_orb1b"]
+atlas = ExtResource("1_llfe1")
+region = Rect2(0, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_obtnf"]
+atlas = ExtResource("1_llfe1")
+region = Rect2(96, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lgbj3"]
+atlas = ExtResource("1_llfe1")
+region = Rect2(0, 96, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pyku4"]
+atlas = ExtResource("1_llfe1")
+region = Rect2(96, 96, 96, 96)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_kwsjj"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_orb1b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_obtnf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lgbj3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pyku4")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="character_animation" type="Node2D"]
+
+[node name="miner_animation" type="AnimatedSprite2D" parent="."]
+texture_filter = 3
+sprite_frames = SubResource("SpriteFrames_kwsjj")
+frame_progress = 0.975303

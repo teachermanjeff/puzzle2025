@@ -1,0 +1,59 @@
+[gd_scene load_steps=8 format=3 uid="uid://bfjn46y8di7q"]
+
+[ext_resource type="Texture2D" uid="uid://dfo01f3a33nuf" path="res://assets/Game Sprites/Character animation/Cave Miner bubble text.png" id="1_0v3ev"]
+[ext_resource type="FontFile" uid="uid://drc3f4b74p0dt" path="res://Fonts/alagard/alagard.ttf" id="2_iqaxw"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oh7vj"]
+atlas = ExtResource("1_0v3ev")
+region = Rect2(0, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0swny"]
+atlas = ExtResource("1_0v3ev")
+region = Rect2(96, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_50hgy"]
+atlas = ExtResource("1_0v3ev")
+region = Rect2(0, 96, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ssc05"]
+atlas = ExtResource("1_0v3ev")
+region = Rect2(96, 96, 96, 96)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_e1oru"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oh7vj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0swny")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_50hgy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ssc05")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="character_congrats_animation" type="Node2D"]
+
+[node name="miner_congrats_animation" type="AnimatedSprite2D" parent="."]
+texture_filter = 3
+position = Vector2(10, 40)
+scale = Vector2(2.96875, 2.96875)
+sprite_frames = SubResource("SpriteFrames_e1oru")
+frame_progress = 0.519173
+
+[node name="congrats" type="Label" parent="."]
+texture_filter = 3
+offset_left = 49.0
+offset_top = -90.0
+offset_right = 150.0
+offset_bottom = -66.0
+theme_override_colors/font_color = Color(0.231373, 0.231373, 0.215686, 1)
+theme_override_fonts/font = ExtResource("2_iqaxw")
+text = "CONGRATS!"
