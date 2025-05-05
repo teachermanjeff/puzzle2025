@@ -19,7 +19,7 @@ func _ready() -> void:
 	disappear_timer.wait_time = 10 #10sec timer
 	disappear_timer.one_shot = false #repeat timer
 	
-	object_to_appear = $"power-up (rand) bg 1"
+	object_to_appear = $"character_power-up_animation"
 	object_to_appear.visible = false #in start invisible 
 	
 	
