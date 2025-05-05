@@ -177,6 +177,7 @@ func is_in_grid(column, row):
 	
 func detect_matches():
 	#check rows for matches (check if right beside is there simmilar gems)
+	print("at beginning of detect function, matches are",matches)
 	for row in range(height-1):
 		for col in range(width - 3): #only checks the code till grid box 5
 			if all_gems[col][row] != null && all_gems[col][row].get_groups() == all_gems[col + 1][row].get_groups() && all_gems[col +1][row].get_groups() == all_gems[col +2][row].get_groups():
@@ -204,14 +205,17 @@ func detect_matches():
 	remove_matches(matches)
 	
 #remove matched gems (empty the space)
-func remove_matches(matches):
-	for position in matches:
+func remove_matches(rem_matches):
+	print("Matches are ", rem_matches)
+	for position in rem_matches:
 		var gem = all_gems[position.x][position.y]
 		if gem != null:
 			print("Removing gem at: ", position)
 			all_gems[position.x][position.y] = null
 			gem.queue_free() #gems are removed from the grid
 	spawn_new_gems()
+	matches = []
+	
 	
 #shows new gems randomly in that place						
 func spawn_new_gems():
