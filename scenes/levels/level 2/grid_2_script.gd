@@ -193,7 +193,7 @@ func shift_gems_down():
 				for upper_row in range(row - 1,-1, -1): #check top row
 					if all_gems[col][upper_row] != null:
 						all_gems[col][row] = all_gems[col][upper_row]
-						all_gems[col][row].position = grid_to_pixel(col,row)
+						all_gems[col][row].position = grid_to_pixel(col, row)
 						all_gems[col][upper_row] = null
 						break
 #shows new gems randomly in that place						
@@ -206,7 +206,7 @@ func spawn_new_gems():
 				var new_gems = gems[rand].instantiate()
 				if new_gems != null:
 					add_child(new_gems)
-					new_gems.position = grid_to_pixel(col,row)
+					new_gems.position = grid_to_pixel(col, row)
 					all_gems[col][row] = new_gems	
 				else:
 					print("fail to instantiate the new gem")		

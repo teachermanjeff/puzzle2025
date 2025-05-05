@@ -19,7 +19,7 @@ animations = [{
 
 [node name="yellow gem" type="Node2D" groups=["yellow_gems"]]
 
-[node name="yellow gem sprite" type="AnimatedSprite2D" parent="."]
+[node name="yellow gem sprite" type="AnimatedSprite2D" parent="." groups=["yellow_gems"]]
 position = Vector2(2, -1)
 scale = Vector2(1.85, 1.85)
 sprite_frames = SubResource("SpriteFrames_wqbvr")

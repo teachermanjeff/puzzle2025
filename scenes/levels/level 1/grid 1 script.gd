@@ -39,10 +39,23 @@ func make_2D_array() -> Array:
 func spawn_gems():
 	for j in range(height):  
 		for i in range(width):  # added loop over width
-			var rand = floor(randf_range(0, gems.size()))
-			var piece = gems[rand].instantiate()
-			
-			# Check if the piece is valid (not Nil)
+			var piece = null
+			var gem_index = 0
+			while true:
+				gem_index = floor(randf_range(0, gems.size()))
+				var gem_scene = gems[gem_index].instantiate()
+				
+				if gem_scene.get_groups().size() > 0:
+					var gem_group = gem_scene.get_groups()[0]
+					
+					if no_match_in_start(i, j, gem_index): 
+						piece = gem_scene
+						break
+				
+			#var rand = floor(randf_range(0, gems.size()))
+			#var piece = gems[rand].instantiate()
+			#rand == floor (randf_range(0, gems.size()))
+			#piece = gems [rand].intance()
 			if piece != null:
 				add_child(piece)
 				piece.position = grid_to_pixel(i, j)
@@ -50,7 +63,27 @@ func spawn_gems():
 			else:
 				print("Error: Piece not instantiated correctly.")
 
-				
+# checks if the intial gems positioned have a match or not				
+func no_match_in_start(i, j, gem_index): 
+	var gem_scene = gems[gem_index].instantiate()
+	if gem_scene.get_groups().size()>0:
+		var gem_group = gem_scene.get_groups()[0]
+		
+		#check horizontally
+		if i >= 2:
+			if all_gems[i-1][j] != null && all_gems [i-2][j] != null:
+				if all_gems[i-1][j].get_groups().size()>0 && all_gems[i-2][j].get_groups().size()>0:
+					if all_gems [i-1][j].get_groups()[0] == gem_group && all_gems[i-2][j].get_groups()[0] == gem_group:
+						return false
+						
+		#check vertically	
+		if j >= 2:
+			if all_gems[i][j-1] != null && all_gems [i][j-2] != null:
+				if all_gems[i][j-1].get_groups().size()>0 && all_gems[i][j-2].get_groups().size()>0:
+					if all_gems [i][j-1].get_groups()[0] == gem_group && all_gems[i][j-2].get_groups()[0] == gem_group:
+						return false	
+	return true
+
 # Convert grid coordinates to pixel coordinates
 func grid_to_pixel(column, row):
 	var new_x = x_start + offset * column
@@ -179,18 +212,6 @@ func remove_matches(matches):
 			all_gems[position.x][position.y] = null
 			gem.queue_free() #gems are removed from the grid
 	spawn_new_gems()
-			
-#func shift_gems_down():
-	#for col in range(width):
-		#for row in range(height -1, -1, -1): #start checking from bottom row
-			#if all_gems[col][row] == null:
-				#for upper_row in range(row - 1,-1, -1): #check top row
-					#if all_gems[col][upper_row] != null:
-						#all_gems[col][row] = all_gems[col][upper_row]
-						#all_gems[col][row].position = grid_to_pixel(col,row)
-						#all_gems[col][upper_row] = null
-						#break
-	
 	
 #shows new gems randomly in that place						
 func spawn_new_gems():
@@ -202,7 +223,7 @@ func spawn_new_gems():
 				var new_gems = gems[rand].instantiate()
 				if new_gems != null:
 					add_child(new_gems)
-					new_gems.position = grid_to_pixel(col,row)
+					new_gems.position = grid_to_pixel(col, row)
 					all_gems[col][row] = new_gems	
 				else:
 					print("fail to instantiate the new gem")		
