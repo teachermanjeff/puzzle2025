@@ -136,7 +136,7 @@ texture = ExtResource("4_rmw0i")
 [node name="grid 1 script" type="Node2D" parent="."]
 script = ExtResource("2_7vvte")
 width = 9
-height = 8
+height = 9
 x_start = 43
 y_start = 650
 offset = 64
