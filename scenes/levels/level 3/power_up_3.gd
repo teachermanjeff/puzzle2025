@@ -5,7 +5,6 @@ var timer = Timer
 var disappear_timer = Timer
 var object_to_appear = Node
 var extra_moves = Node
-@onready var movements_cd_l_3: Label = $"../Movements-CD-L3"
 @onready var movements_cd_l_3 = $"../Movements-CD-L3"
 
 func _ready() -> void:
