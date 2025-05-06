@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://v85y54t2rmwj"]
+[gd_scene load_steps=19 format=3 uid="uid://v85y54t2rmwj"]
 
 [ext_resource type="Texture2D" uid="uid://c7knsgkrc7oif" path="res://assets/background/level 2 bg.png" id="1_mi4ay"]
 [ext_resource type="Script" uid="uid://df0liy5tyi61k" path="res://scenes/levels/level 2/level_2.gd" id="1_wmiuw"]
@@ -9,7 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://cektohyhvd82t" path="res://scenes/new_score.tscn" id="6_kkeqq"]
 [ext_resource type="FontFile" uid="uid://drc3f4b74p0dt" path="res://Fonts/alagard/alagard.ttf" id="6_kt7cp"]
 [ext_resource type="Texture2D" uid="uid://bqjmdmq20d7v3" path="res://assets/Game Sprites/kenney_ui-pack-rpg-expansion/PNG/buttonRound_grey.png" id="10_1dct4"]
-[ext_resource type="Texture2D" uid="uid://dr2fbaoc3buc0" path="res://assets/Game Sprites/kenney_ui-pack-rpg-expansion/PNG/buttonSquare_beige_pressed.png" id="13_4xblw"]
+[ext_resource type="PackedScene" uid="uid://mmi6vwnxo3nd" path="res://assets/Game Sprites/Character animation/character_power_up_animation.tscn" id="12_kkeqq"]
 [ext_resource type="Script" uid="uid://cqt0xrins683r" path="res://scenes/levels/level 2/power_up_2.gd" id="13_tn6ht"]
 [ext_resource type="PackedScene" uid="uid://b23xlpdoms6q6" path="res://scenes/moves_left_counter.tscn" id="14_tn6ht"]
 
@@ -52,21 +52,6 @@ animations = [{
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_kkeqq")
-}],
-"loop": true,
-"name": &"default",
-"speed": 5.0
-}]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_thipd"]
-atlas = ExtResource("13_4xblw")
-region = Rect2(0, 0, 45, 45)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_gkqe2"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_thipd")
 }],
 "loop": true,
 "name": &"default",
@@ -162,15 +147,14 @@ flat = true
 position = Vector2(-2, 7)
 script = ExtResource("13_tn6ht")
 
-[node name="power-up (rand) bg 2" type="AnimatedSprite2D" parent="Power-up 2"]
-position = Vector2(227.75, 750.25)
-scale = Vector2(1.74444, 1.98889)
-sprite_frames = SubResource("SpriteFrames_gkqe2")
-
 [node name="power-up Timer 2 (appear)" type="Timer" parent="Power-up 2"]
 wait_time = 60.0
 
 [node name="power-up Timer 2 (disappear)" type="Timer" parent="Power-up 2"]
+
+[node name="character_power-up_animation" parent="Power-up 2" instance=ExtResource("12_kkeqq")]
+position = Vector2(164, 893)
+scale = Vector2(1.5, 1.5)
 
 [connection signal="button_down" from="Pause button 2/Pause Button 2" to="." method="_on_button_button_down"]
 [connection signal="addpoints" from="grid 2 script" to="grid 2 script/score" method="_on_grid_2_script_addpoints"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://mrkdxqm8sw2x"]
+[gd_scene load_steps=19 format=3 uid="uid://mrkdxqm8sw2x"]
 
 [ext_resource type="Script" uid="uid://ce5sdn60b2tsi" path="res://scenes/levels/level 3/level_3.gd" id="1_i6lnk"]
 [ext_resource type="Texture2D" uid="uid://bjq5oghph4bwx" path="res://assets/background/level 3 bg.png" id="1_vkd0v"]
@@ -9,7 +9,7 @@
 [ext_resource type="FontFile" uid="uid://drc3f4b74p0dt" path="res://Fonts/alagard/alagard.ttf" id="6_g04qi"]
 [ext_resource type="Texture2D" uid="uid://bqjmdmq20d7v3" path="res://assets/Game Sprites/kenney_ui-pack-rpg-expansion/PNG/buttonRound_grey.png" id="11_ioiww"]
 [ext_resource type="PackedScene" uid="uid://cektohyhvd82t" path="res://scenes/new_score.tscn" id="12_3uo3b"]
-[ext_resource type="Texture2D" uid="uid://dr2fbaoc3buc0" path="res://assets/Game Sprites/kenney_ui-pack-rpg-expansion/PNG/buttonSquare_beige_pressed.png" id="14_8rk8s"]
+[ext_resource type="PackedScene" uid="uid://mmi6vwnxo3nd" path="res://assets/Game Sprites/Character animation/character_power_up_animation.tscn" id="12_hog8a"]
 [ext_resource type="Script" uid="uid://ctay6xc4v255i" path="res://scenes/levels/level 3/power_up_3.gd" id="14_o1jg3"]
 [ext_resource type="PackedScene" uid="uid://b23xlpdoms6q6" path="res://scenes/moves_left_counter.tscn" id="15_o1jg3"]
 
@@ -52,21 +52,6 @@ animations = [{
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_3uo3b")
-}],
-"loop": true,
-"name": &"default",
-"speed": 5.0
-}]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_b060x"]
-atlas = ExtResource("14_8rk8s")
-region = Rect2(0, 0, 45, 45)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_cyhwt"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_b060x")
 }],
 "loop": true,
 "name": &"default",
@@ -149,21 +134,7 @@ text = "Shuffle
 "
 flat = true
 
-[node name="Power-up 3" type="Node2D" parent="."]
-script = ExtResource("14_o1jg3")
-
-[node name="power-up (rand) bg 3" type="AnimatedSprite2D" parent="Power-up 3"]
-position = Vector2(207.625, 796.813)
-scale = Vector2(2.78333, 1.74166)
-sprite_frames = SubResource("SpriteFrames_cyhwt")
-
-[node name="power-up Timer 3 (appear)" type="Timer" parent="Power-up 3"]
-wait_time = 120.0
-
-[node name="power-up Timer 3 (disappear)" type="Timer" parent="Power-up 3"]
-wait_time = 10.0
-
-[node name="Movements-CD-L1" parent="." instance=ExtResource("15_o1jg3")]
+[node name="Movements-CD-L3" parent="." instance=ExtResource("15_o1jg3")]
 offset_left = 272.0
 offset_top = 77.0
 offset_right = 346.0
@@ -173,9 +144,22 @@ max_attempts = 10
 
 [node name="score" parent="." instance=ExtResource("12_3uo3b")]
 
+[node name="Power-up 3" type="Node2D" parent="."]
+script = ExtResource("14_o1jg3")
+
+[node name="power-up Timer 3 (appear)" type="Timer" parent="Power-up 3"]
+wait_time = 120.0
+
+[node name="power-up Timer 3 (disappear)" type="Timer" parent="Power-up 3"]
+wait_time = 10.0
+
+[node name="character_power-up_animation" parent="Power-up 3" instance=ExtResource("12_hog8a")]
+position = Vector2(162, 912)
+scale = Vector2(1, 1.1)
+
 [connection signal="button_down" from="Pause button 3/Pause Button 3" to="." method="_on_button_button_down"]
 [connection signal="addpoints" from="grid 3 script" to="score" method="_on_grid_3_script_addpoints"]
-[connection signal="gemswap" from="grid 3 script" to="Movements-CD-L1" method="_on_grid_3_script_gemswap"]
+[connection signal="gemswap" from="grid 3 script" to="Movements-CD-L3" method="_on_grid_3_script_gemswap"]
 [connection signal="pressed" from="Shuffle button 3/shuffle Button(3)" to="grid 3 script" method="_on_shuffle_button_pressed"]
 [connection signal="timeout" from="Power-up 3/power-up Timer 3 (appear)" to="Power-up 3" method="_on_powerup_timer_3_appear_timeout"]
 [connection signal="timeout" from="Power-up 3/power-up Timer 3 (disappear)" to="Power-up 3" method="_on_powerup_timer_3_disappear_timeout"]

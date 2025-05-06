@@ -115,10 +115,10 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Moves left 1" parent="." instance=ExtResource("8_ggdaa")]
-offset_left = 256.0
-offset_top = 92.0
-offset_right = 330.0
-offset_bottom = 135.0
+offset_left = 274.0
+offset_top = 58.0
+offset_right = 348.0
+offset_bottom = 101.0
 text = ""
 
 [node name="Shuffle button 1" type="Node2D" parent="."]
@@ -158,8 +158,8 @@ wait_time = 30.0
 wait_time = 10.0
 
 [node name="character_power-up_animation" parent="Power-up 1" instance=ExtResource("14_vwe5i")]
-position = Vector2(39.9284, 461.479)
-scale = Vector2(0.4, 0.8)
+position = Vector2(59.2486, 464.043)
+scale = Vector2(0.4, 0.7)
 
 [connection signal="button_down" from="Pause button 1/Pause Button 1" to="." method="_on_button_button_down"]
 [connection signal="addpoints" from="grid 1 script" to="grid 1 script/score" method="_on_grid_1_script_addpoints"]

@@ -39,6 +39,7 @@ scale = Vector2(1.82527, 1)
 sprite_frames = SubResource("SpriteFrames_wswc2")
 
 [node name="Moves left title 1" type="Label" parent="."]
+layout_mode = 0
 offset_left = -77.0
 offset_top = -35.0
 offset_right = 27.0
