@@ -86,7 +86,7 @@ position = Vector2(272, 438.5)
 scale = Vector2(2.17067, 1.98851)
 texture = ExtResource("3_huqas")
 
-[node name="grid 2 script" type="Node2D" parent="."]
+[node name="grid script" type="Node2D" parent="."]
 script = ExtResource("4_onheu")
 width = 9
 height = 8

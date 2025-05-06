@@ -86,13 +86,15 @@ position = Vector2(268, 477)
 scale = Vector2(1.62745, 1.23715)
 texture = ExtResource("3_3qswj")
 
-[node name="grid 3 script" type="Node2D" parent="."]
+[node name="grid script" type="Node2D" parent="."]
 script = ExtResource("4_xex88")
 width = 9
 height = 8
 x_start = 43
 y_start = 700
 offset = 64
+
+[node name="score" parent="grid script" instance=ExtResource("12_3uo3b")]
 
 [node name="level 3 title bg" type="AnimatedSprite2D" parent="."]
 position = Vector2(76, 51)
@@ -186,8 +188,8 @@ position = Vector2(87, 922)
 scale = Vector2(1.091, 1.2)
 
 [connection signal="button_down" from="Pause button 3/Pause Button 3" to="." method="_on_button_button_down"]
-[connection signal="addpoints" from="grid 3 script" to="score" method="_on_grid_3_script_addpoints"]
-[connection signal="gemswap" from="grid 3 script" to="Movements-CD-L3" method="_on_grid_3_script_gemswap"]
-[connection signal="pressed" from="Shuffle button 3/shuffle Button(3)" to="grid 3 script" method="_on_shuffle_button_pressed"]
+[connection signal="addpoints" from="grid script" to="grid script/score" method="_on_grid_3_script_addpoints"]
+[connection signal="gemswap" from="grid script" to="Movements-CD-L3" method="_on_grid_3_script_gemswap"]
+[connection signal="pressed" from="Shuffle button 3/shuffle Button(3)" to="grid script" method="_on_shuffle_button_pressed"]
 [connection signal="timeout" from="Power-up 3/power-up Timer 3 (appear)" to="Power-up 3" method="_on_powerup_timer_3_appear_timeout"]
 [connection signal="timeout" from="Power-up 3/power-up Timer 3 (disappear)" to="Power-up 3" method="_on_powerup_timer_3_disappear_timeout"]

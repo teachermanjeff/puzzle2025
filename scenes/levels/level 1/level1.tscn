@@ -89,9 +89,9 @@ position = Vector2(272, 420.077)
 scale = Vector2(2.21053, 2.06025)
 texture = ExtResource("4_rmw0i")
 
-[node name="grid 1 script" type="Node2D" parent="."]
+[node name="grid script" type="Node2D" parent="."]
 script = ExtResource("2_7vvte")
-width = 8
+width = 9
 height = 8
 x_start = 43
 y_start = 650
