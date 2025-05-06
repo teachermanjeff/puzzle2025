@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://bo7tu1l802pcq"]
+
+[ext_resource type="PackedScene" uid="uid://d0lurakf3cxwx" path="res://scenes/menu scene/failscreen.tscn" id="1_02wds"]
+
+[node name="FAIL SCREEN (2)" instance=ExtResource("1_02wds")]

@@ -1,8 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://d0lurakf3cxwx"]
+[gd_scene load_steps=4 format=3 uid="uid://ppu8378o07oq"]
 
-[ext_resource type="Script" uid="uid://dtceknuti86u" path="res://scenes/menu scene/failscreen.gd" id="1_08iva"]
-[ext_resource type="Texture2D" uid="uid://cahp26fkmop6w" path="res://assets/background/menu image.png" id="1_8oovv"]
-[ext_resource type="FontFile" uid="uid://drc3f4b74p0dt" path="res://Fonts/alagard/alagard.ttf" id="2_08iva"]
+[ext_resource type="Script" uid="uid://dtceknuti86u" path="res://scenes/menu scene/failscreen.gd" id="1_yjr33"]
+[ext_resource type="Texture2D" uid="uid://cahp26fkmop6w" path="res://assets/background/menu image.png" id="2_aag4r"]
+[ext_resource type="FontFile" uid="uid://drc3f4b74p0dt" path="res://Fonts/alagard/alagard.ttf" id="3_ow7f6"]
 
 [node name="FAIL SCREEN (1)" type="Control"]
 layout_mode = 3
@@ -13,13 +13,13 @@ offset_right = -540.0
 offset_bottom = -960.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_08iva")
+script = ExtResource("1_yjr33")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 0
 offset_right = 543.0
 offset_bottom = 965.0
-texture = ExtResource("1_8oovv")
+texture = ExtResource("2_aag4r")
 
 [node name="text" type="Label" parent="."]
 layout_mode = 0
@@ -27,7 +27,7 @@ offset_left = 83.0
 offset_top = 59.0
 offset_right = 473.0
 offset_bottom = 134.0
-theme_override_fonts/font = ExtResource("2_08iva")
+theme_override_fonts/font = ExtResource("3_ow7f6")
 theme_override_font_sizes/font_size = 79
 text = "You  failed"
 
@@ -37,7 +37,7 @@ offset_left = 73.0
 offset_top = 197.0
 offset_right = 473.0
 offset_bottom = 248.0
-theme_override_fonts/font = ExtResource("2_08iva")
+theme_override_fonts/font = ExtResource("3_ow7f6")
 theme_override_font_sizes/font_size = 42
 text = "your score is "
 
@@ -48,39 +48,40 @@ offset_top = 203.0
 offset_right = 375.0
 offset_bottom = 254.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("2_08iva")
+theme_override_fonts/font = ExtResource("3_ow7f6")
 theme_override_font_sizes/font_size = 42
 text = "0"
 
-[node name="contd" type="Button" parent="."]
+[node name="main but (1)" type="Button" parent="."]
 layout_mode = 0
 offset_left = 164.0
 offset_top = 325.0
 offset_right = 364.0
 offset_bottom = 366.0
-theme_override_fonts/font = ExtResource("2_08iva")
+theme_override_fonts/font = ExtResource("3_ow7f6")
 theme_override_font_sizes/font_size = 34
 text = "Main screen"
 
-[node name="instruct but" type="Button" parent="."]
+[node name="instruct but (1)" type="Button" parent="."]
 layout_mode = 0
 offset_left = 153.0
 offset_top = 420.0
 offset_right = 393.0
 offset_bottom = 469.0
-theme_override_fonts/font = ExtResource("2_08iva")
+theme_override_fonts/font = ExtResource("3_ow7f6")
 theme_override_font_sizes/font_size = 34
 text = "INSTRUCTIONS"
 
-[node name="instruct but2" type="Button" parent="."]
+[node name="Restart (1)" type="Button" parent="."]
 layout_mode = 0
 offset_left = 172.0
 offset_top = 532.0
 offset_right = 346.0
 offset_bottom = 581.0
-theme_override_fonts/font = ExtResource("2_08iva")
+theme_override_fonts/font = ExtResource("3_ow7f6")
 theme_override_font_sizes/font_size = 34
 text = "RESTART"
 
-[connection signal="pressed" from="contd" to="." method="_on_contd_pressed"]
-[connection signal="pressed" from="instruct but" to="." method="_on_instruct_but_pressed"]
+[connection signal="pressed" from="main but (1)" to="." method="_on_main_but_1_pressed"]
+[connection signal="pressed" from="instruct but (1)" to="." method="_on_instruct_but_1_pressed"]
+[connection signal="pressed" from="Restart (1)" to="." method="_on_restart_1_pressed"]
