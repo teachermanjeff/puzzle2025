@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://v85y54t2rmwj"]
+[gd_scene load_steps=20 format=3 uid="uid://v85y54t2rmwj"]
 
 [ext_resource type="Texture2D" uid="uid://c7knsgkrc7oif" path="res://assets/background/level 2 bg.png" id="1_mi4ay"]
 [ext_resource type="Script" uid="uid://df0liy5tyi61k" path="res://scenes/levels/level 2/level_2.gd" id="1_wmiuw"]
@@ -8,8 +8,9 @@
 [ext_resource type="Texture2D" uid="uid://5ehnk5tfff0l" path="res://assets/Game Sprites/kenney_ui-pack-rpg-expansion/Spritesheet/uipack_rpg_sheet.png" id="5_4ejoj"]
 [ext_resource type="PackedScene" uid="uid://cektohyhvd82t" path="res://scenes/new_score.tscn" id="6_kkeqq"]
 [ext_resource type="FontFile" uid="uid://drc3f4b74p0dt" path="res://Fonts/alagard/alagard.ttf" id="6_kt7cp"]
-[ext_resource type="Texture2D" uid="uid://bqjmdmq20d7v3" path="res://assets/Game Sprites/kenney_ui-pack-rpg-expansion/PNG/buttonRound_grey.png" id="10_1dct4"]
+[ext_resource type="Texture2D" uid="uid://cxlh12igmk3xn" path="res://assets/Game Sprites/kenney_ui-pack-rpg-expansion/PNG/buttonLong_brown.png" id="9_4xblw"]
 [ext_resource type="PackedScene" uid="uid://mmi6vwnxo3nd" path="res://assets/Game Sprites/Character animation/character_power_up_animation.tscn" id="12_kkeqq"]
+[ext_resource type="Texture2D" uid="uid://cqne4kyx12e1o" path="res://assets/Game Sprites/kenney_ui-pack-rpg-expansion/PNG/buttonSquare_brown_pressed.png" id="12_tn6ht"]
 [ext_resource type="Script" uid="uid://cqt0xrins683r" path="res://scenes/levels/level 2/power_up_2.gd" id="13_tn6ht"]
 [ext_resource type="PackedScene" uid="uid://b23xlpdoms6q6" path="res://scenes/moves_left_counter.tscn" id="14_tn6ht"]
 
@@ -43,15 +44,15 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_kkeqq"]
-atlas = ExtResource("10_1dct4")
-region = Rect2(0, 0, 35, 38)
+[sub_resource type="AtlasTexture" id="AtlasTexture_thipd"]
+atlas = ExtResource("9_4xblw")
+region = Rect2(0, 0, 190, 49)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_4xblw"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_kkeqq")
+"texture": SubResource("AtlasTexture_thipd")
 }],
 "loop": true,
 "name": &"default",
@@ -93,8 +94,6 @@ x_start = 46
 y_start = 663
 offset = 64
 
-[node name="score" parent="grid 2 script" instance=ExtResource("6_kkeqq")]
-
 [node name="level 2 title bg" type="AnimatedSprite2D" parent="."]
 position = Vector2(76, 51)
 scale = Vector2(0.771, 1.363)
@@ -105,6 +104,7 @@ offset_left = -79.0
 offset_top = -16.0
 offset_right = 87.0
 offset_bottom = 13.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("6_kt7cp")
 theme_override_font_sizes/font_size = 30
 text = "Level 2"
@@ -121,15 +121,16 @@ max_attempts = 20
 [node name="Shuffle button 2" type="Node2D" parent="."]
 
 [node name="shuffle Button bg(2)" type="AnimatedSprite2D" parent="Shuffle button 2"]
-position = Vector2(81, 740)
-scale = Vector2(2.714, 1.789)
+texture_filter = 3
+position = Vector2(435.269, 916.958)
+scale = Vector2(0.844938, 1.05949)
 sprite_frames = SubResource("SpriteFrames_4xblw")
 
 [node name="shuffle Button(2)" type="Button" parent="Shuffle button 2"]
-offset_left = 30.0
-offset_top = 710.0
-offset_right = 135.0
-offset_bottom = 760.0
+offset_left = 380.415
+offset_top = 891.0
+offset_right = 495.415
+offset_bottom = 941.0
 theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
 theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
 theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
@@ -139,8 +140,9 @@ theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
 theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 20
-text = "Shuffle"
+theme_override_fonts/font = ExtResource("6_kt7cp")
+theme_override_font_sizes/font_size = 25
+text = "SHUFFLE"
 flat = true
 
 [node name="Power-up 2" type="Node2D" parent="."]
@@ -153,11 +155,38 @@ wait_time = 60.0
 [node name="power-up Timer 2 (disappear)" type="Timer" parent="Power-up 2"]
 
 [node name="character_power-up_animation" parent="Power-up 2" instance=ExtResource("12_kkeqq")]
-position = Vector2(164, 893)
+position = Vector2(57, 922)
 scale = Vector2(1.5, 1.5)
 
+[node name="score_board2" type="Sprite2D" parent="."]
+texture_filter = 3
+position = Vector2(435, 793)
+scale = Vector2(3.26111, 3.26111)
+texture = ExtResource("12_tn6ht")
+
+[node name="score" parent="." instance=ExtResource("6_kkeqq")]
+offset_left = 396.0
+offset_top = 794.0
+offset_right = 481.0
+offset_bottom = 889.875
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_kt7cp")
+theme_override_font_sizes/font_size = 50
+text = "
+"
+
+[node name="score_title2" type="Label" parent="."]
+offset_left = 376.0
+offset_top = 736.0
+offset_right = 494.0
+offset_bottom = 773.5
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_kt7cp")
+theme_override_font_sizes/font_size = 40
+text = "SCORE"
+
 [connection signal="button_down" from="Pause button 2/Pause Button 2" to="." method="_on_button_button_down"]
-[connection signal="addpoints" from="grid 2 script" to="grid 2 script/score" method="_on_grid_2_script_addpoints"]
+[connection signal="addpoints" from="grid 2 script" to="score" method="_on_grid_2_script_addpoints"]
 [connection signal="gemswap" from="grid 2 script" to="Moves left 2" method="_on_grid_2_script_gemswap"]
 [connection signal="pressed" from="Shuffle button 2/shuffle Button(2)" to="grid 2 script" method="_on_shuffle_button_pressed"]
 [connection signal="timeout" from="Power-up 2/power-up Timer 2 (appear)" to="Power-up 2" method="_on_powerup_timer_2_appear_timeout"]

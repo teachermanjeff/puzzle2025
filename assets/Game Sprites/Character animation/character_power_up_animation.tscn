@@ -43,16 +43,16 @@ animations = [{
 
 [node name="miner_power-up_aniamtion" type="AnimatedSprite2D" parent="."]
 texture_filter = 3
-position = Vector2(15.7501, 44.2501)
-scale = Vector2(3.25521, 3.80729)
+position = Vector2(33.25, 44.2501)
+scale = Vector2(3.61979, 3.80729)
 sprite_frames = SubResource("SpriteFrames_4ft1w")
 
 [node name="power-up_text" type="Label" parent="."]
 texture_filter = 3
-offset_left = 49.0
-offset_top = -119.0
-offset_right = 160.0
-offset_bottom = -97.0
+offset_left = 77.0
+offset_top = -118.0
+offset_right = 188.0
+offset_bottom = -96.0
 theme_override_colors/font_color = Color(0.231373, 0.231373, 0.215686, 1)
 theme_override_fonts/font = ExtResource("2_u2y8v")
 theme_override_font_sizes/font_size = 11
