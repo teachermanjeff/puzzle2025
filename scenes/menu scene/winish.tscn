@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://cx2icow5kg3sq"]
+[gd_scene load_steps=4 format=3 uid="uid://brkkqpmkng4hf"]
 
 [ext_resource type="Script" uid="uid://bktlvqyl3qj5m" path="res://scenes/menu scene/winish.gd" id="1_e5j53"]
 [ext_resource type="Texture2D" uid="uid://cahp26fkmop6w" path="res://assets/background/menu image.png" id="2_rdbrx"]
