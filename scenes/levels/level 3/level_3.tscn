@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://mrkdxqm8sw2x"]
+[gd_scene load_steps=19 format=3 uid="uid://mrkdxqm8sw2x"]
 
 [ext_resource type="Script" uid="uid://ce5sdn60b2tsi" path="res://scenes/levels/level 3/level_3.gd" id="1_i6lnk"]
 [ext_resource type="Texture2D" uid="uid://bjq5oghph4bwx" path="res://assets/background/level 3 bg.png" id="1_vkd0v"]
@@ -8,7 +8,6 @@
 [ext_resource type="Texture2D" uid="uid://5ehnk5tfff0l" path="res://assets/Game Sprites/kenney_ui-pack-rpg-expansion/Spritesheet/uipack_rpg_sheet.png" id="5_iyurd"]
 [ext_resource type="FontFile" uid="uid://drc3f4b74p0dt" path="res://Fonts/alagard/alagard.ttf" id="6_g04qi"]
 [ext_resource type="Texture2D" uid="uid://cxlh12igmk3xn" path="res://assets/Game Sprites/kenney_ui-pack-rpg-expansion/PNG/buttonLong_brown.png" id="8_hog8a"]
-[ext_resource type="Texture2D" uid="uid://cqne4kyx12e1o" path="res://assets/Game Sprites/kenney_ui-pack-rpg-expansion/PNG/buttonSquare_brown_pressed.png" id="10_8rk8s"]
 [ext_resource type="PackedScene" uid="uid://cektohyhvd82t" path="res://scenes/new_score.tscn" id="12_3uo3b"]
 [ext_resource type="PackedScene" uid="uid://mmi6vwnxo3nd" path="res://assets/Game Sprites/Character animation/character_power_up_animation.tscn" id="12_hog8a"]
 [ext_resource type="Script" uid="uid://ctay6xc4v255i" path="res://scenes/levels/level 3/power_up_3.gd" id="14_o1jg3"]
@@ -147,6 +146,7 @@ text = ""
 max_attempts = 10
 
 [node name="score" parent="." instance=ExtResource("12_3uo3b")]
+score = null
 
 [node name="Power-up 3" type="Node2D" parent="."]
 script = ExtResource("14_o1jg3")
