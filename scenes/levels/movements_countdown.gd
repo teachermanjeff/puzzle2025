@@ -27,4 +27,4 @@ func _on_grid_2_script_gemswap() -> void:
 
 
 func _on_grid_3_script_gemswap() -> void:
-	attempts_left -= 1
+	attempts_left -= 1 
