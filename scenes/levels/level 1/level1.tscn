@@ -89,17 +89,6 @@ position = Vector2(272, 420.077)
 scale = Vector2(2.21053, 2.06025)
 texture = ExtResource("4_rmw0i")
 
-[node name="grid 1 script" type="Node2D" parent="."]
-script = ExtResource("2_7vvte")
-width = 8
-height = 8
-x_start = 43
-y_start = 650
-offset = 64
-
-[node name="score" parent="grid 1 script" instance=ExtResource("6_cdfij")]
-score = null
-
 [node name="level 1 title bg" type="AnimatedSprite2D" parent="."]
 position = Vector2(76, 51)
 scale = Vector2(0.770588, 1.36275)
@@ -123,6 +112,7 @@ offset_top = 58.0
 offset_right = 348.0
 offset_bottom = 101.0
 text = ""
+metadata/_edit_use_anchors_ = true
 
 [node name="Shuffle button 1" type="Node2D" parent="."]
 
@@ -172,6 +162,17 @@ position = Vector2(442, 775)
 scale = Vector2(3.55556, 3.55556)
 texture = ExtResource("12_vwe5i")
 
+[node name="grid 1 script" type="Node2D" parent="."]
+script = ExtResource("2_7vvte")
+width = 8
+height = 8
+x_start = 43
+y_start = 650
+offset = 64
+
+[node name="score" parent="grid 1 script" instance=ExtResource("6_cdfij")]
+text = "dfgdfg"
+
 [node name="score_title" type="Label" parent="."]
 offset_left = 382.0
 offset_top = 714.0
@@ -183,9 +184,9 @@ theme_override_font_sizes/font_size = 40
 text = "SCORE"
 
 [connection signal="button_down" from="Pause button 1/Pause Button 1" to="." method="_on_button_button_down"]
-[connection signal="addpoints" from="grid 1 script" to="grid 1 script/score" method="_on_grid_1_script_addpoints"]
-[connection signal="gemswap" from="grid 1 script" to="Moves left 1" method="_on_grid_1_script_gemswap"]
-[connection signal="pressed" from="Shuffle button 1/shuffle Button(1)" to="grid 1 script" method="_on_shuffle_button_pressed"]
 [connection signal="pressed" from="Shuffle button 1/shuffle Button(1)" to="grid 1 script" method="_on_shuffle_button_1_pressed"]
+[connection signal="pressed" from="Shuffle button 1/shuffle Button(1)" to="grid 1 script" method="_on_shuffle_button_pressed"]
 [connection signal="timeout" from="Power-up 1/power-up Timer 1 (appear)" to="Power-up 1" method="_on_powerup_timer_1_appear_timeout"]
 [connection signal="timeout" from="Power-up 1/power-up Timer 1 (disappear)" to="Power-up 1" method="_on_powerup_timer_1_disappear_timeout"]
+[connection signal="addpoints" from="grid 1 script" to="grid 1 script/score" method="_on_grid_1_script_addpoints"]
+[connection signal="gemswap" from="grid 1 script" to="Moves left 1" method="_on_grid_1_script_gemswap"]
