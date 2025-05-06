@@ -94,6 +94,18 @@ x_start = 46
 y_start = 663
 offset = 64
 
+[node name="score" parent="grid script" instance=ExtResource("6_kkeqq")]
+top_level = true
+offset_left = 396.0
+offset_top = 794.0
+offset_right = 481.0
+offset_bottom = 889.875
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_kt7cp")
+theme_override_font_sizes/font_size = 50
+text = "
+"
+
 [node name="level 2 title bg" type="AnimatedSprite2D" parent="."]
 position = Vector2(76, 51)
 scale = Vector2(0.771, 1.363)
@@ -155,7 +167,7 @@ wait_time = 60.0
 [node name="power-up Timer 2 (disappear)" type="Timer" parent="Power-up 2"]
 
 [node name="character_power-up_animation" parent="Power-up 2" instance=ExtResource("12_kkeqq")]
-position = Vector2(57, 922)
+position = Vector2(59, 889)
 scale = Vector2(1.5, 1.5)
 
 [node name="score_board2" type="Sprite2D" parent="."]
@@ -163,17 +175,6 @@ texture_filter = 3
 position = Vector2(435, 793)
 scale = Vector2(3.26111, 3.26111)
 texture = ExtResource("12_tn6ht")
-
-[node name="score" parent="." instance=ExtResource("6_kkeqq")]
-offset_left = 396.0
-offset_top = 794.0
-offset_right = 481.0
-offset_bottom = 889.875
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("6_kt7cp")
-theme_override_font_sizes/font_size = 50
-text = "
-"
 
 [node name="score_title2" type="Label" parent="."]
 offset_left = 376.0
@@ -186,8 +187,5 @@ theme_override_font_sizes/font_size = 40
 text = "SCORE"
 
 [connection signal="button_down" from="Pause button 2/Pause Button 2" to="." method="_on_button_button_down"]
-[connection signal="addpoints" from="grid 2 script" to="score" method="_on_grid_2_script_addpoints"]
-[connection signal="gemswap" from="grid 2 script" to="Moves left 2" method="_on_grid_2_script_gemswap"]
-[connection signal="pressed" from="Shuffle button 2/shuffle Button(2)" to="grid 2 script" method="_on_shuffle_button_pressed"]
 [connection signal="timeout" from="Power-up 2/power-up Timer 2 (appear)" to="Power-up 2" method="_on_powerup_timer_2_appear_timeout"]
 [connection signal="timeout" from="Power-up 2/power-up Timer 2 (disappear)" to="Power-up 2" method="_on_powerup_timer_2_disappear_timeout"]

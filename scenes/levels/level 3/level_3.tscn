@@ -95,6 +95,14 @@ y_start = 700
 offset = 64
 
 [node name="score" parent="grid script" instance=ExtResource("12_3uo3b")]
+top_level = true
+offset_left = 417.75
+offset_top = 820.75
+offset_right = 467.75
+offset_bottom = 867.75
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_g04qi")
+theme_override_font_sizes/font_size = 50
 
 [node name="level 3 title bg" type="AnimatedSprite2D" parent="."]
 position = Vector2(76, 51)
@@ -154,16 +162,6 @@ position = Vector2(443.875, 825.875)
 scale = Vector2(3.15, 3.15)
 texture = ExtResource("10_8rk8s")
 
-[node name="score" parent="." instance=ExtResource("12_3uo3b")]
-offset_left = 417.75
-offset_top = 820.75
-offset_right = 467.75
-offset_bottom = 867.75
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("6_g04qi")
-theme_override_font_sizes/font_size = 50
-text = "50"
-
 [node name="score_title3" type="Label" parent="."]
 offset_left = 385.75
 offset_top = 772.75
@@ -188,7 +186,6 @@ position = Vector2(87, 922)
 scale = Vector2(1.091, 1.2)
 
 [connection signal="button_down" from="Pause button 3/Pause Button 3" to="." method="_on_button_button_down"]
-[connection signal="addpoints" from="grid script" to="grid script/score" method="_on_grid_3_script_addpoints"]
 [connection signal="gemswap" from="grid script" to="Movements-CD-L3" method="_on_grid_3_script_gemswap"]
 [connection signal="pressed" from="Shuffle button 3/shuffle Button(3)" to="grid script" method="_on_shuffle_button_pressed"]
 [connection signal="timeout" from="Power-up 3/power-up Timer 3 (appear)" to="Power-up 3" method="_on_powerup_timer_3_appear_timeout"]
