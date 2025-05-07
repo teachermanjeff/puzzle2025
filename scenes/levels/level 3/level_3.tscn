@@ -146,7 +146,6 @@ text = ""
 max_attempts = 10
 
 [node name="score" parent="." instance=ExtResource("12_3uo3b")]
-score = null
 
 [node name="Power-up 3" type="Node2D" parent="."]
 script = ExtResource("14_o1jg3")

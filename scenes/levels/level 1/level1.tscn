@@ -98,7 +98,6 @@ y_start = 650
 offset = 64
 
 [node name="score" parent="grid 1 script" instance=ExtResource("6_cdfij")]
-score = null
 
 [node name="level 1 title bg" type="AnimatedSprite2D" parent="."]
 position = Vector2(76, 51)
