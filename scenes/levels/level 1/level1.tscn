@@ -98,6 +98,17 @@ y_start = 650
 offset = 64
 
 [node name="score" parent="grid 1 script" instance=ExtResource("6_cdfij")]
+top_level = true
+offset_left = 356.0
+offset_top = 705.0
+offset_right = 528.0
+offset_bottom = 900.0
+theme_override_font_sizes/font_size = 45
+text = "
+
+"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="level 1 title bg" type="AnimatedSprite2D" parent="."]
 position = Vector2(76, 51)
@@ -122,6 +133,7 @@ offset_top = 58.0
 offset_right = 348.0
 offset_bottom = 101.0
 text = ""
+metadata/_edit_use_anchors_ = true
 
 [node name="Shuffle button 1" type="Node2D" parent="."]
 
@@ -167,7 +179,7 @@ scale = Vector2(0.4, 0.7)
 
 [node name="score_board" type="Sprite2D" parent="."]
 texture_filter = 3
-position = Vector2(442, 775)
+position = Vector2(437, 776)
 scale = Vector2(3.55556, 3.55556)
 texture = ExtResource("12_vwe5i")
 
