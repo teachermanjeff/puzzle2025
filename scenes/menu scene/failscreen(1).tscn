@@ -47,69 +47,48 @@ theme_override_fonts/font = ExtResource("3_ow7f6")
 theme_override_font_sizes/font_size = 79
 text = "You  failed"
 
-[node name="text2" type="Label" parent="."]
-layout_mode = 0
-offset_left = 73.0
-offset_top = 197.0
-offset_right = 473.0
-offset_bottom = 248.0
-theme_override_fonts/font = ExtResource("3_ow7f6")
-theme_override_font_sizes/font_size = 42
-text = "your score is "
-
-[node name="score box" type="Label" parent="."]
-layout_mode = 0
-offset_left = 354.0
-offset_top = 203.0
-offset_right = 375.0
-offset_bottom = 254.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("3_ow7f6")
-theme_override_font_sizes/font_size = 42
-text = "0"
-
 [node name="main but (1)" type="Button" parent="."]
 layout_mode = 0
-offset_left = 172.0
-offset_top = 319.0
-offset_right = 372.0
-offset_bottom = 360.0
+offset_left = 178.0
+offset_top = 210.0
+offset_right = 378.0
+offset_bottom = 251.0
 theme_override_fonts/font = ExtResource("3_ow7f6")
 theme_override_font_sizes/font_size = 34
 text = "Main screen"
 
 [node name="instruct but (1)" type="Button" parent="."]
 layout_mode = 0
-offset_left = 153.0
-offset_top = 420.0
-offset_right = 393.0
-offset_bottom = 469.0
+offset_left = 157.0
+offset_top = 304.0
+offset_right = 397.0
+offset_bottom = 353.0
 theme_override_fonts/font = ExtResource("3_ow7f6")
 theme_override_font_sizes/font_size = 34
 text = "INSTRUCTIONS"
 
 [node name="Restart (1)" type="Button" parent="."]
 layout_mode = 0
-offset_left = 187.0
-offset_top = 534.0
-offset_right = 361.0
-offset_bottom = 583.0
+offset_left = 189.0
+offset_top = 409.0
+offset_right = 363.0
+offset_bottom = 458.0
 theme_override_fonts/font = ExtResource("3_ow7f6")
 theme_override_font_sizes/font_size = 34
 text = "RESTART"
 
 [node name="sprite" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
-position = Vector2(175, 966)
-scale = Vector2(6.0651, 7.1862)
+position = Vector2(179.938, 946.969)
+scale = Vector2(6.16797, 7.58268)
 sprite_frames = SubResource("SpriteFrames_gehcn")
 
 [node name="sorry text" type="Label" parent="."]
 layout_mode = 0
-offset_left = 236.0
-offset_top = 659.0
-offset_right = 453.0
-offset_bottom = 682.0
+offset_left = 241.0
+offset_top = 628.0
+offset_right = 458.0
+offset_bottom = 651.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3_ow7f6")
 theme_override_font_sizes/font_size = 19

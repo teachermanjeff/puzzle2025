@@ -34,7 +34,7 @@ func _failed():
 	if attempts_left == 0:
 		get_tree().change_scene_to_file("res://scenes/menu scene/failscreen(1).tscn")
 func win():		
-	if score.score == 80:
+	if score.score == 50:
 		globals.wonscene = get_tree().current_scene
 		get_tree().change_scene_to_file("res://scenes/menu scene/winish.tscn")
 	
