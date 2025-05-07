@@ -1,8 +1,8 @@
 extends Label
 
-@export var score = 0  # Maximum number of attempts
+@export var score = -4  # Maximum number of attempts
 var new_score # How many attempts are left
-@onready var movementscountdown: Label = $"../../Moves left 1"
+@onready var movesleft: Label = $"../../Moves left 1"
 
 func _ready():
 	# Optionally, set up your UI to show countdown and points
@@ -33,8 +33,8 @@ func _on_grid_3_script_addpoints(point: Variant) -> void:
 	new_score += 4
 	
 func failed():
-	if movementscountdown.attempts_left == 0:
-		get_tree().change_scene_to_file("res://scenes/menu scene/failscreen(1).tscn")
+		if movesleft.attempts_left == 0:
+			get_tree().change_scene_to_file("res://scenes/menu scene/failscreen(1).tscn")
 
 func win():		
 	if new_score == 80:

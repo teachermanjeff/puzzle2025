@@ -1,7 +1,7 @@
 extends Label
 
 # Variables for the movement countdown and points
-@export var max_attempts = 30  # Maximum number of attempts
+@export var max_attempts = 31  # Maximum number of attempts
 var attempts_left # How many attempts are left
 @onready var score: Label = $"../grid 1 script/score"
 

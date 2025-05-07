@@ -98,7 +98,7 @@ offset = 64
 top_level = true
 offset_left = 407.0
 offset_top = 811.0
-offset_right = 481.0
+offset_right = 480.0
 offset_bottom = 942.0
 theme_override_font_sizes/font_size = 46
 text = "
@@ -150,7 +150,7 @@ text = "SHUFFLE
 "
 flat = true
 
-[node name="Movements-CD-L3" parent="." instance=ExtResource("15_o1jg3")]
+[node name="Moves left 1" parent="." instance=ExtResource("15_o1jg3")]
 offset_left = 272.0
 offset_top = 77.0
 offset_right = 346.0
@@ -177,18 +177,18 @@ scale = Vector2(3.05, 2.81667)
 texture = ExtResource("13_hog8a")
 
 [node name="score title 3" type="Label" parent="."]
-offset_left = 395.0
-offset_top = 770.0
-offset_right = 498.0
-offset_bottom = 807.5
+offset_left = 390.0
+offset_top = 772.0
+offset_right = 508.0
+offset_bottom = 809.5
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("6_g04qi")
 theme_override_font_sizes/font_size = 40
-text = "Score"
+text = "SCORE"
 
 [connection signal="button_down" from="Pause button 3/Pause Button 3" to="." method="_on_button_button_down"]
 [connection signal="addpoints" from="grid 3 script" to="grid 3 script/score" method="_on_grid_3_script_addpoints"]
-[connection signal="gemswap" from="grid 3 script" to="Movements-CD-L3" method="_on_grid_3_script_gemswap"]
+[connection signal="gemswap" from="grid 3 script" to="Moves left 1" method="_on_grid_3_script_gemswap"]
 [connection signal="pressed" from="Shuffle button 3/shuffle Button(3)" to="grid 3 script" method="_on_shuffle_button_pressed"]
 [connection signal="timeout" from="Power-up 3/power-up Timer 3 (appear)" to="Power-up 3" method="_on_powerup_timer_3_appear_timeout"]
 [connection signal="timeout" from="Power-up 3/power-up Timer 3 (disappear)" to="Power-up 3" method="_on_powerup_timer_3_disappear_timeout"]

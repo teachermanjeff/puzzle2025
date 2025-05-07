@@ -49,11 +49,11 @@ sprite_frames = SubResource("SpriteFrames_4ft1w")
 
 [node name="power-up_text" type="Label" parent="."]
 texture_filter = 3
-offset_left = 77.0
-offset_top = -118.0
-offset_right = 188.0
-offset_bottom = -96.0
+offset_left = 75.0
+offset_top = -117.0
+offset_right = 199.0
+offset_bottom = -95.0
 theme_override_colors/font_color = Color(0.231373, 0.231373, 0.215686, 1)
 theme_override_fonts/font = ExtResource("2_u2y8v")
-theme_override_font_sizes/font_size = 11
-text = "YOU GOT A POWER-UP"
+theme_override_font_sizes/font_size = 10
+text = "YOU GOT 5 MORE MOVES"

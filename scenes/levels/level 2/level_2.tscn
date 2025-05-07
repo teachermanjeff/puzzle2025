@@ -122,7 +122,7 @@ theme_override_font_sizes/font_size = 30
 text = "Level 2"
 horizontal_alignment = 1
 
-[node name="Moves left 2" parent="." instance=ExtResource("14_tn6ht")]
+[node name="Moves left 1" parent="." instance=ExtResource("14_tn6ht")]
 offset_left = 271.0
 offset_top = 62.0
 offset_right = 345.0
@@ -188,7 +188,7 @@ text = "SCORE"
 
 [connection signal="button_down" from="Pause button 2/Pause Button 2" to="." method="_on_button_button_down"]
 [connection signal="addpoints" from="grid 2 script" to="grid 2 script/score" method="_on_grid_2_script_addpoints"]
-[connection signal="gemswap" from="grid 2 script" to="Moves left 2" method="_on_grid_2_script_gemswap"]
+[connection signal="gemswap" from="grid 2 script" to="Moves left 1" method="_on_grid_2_script_gemswap"]
 [connection signal="pressed" from="Shuffle button 2/shuffle Button(2)" to="grid 2 script" method="_on_shuffle_button_pressed"]
 [connection signal="timeout" from="Power-up 2/power-up Timer 2 (appear)" to="Power-up 2" method="_on_powerup_timer_2_appear_timeout"]
 [connection signal="timeout" from="Power-up 2/power-up Timer 2 (disappear)" to="Power-up 2" method="_on_powerup_timer_2_disappear_timeout"]

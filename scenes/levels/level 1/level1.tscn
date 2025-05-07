@@ -99,14 +99,13 @@ offset = 64
 
 [node name="score" parent="grid 1 script" instance=ExtResource("6_cdfij")]
 top_level = true
-offset_left = 356.0
-offset_top = 705.0
-offset_right = 528.0
-offset_bottom = 900.0
-theme_override_font_sizes/font_size = 45
-text = "
-
-"
+offset_left = 357.0
+offset_top = 745.0
+offset_right = 512.0
+offset_bottom = 840.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_k5rfc")
+theme_override_font_sizes/font_size = 50
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -174,7 +173,7 @@ wait_time = 30.0
 wait_time = 10.0
 
 [node name="character_power-up_animation" parent="Power-up 1" instance=ExtResource("14_vwe5i")]
-position = Vector2(18.3542, 470.196)
+position = Vector2(18.6762, 468.658)
 scale = Vector2(0.4, 0.7)
 
 [node name="score_board" type="Sprite2D" parent="."]
@@ -196,7 +195,7 @@ text = "SCORE"
 [connection signal="button_down" from="Pause button 1/Pause Button 1" to="." method="_on_button_button_down"]
 [connection signal="addpoints" from="grid 1 script" to="grid 1 script/score" method="_on_grid_1_script_addpoints"]
 [connection signal="gemswap" from="grid 1 script" to="Moves left 1" method="_on_grid_1_script_gemswap"]
-[connection signal="pressed" from="Shuffle button 1/shuffle Button(1)" to="grid 1 script" method="_on_shuffle_button_pressed"]
 [connection signal="pressed" from="Shuffle button 1/shuffle Button(1)" to="grid 1 script" method="_on_shuffle_button_1_pressed"]
+[connection signal="pressed" from="Shuffle button 1/shuffle Button(1)" to="grid 1 script" method="_on_shuffle_button_pressed"]
 [connection signal="timeout" from="Power-up 1/power-up Timer 1 (appear)" to="Power-up 1" method="_on_powerup_timer_1_appear_timeout"]
 [connection signal="timeout" from="Power-up 1/power-up Timer 1 (disappear)" to="Power-up 1" method="_on_powerup_timer_1_disappear_timeout"]
