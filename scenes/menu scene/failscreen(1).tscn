@@ -1,8 +1,24 @@
-[gd_scene load_steps=4 format=3 uid="uid://ppu8378o07oq"]
+[gd_scene load_steps=7 format=3 uid="uid://ppu8378o07oq"]
 
 [ext_resource type="Script" uid="uid://dtceknuti86u" path="res://scenes/menu scene/failscreen.gd" id="1_yjr33"]
 [ext_resource type="Texture2D" uid="uid://cahp26fkmop6w" path="res://assets/background/menu image.png" id="2_aag4r"]
 [ext_resource type="FontFile" uid="uid://drc3f4b74p0dt" path="res://Fonts/alagard/alagard.ttf" id="3_ow7f6"]
+[ext_resource type="Texture2D" uid="uid://dfo01f3a33nuf" path="res://assets/Game Sprites/Character animation/Cave Miner bubble text.png" id="4_aag4r"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ow7f6"]
+atlas = ExtResource("4_aag4r")
+region = Rect2(0, 0, 96, 96)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_gehcn"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ow7f6")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [node name="FAIL SCREEN (1)" type="Control"]
 layout_mode = 3
@@ -21,7 +37,7 @@ offset_right = 543.0
 offset_bottom = 965.0
 texture = ExtResource("2_aag4r")
 
-[node name="text" type="Label" parent="."]
+[node name="title" type="Label" parent="."]
 layout_mode = 0
 offset_left = 83.0
 offset_top = 59.0
@@ -54,10 +70,10 @@ text = "0"
 
 [node name="main but (1)" type="Button" parent="."]
 layout_mode = 0
-offset_left = 164.0
-offset_top = 325.0
-offset_right = 364.0
-offset_bottom = 366.0
+offset_left = 172.0
+offset_top = 319.0
+offset_right = 372.0
+offset_bottom = 360.0
 theme_override_fonts/font = ExtResource("3_ow7f6")
 theme_override_font_sizes/font_size = 34
 text = "Main screen"
@@ -74,13 +90,30 @@ text = "INSTRUCTIONS"
 
 [node name="Restart (1)" type="Button" parent="."]
 layout_mode = 0
-offset_left = 172.0
-offset_top = 532.0
-offset_right = 346.0
-offset_bottom = 581.0
+offset_left = 187.0
+offset_top = 534.0
+offset_right = 361.0
+offset_bottom = 583.0
 theme_override_fonts/font = ExtResource("3_ow7f6")
 theme_override_font_sizes/font_size = 34
 text = "RESTART"
+
+[node name="sprite" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(175, 966)
+scale = Vector2(6.0651, 7.1862)
+sprite_frames = SubResource("SpriteFrames_gehcn")
+
+[node name="sorry text" type="Label" parent="."]
+layout_mode = 0
+offset_left = 236.0
+offset_top = 659.0
+offset_right = 453.0
+offset_bottom = 682.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_ow7f6")
+theme_override_font_sizes/font_size = 19
+text = "Better Luck Next Time!"
 
 [connection signal="pressed" from="main but (1)" to="." method="_on_main_but_1_pressed"]
 [connection signal="pressed" from="instruct but (1)" to="." method="_on_instruct_but_1_pressed"]

@@ -1,8 +1,24 @@
-[gd_scene load_steps=4 format=3 uid="uid://cx2icow5kg3sq"]
+[gd_scene load_steps=7 format=3 uid="uid://cx2icow5kg3sq"]
 
 [ext_resource type="Script" uid="uid://bktlvqyl3qj5m" path="res://scenes/menu scene/winish.gd" id="1_e5j53"]
 [ext_resource type="Texture2D" uid="uid://cahp26fkmop6w" path="res://assets/background/menu image.png" id="2_rdbrx"]
 [ext_resource type="FontFile" uid="uid://drc3f4b74p0dt" path="res://Fonts/alagard/alagard.ttf" id="3_4wmyv"]
+[ext_resource type="Texture2D" uid="uid://dfo01f3a33nuf" path="res://assets/Game Sprites/Character animation/Cave Miner bubble text.png" id="4_rdbrx"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4wmyv"]
+atlas = ExtResource("4_rdbrx")
+region = Rect2(96, 96, 96, 96)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_84bg7"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4wmyv")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [node name="win screen" type="CanvasLayer"]
 script = ExtResource("1_e5j53")
@@ -13,10 +29,10 @@ offset_bottom = 965.0
 texture = ExtResource("2_rdbrx")
 
 [node name="menu name" type="Label" parent="."]
-offset_left = 141.0
-offset_top = 78.0
-offset_right = 407.0
-offset_bottom = 153.0
+offset_left = 115.0
+offset_top = 87.0
+offset_right = 446.0
+offset_bottom = 162.0
 theme_override_fonts/font = ExtResource("3_4wmyv")
 theme_override_font_sizes/font_size = 79
 text = "YOU WON"
@@ -31,22 +47,38 @@ theme_override_font_sizes/font_size = 34
 text = "next level"
 
 [node name="instruct but" type="Button" parent="."]
-offset_left = 162.0
-offset_top = 315.0
-offset_right = 402.0
-offset_bottom = 364.0
+offset_left = 158.0
+offset_top = 310.0
+offset_right = 398.0
+offset_bottom = 359.0
 theme_override_fonts/font = ExtResource("3_4wmyv")
 theme_override_font_sizes/font_size = 34
 text = "INSTRUCTIONS"
 
 [node name="instruct but2" type="Button" parent="."]
-offset_left = 196.0
+offset_left = 189.0
 offset_top = 416.0
-offset_right = 370.0
+offset_right = 363.0
 offset_bottom = 465.0
 theme_override_fonts/font = ExtResource("3_4wmyv")
 theme_override_font_sizes/font_size = 34
 text = "RESTART"
+
+[node name="sprite" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(184, 949)
+scale = Vector2(6.54167, 8.51042)
+sprite_frames = SubResource("SpriteFrames_84bg7")
+
+[node name="congrats text" type="Label" parent="sprite"]
+offset_left = 13.758
+offset_top = -43.5936
+offset_right = 39.758
+offset_bottom = -38.5936
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_4wmyv")
+theme_override_font_sizes/font_size = 5
+text = "Congrats!!"
 
 [connection signal="pressed" from="contd" to="." method="_on_contd_pressed"]
 [connection signal="pressed" from="instruct but" to="." method="_on_instruct_but_pressed"]

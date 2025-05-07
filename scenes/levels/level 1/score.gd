@@ -40,5 +40,5 @@ func win():
 	if new_score == 80:
 		print("reached 80 score")
 		globals.wonscene = str(get_tree().current_scene.name)
-		get_tree().change_scene_to_file("res://scenes/menu scene/failscreen(1).tscn")
+		get_tree().change_scene_to_file("res://scenes/menu scene/winish.tscn")
 	

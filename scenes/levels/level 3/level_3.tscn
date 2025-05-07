@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://mrkdxqm8sw2x"]
+[gd_scene load_steps=20 format=3 uid="uid://mrkdxqm8sw2x"]
 
 [ext_resource type="Script" uid="uid://ce5sdn60b2tsi" path="res://scenes/levels/level 3/level_3.gd" id="1_i6lnk"]
 [ext_resource type="Texture2D" uid="uid://bjq5oghph4bwx" path="res://assets/background/level 3 bg.png" id="1_vkd0v"]
@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://cxlh12igmk3xn" path="res://assets/Game Sprites/kenney_ui-pack-rpg-expansion/PNG/buttonLong_brown.png" id="8_hog8a"]
 [ext_resource type="PackedScene" uid="uid://cektohyhvd82t" path="res://scenes/new_score.tscn" id="12_3uo3b"]
 [ext_resource type="PackedScene" uid="uid://mmi6vwnxo3nd" path="res://assets/Game Sprites/Character animation/character_power_up_animation.tscn" id="12_hog8a"]
+[ext_resource type="Texture2D" uid="uid://cqne4kyx12e1o" path="res://assets/Game Sprites/kenney_ui-pack-rpg-expansion/PNG/buttonSquare_brown_pressed.png" id="13_hog8a"]
 [ext_resource type="Script" uid="uid://ctay6xc4v255i" path="res://scenes/levels/level 3/power_up_3.gd" id="14_o1jg3"]
 [ext_resource type="PackedScene" uid="uid://b23xlpdoms6q6" path="res://scenes/moves_left_counter.tscn" id="15_o1jg3"]
 
@@ -93,6 +94,18 @@ x_start = 43
 y_start = 700
 offset = 64
 
+[node name="score" parent="grid 3 script" instance=ExtResource("12_3uo3b")]
+top_level = true
+offset_left = 407.0
+offset_top = 811.0
+offset_right = 481.0
+offset_bottom = 942.0
+theme_override_font_sizes/font_size = 46
+text = "
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [node name="level 3 title bg" type="AnimatedSprite2D" parent="."]
 position = Vector2(76, 51)
 scale = Vector2(0.771, 1.363)
@@ -145,8 +158,6 @@ offset_bottom = 120.0
 text = ""
 max_attempts = 10
 
-[node name="score" parent="." instance=ExtResource("12_3uo3b")]
-
 [node name="Power-up 3" type="Node2D" parent="."]
 script = ExtResource("14_o1jg3")
 
@@ -157,11 +168,26 @@ wait_time = 120.0
 wait_time = 10.0
 
 [node name="character_power-up_animation" parent="Power-up 3" instance=ExtResource("12_hog8a")]
-position = Vector2(79, 901)
+position = Vector2(66, 918)
 scale = Vector2(1.091, 1.2)
 
+[node name="Scoreboard 3" type="Sprite2D" parent="."]
+position = Vector2(444, 822)
+scale = Vector2(3.05, 2.81667)
+texture = ExtResource("13_hog8a")
+
+[node name="score title 3" type="Label" parent="."]
+offset_left = 395.0
+offset_top = 770.0
+offset_right = 498.0
+offset_bottom = 807.5
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_g04qi")
+theme_override_font_sizes/font_size = 40
+text = "Score"
+
 [connection signal="button_down" from="Pause button 3/Pause Button 3" to="." method="_on_button_button_down"]
-[connection signal="addpoints" from="grid 3 script" to="score" method="_on_grid_3_script_addpoints"]
+[connection signal="addpoints" from="grid 3 script" to="grid 3 script/score" method="_on_grid_3_script_addpoints"]
 [connection signal="gemswap" from="grid 3 script" to="Movements-CD-L3" method="_on_grid_3_script_gemswap"]
 [connection signal="pressed" from="Shuffle button 3/shuffle Button(3)" to="grid 3 script" method="_on_shuffle_button_pressed"]
 [connection signal="timeout" from="Power-up 3/power-up Timer 3 (appear)" to="Power-up 3" method="_on_powerup_timer_3_appear_timeout"]
