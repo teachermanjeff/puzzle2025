@@ -1,5 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://cujih0ln5uwtk"]
+[gd_scene load_steps=4 format=3 uid="uid://cujih0ln5uwtk"]
 
+[ext_resource type="Script" uid="uid://bxkeuxi3ydbmj" path="res://winscreen.gd" id="1_ehxyi"]
 [ext_resource type="Texture2D" uid="uid://cahp26fkmop6w" path="res://assets/background/menu image.png" id="2_pd04t"]
 [ext_resource type="FontFile" uid="uid://drc3f4b74p0dt" path="res://Fonts/alagard/alagard.ttf" id="3_2gb7w"]
 
@@ -12,6 +13,7 @@ offset_right = -540.0
 offset_bottom = -960.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_ehxyi")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 0
@@ -27,28 +29,7 @@ offset_right = 490.0
 offset_bottom = 133.0
 theme_override_fonts/font = ExtResource("3_2gb7w")
 theme_override_font_sizes/font_size = 79
-text = "You  win"
-
-[node name="score text" type="Label" parent="."]
-layout_mode = 0
-offset_left = 73.0
-offset_top = 197.0
-offset_right = 473.0
-offset_bottom = 248.0
-theme_override_fonts/font = ExtResource("3_2gb7w")
-theme_override_font_sizes/font_size = 42
-text = "your score is "
-
-[node name="score box" type="Label" parent="."]
-layout_mode = 0
-offset_left = 354.0
-offset_top = 203.0
-offset_right = 375.0
-offset_bottom = 254.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("3_2gb7w")
-theme_override_font_sizes/font_size = 42
-text = "0"
+text = "You  win!!"
 
 [node name="main menu" type="Button" parent="."]
 layout_mode = 0
@@ -70,15 +51,5 @@ theme_override_fonts/font = ExtResource("3_2gb7w")
 theme_override_font_sizes/font_size = 34
 text = "INSTRUCTIONS"
 
-[node name="restartbtn" type="Button" parent="."]
-layout_mode = 0
-offset_left = 172.0
-offset_top = 532.0
-offset_right = 346.0
-offset_bottom = 581.0
-theme_override_fonts/font = ExtResource("3_2gb7w")
-theme_override_font_sizes/font_size = 34
-text = "RESTART"
-
-[connection signal="button_down" from="main menu" to="." method="_on_contd_button_down"]
+[connection signal="button_down" from="main menu" to="." method="_on_main_menu_button_down"]
 [connection signal="button_down" from="instruct but" to="." method="_on_instruct_but_button_down"]

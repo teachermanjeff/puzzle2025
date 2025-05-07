@@ -156,7 +156,7 @@ offset_top = 77.0
 offset_right = 346.0
 offset_bottom = 120.0
 text = ""
-max_attempts = 10
+max_attempts = 14
 
 [node name="Power-up 3" type="Node2D" parent="."]
 script = ExtResource("14_o1jg3")

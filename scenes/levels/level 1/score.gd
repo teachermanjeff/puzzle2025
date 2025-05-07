@@ -1,6 +1,6 @@
 extends Label
 
-@export var score = -4  # Maximum number of attempts
+@export var score = 0  # Maximum number of attempts
 var new_score # How many attempts are left
 @onready var movesleft: Label = $"../../Moves left 1"
 
@@ -37,8 +37,9 @@ func failed():
 			get_tree().change_scene_to_file("res://scenes/menu scene/failscreen(1).tscn")
 
 func win():		
-	if new_score == 80:
-		print("reached 80 score")
+	if new_score >= 50:
 		globals.wonscene = str(get_tree().current_scene.name)
-		get_tree().change_scene_to_file("res://scenes/menu scene/winish.tscn")
-	
+		if globals.wonscene != "Level 3":
+			get_tree().change_scene_to_file("res://scenes/menu scene/winish.tscn")
+		else:
+			get_tree().change_scene_to_file("res://winscreen.tscn")
