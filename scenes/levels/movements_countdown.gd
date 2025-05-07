@@ -33,5 +33,4 @@ func _on_grid_3_script_gemswap() -> void:
 func _failed():
 	if attempts_left == 0:
 		get_tree().change_scene_to_file("res://scenes/menu scene/failscreen(1).tscn")
-
 	
