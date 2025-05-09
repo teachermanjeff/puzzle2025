@@ -31,23 +31,23 @@ theme_override_font_sizes/font_size = 34
 text = "continue"
 
 [node name="instruct but" type="Button" parent="."]
-offset_left = 162.0
-offset_top = 315.0
-offset_right = 402.0
-offset_bottom = 364.0
+offset_left = 146.0
+offset_top = 328.0
+offset_right = 386.0
+offset_bottom = 377.0
 theme_override_fonts/font = ExtResource("2_rcrpa")
 theme_override_font_sizes/font_size = 34
 text = "INSTRUCTIONS"
 
-[node name="instruct but2" type="Button" parent="."]
-offset_left = 196.0
-offset_top = 416.0
-offset_right = 370.0
-offset_bottom = 465.0
+[node name="startscreen" type="Button" parent="."]
+offset_left = 165.0
+offset_top = 460.0
+offset_right = 371.0
+offset_bottom = 509.0
 theme_override_fonts/font = ExtResource("2_rcrpa")
 theme_override_font_sizes/font_size = 34
-text = "RESTART"
+text = "Start Screen"
 
 [connection signal="pressed" from="contd" to="." method="_on_contd_pressed"]
 [connection signal="pressed" from="instruct but" to="." method="_on_instruct_but_pressed"]
-[connection signal="pressed" from="instruct but2" to="." method="_on_instruct_but_2_pressed"]
+[connection signal="pressed" from="startscreen" to="." method="_on_startscreen_pressed"]

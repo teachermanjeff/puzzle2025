@@ -1,8 +1,24 @@
-[gd_scene load_steps=4 format=3 uid="uid://cujih0ln5uwtk"]
+[gd_scene load_steps=7 format=3 uid="uid://cujih0ln5uwtk"]
 
 [ext_resource type="Script" uid="uid://bxkeuxi3ydbmj" path="res://winscreen.gd" id="1_ehxyi"]
 [ext_resource type="Texture2D" uid="uid://cahp26fkmop6w" path="res://assets/background/menu image.png" id="2_pd04t"]
 [ext_resource type="FontFile" uid="uid://drc3f4b74p0dt" path="res://Fonts/alagard/alagard.ttf" id="3_2gb7w"]
+[ext_resource type="Texture2D" uid="uid://dfo01f3a33nuf" path="res://assets/Game Sprites/Character animation/Cave Miner bubble text.png" id="4_pd04t"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2gb7w"]
+atlas = ExtResource("4_pd04t")
+region = Rect2(96, 96, 96, 96)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_dvt3n"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2gb7w")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [node name="MENU SCREEN" type="Control"]
 layout_mode = 3
@@ -33,23 +49,31 @@ text = "You  win!!"
 
 [node name="main menu" type="Button" parent="."]
 layout_mode = 0
-offset_left = 164.0
-offset_top = 325.0
-offset_right = 364.0
-offset_bottom = 366.0
+offset_left = 136.0
+offset_top = 275.0
+offset_right = 426.0
+offset_bottom = 376.0
 theme_override_fonts/font = ExtResource("3_2gb7w")
 theme_override_font_sizes/font_size = 34
 text = "Main screen"
 
-[node name="instruct but" type="Button" parent="."]
-layout_mode = 0
-offset_left = 153.0
-offset_top = 420.0
-offset_right = 393.0
-offset_bottom = 469.0
+[node name="sprite" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(164, 960)
+scale = Vector2(7.05208, 9.72917)
+sprite_frames = SubResource("SpriteFrames_dvt3n")
+
+[node name="congrats text" type="Label" parent="sprite"]
+texture_filter = 1
+offset_left = 5.95569
+offset_top = -52.4197
+offset_right = 49.9557
+offset_bottom = -29.4197
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3_2gb7w")
-theme_override_font_sizes/font_size = 34
-text = "INSTRUCTIONS"
+theme_override_font_sizes/font_size = 6
+text = "Congrats!"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [connection signal="button_down" from="main menu" to="." method="_on_main_menu_button_down"]
-[connection signal="button_down" from="instruct but" to="." method="_on_instruct_but_button_down"]
