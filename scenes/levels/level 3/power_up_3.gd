@@ -10,7 +10,7 @@ var extra_moves = Node
 func _ready() -> void:
 	#the time it is visible for
 	timer = $"power-up Timer 3 (appear)"
-	timer.wait_time = 120 # 120sec timer
+	timer.wait_time = 60 # 60sec timer
 	timer.one_shot = false #repeat time
 	timer.start()
 	

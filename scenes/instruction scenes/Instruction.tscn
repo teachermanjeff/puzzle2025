@@ -22,7 +22,7 @@ theme_override_fonts/font = ExtResource("1_ajmqj")
 theme_override_font_sizes/font_size = 40
 text = "Select groups of 3 gems to
  earn points to the next 
-level. You must collect 80 
+level. You must collect 50 
 points to move on and you
  have a select amount of 
 moves each level. 
